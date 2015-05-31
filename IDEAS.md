@@ -30,6 +30,12 @@ instances in Go, as you have to explicitly implement the trait.
         }
     }
 
+
+    // attributes look cool
+    func [T: Foo] callFooBar(value: T) {
+
+    }
+
     func main() {
         // monomorphisation????
         baz: Baz = {
