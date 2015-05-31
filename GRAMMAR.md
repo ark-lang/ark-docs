@@ -1,13 +1,15 @@
 This document specifies the grammar for the Ark programming language. It's still a work in progress,
 some of the language may be missing, or some of the following may be incorrect/invalid or out-dated.
-The grammar pretty much maps straight onto the parsers source.
+
+The grammar pretty much maps straight onto the parsers source. Note that this is
+somewhat out-dated due to some heavy changes in the languages syntax.
 
 	digit = { "0" ... "9" }
 	letter = "a" ... "Z" | "_";
 	hex_digit = "0" ... "9" | "A" ... "F" | "a" ... "f"
-	
+
 	identifier = letter { letter | digit };
-	
+
 	sign = "+" | "-";
 	escaped_char = "\" ( "a" | "b" | "f" | "n" | "r" | "t" | "v" | "\" | "'" | """ );
 	binaryOp = logOp | relOp | addOp | mulOp;
@@ -17,21 +19,21 @@ The grammar pretty much maps straight onto the parsers source.
 	mulOp = "*" | "/" | "%" | "<<" | ">>" | "&";
 	unaryOp = "+" | "-" | "!" | "^" | "<" | ">" | "*" | "&";
 	hex_literal = "0" ( "x" | "X" ) hex_digit { hex_digit };
-	
+
 	Literal = NumberLiteral | StringLiteral | CharacterLiteral;
-	NumberLiteral = [sign] digit [ "." { digit } ]	
-	StringLiteral = """ { letter } """; 
+	NumberLiteral = [sign] digit [ "." { digit } ]
+	StringLiteral = """ { letter } """;
 	CharacterLiteral = "'"  ( letter | escaped_char ) "'";
-	
+
 	IdentifierList = identifier [ { "," identifier } ]
 	ExpressionList = Expression { "," Expression }
-	
+
 	Type = TypeName | TypeLit.
 	TypeLit = ArrayType | PointerType;
 	TypeName = identifier;
 	PointerType = "^" BaseType;
 	ArrayType = "[" [ Expression ] "]" Type.
-	
+
 	FunctionSignature = identifier Parameters ":" [ "mut" ] Type;
 	Parameters = "(" [ parameterList ] ")";
 	ParameterList = ParameterSection { "," ParameterSection };
@@ -46,8 +48,8 @@ The grammar pretty much maps straight onto the parsers source.
 	Block = ( "{" [ StatementList ] "}" | "->" Statement );
 	IfStat = if Expression Block [ "else" Statement ];
 	StatementList = { Statement ";" };
-	MatchStat = "match" Expression "{" { MatchClause "," } "}"; 
-	MatchClause = Expression Block ";"; 
+	MatchStat = "match" Expression "{" { MatchClause "," } "}";
+	MatchClause = Expression Block ";";
 
 	ForInfiniteLoop = "for" Block;
 	ForWhileLoop = "for" PrimaryExpr Block;
@@ -67,7 +69,7 @@ The grammar pretty much maps straight onto the parsers source.
 		| "^" MemberAccess
 		| Literal
 		| Call;
-		
+
 	Call = PrimaryExpr "(" [ ExpressionList ] ")";
 
 	Statement = ( StructuredStat | UnstructuredStat );
@@ -79,7 +81,3 @@ The grammar pretty much maps straight onto the parsers source.
 	BreakStat = "break" ";"
 	ContinueStat = "continue" ";"
 	IncDecStat = Expression ( "++" | "--" );
-	
-	
-	
-	
