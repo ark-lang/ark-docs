@@ -1,7 +1,7 @@
 # Ideas
 These are ideas for the language, syntax designs, etc.
 
-## Traits
+## Traits + Generics
 Traits are very similar to Rust, they define the methods of the given
 structure, and can be implemented by an `impl`. Traits differ from say
 instances in Go, as you have to explicitly implement the trait.
