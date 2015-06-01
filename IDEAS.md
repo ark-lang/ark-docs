@@ -32,6 +32,15 @@ instances in Go, as you have to explicitly implement the trait.
 
 
     // attributes look cool
+    // basically generics, we need to use
+    // them in this case instead of saying `value: Foo` is
+    // a param, because a trait does not have a constant
+    // size that is known at compile time, so the generic
+    // will basically compile down to [in this case] two
+    // functions one for Bar, and one for Baz, then it
+    // will know the size of the given value.
+    // this might be weird to understand but its 1am and im
+    // ill and tired. jah bless xx
     func [T: Foo] callFooBar(value: T) {
 
     }
