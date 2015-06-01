@@ -33,7 +33,7 @@ instances in Go, as you have to explicitly implement the trait.
 
     // attributes look cool
     // basically generics, we need to use
-    // them in this case instead of saying `value: Foo` is
+    // them in this case instead of saying `value: Foo` as
     // a param, because a trait does not have a constant
     // size that is known at compile time, so the generic
     // will basically compile down to [in this case] two
