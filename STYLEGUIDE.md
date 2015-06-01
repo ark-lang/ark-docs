@@ -67,19 +67,6 @@ Code should not use extra whitespace to provide alignment:
 		foo: int = 2
 	};
 
-## Comments
-Use line comments:
-
-	// Do some stuff then do some more stuff after that, 
-	// close the program after doing stuff.
-
-Instead of:
-
-	/*
-	 * Do some stuff then do some more stuff after that, 
-	 * close the program after doing stuff.
-	 */
-
 ## Braces
 Braces should be on the same line:
 
