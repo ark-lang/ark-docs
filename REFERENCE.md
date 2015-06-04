@@ -757,7 +757,6 @@ Generics is the idea of generalizing types to be more diverse, as opposed
 to constraining yourself to a specific type. Generics are great for making
 code concise and avoiding code duplication.
 
-
 ## Macro System
 We're still thinking about this, want to suggest an idea/have your say? Post an issue, or comment
 on an existing one (relevant to the topic) [here](https://github.com/ark-lang/ark/issues).
