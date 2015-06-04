@@ -664,9 +664,99 @@ the array on its declaration:
 Note that I did not specify a size in the block this time, and that there is also a semi-colon `;`
 at the end of the initializing block, this is because it's still a statement.
 
-## Generics
-We're still thinking about this, want to suggest an idea/have your say? Post an issue, or comment
-on an existing one (relevant to the topic) [here](https://github.com/ark-lang/ark/issues).
+## Attributes
+Attributes describe a unique quality that belongs to something, be it a function, structure,
+variable, trait, etc. Attributes are a guide to the compiler, they clarify something, or they
+tell the compiler what to do. Currently, there are only a few simple attributes. An attribute
+is denoted with square brackets, typically before the statement it belongs to.
+
+For instance, I could tell the compiler that the given function is deprecated and should not be
+used, it will also warn the programmer if they are using a deprecated function/variable/etc:
+
+    [deprecated]
+    fn something(): bool {
+        // something here
+    }
+
+If this function is called, the user will be warned that it is deprecated.
+
+## Traits
+Traits are a set of functions that can be inherited by a structure. Traits must be explicitly
+implemented for a given structure using the `impl` (implementation) we discussed earlier in this
+document.
+
+A trait is defined like so:
+
+    trait TraitName {
+        func foo();
+
+        func defaultFunc() {
+            // do stuff
+        }
+    }
+
+They are then implemented for a stricture, e.g:
+
+    struct Bar {
+
+    }
+
+    trait Foo {
+        func fooBar();
+    }
+
+    impl Foo for Bar  {
+        func fooBar() {
+
+        }
+    }
+
+We can then call these functions like so:
+
+    func main(): int {
+        bar: Bar;
+        bar.fooBar();
+        bar.defaultFunc();
+        return 0;
+    }
+
+Something like a Trait can be passed around, but we don't know the 
+size of the trait at compile-time, for instance, given the previous
+example of Traits
+
+    trait Foo {
+
+    }
+
+    impl Foo for Bar {
+
+    }
+
+And we want to pass something to a function as long as it inherits
+the trait `Foo`. Right, so let's just use that trait in a parameter:
+
+    func doStuff(a: Foo) {
+
+    }
+
+Well unfortunately, that won't work out too well. The trait doesn't
+have a constant size that is known at compile time. So we need to use
+generics!
+
+Currently, generics are defined using the attributes we discussed
+earlier. So we have to define that `T` can be `Foo`, and then we can
+use `T` in the next declaration:
+
+    [T: Foo] // this syntax is under debate
+    func doStuff(a: T) {
+        // yay it works!
+    }
+
+## Generics [work in progress]
+Generics is the idea of generalizing types to be more diverse, as opposed
+to constraining yourself to a specific type. Generics are great for making
+code concise and avoiding code duplication.
+
 
 ## Macro System
 We're still thinking about this, want to suggest an idea/have your say? Post an issue, or comment
