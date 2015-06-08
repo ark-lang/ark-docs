@@ -38,7 +38,7 @@ This document is an informal specification for Ark, a systems programming langua
   - [Enums](#enums)
   - [Arrays](#arrays)
     - [Statically Initializing an array](#statically-initializing-an-array)
-  - [Documentation comments](#doc-comments)
+  - [Documentation comments](#documentation-comments)
   - [Generics](#generics)
   - [Macro System](#macro-system)
 
