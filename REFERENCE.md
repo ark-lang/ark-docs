@@ -605,17 +605,7 @@ The following can be documented by having doc comments placed above them (*with 
 * public struct/enum declarations (note that you can also use doc comments on individual struct members)
 * module declarations [TODO how will this work?]
 
-A small subset of GitHub-flavored Markdown is supported.
-
-* prefix lines with `#`s for headers (one `#` for the largest (h1), six `#`s for the smallest (h6))
-* enclose text in single `*` or `_` for *emphasis*
-* enclose text in double `**` or `__` for **strong emphasis**
-* enclose text in double `~~` for ~~strikethrough~~
-* bulleted lists can be created be prefixing lines with `-` or `+` (eg. `- First point`). Note that `*` cannot be used as a prefix for lists.
-* ordered lists can be created by prefixing lines with numbers (eg. `1. First item`)
-* enclose code with backticks
-  * single backticks for in-sentence code (\`code\`)
-  * triple backticks for block code with syntax highlighting (\`\`\`code\`\`\`)
+Markdown is supported.
 
 ## Attributes
 Attributes describe a unique quality that belongs to something, be it a function, structure,
@@ -673,7 +663,7 @@ We can then call these functions like so:
         return 0;
     }
 
-Something like a Trait can be passed around, but we don't know the 
+Something like a Trait can be passed around, but we don't know the
 size of the trait at compile-time, for instance, given the previous
 example of Traits
 
