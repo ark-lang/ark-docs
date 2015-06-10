@@ -43,7 +43,7 @@ This document is an informal specification for Ark, a systems programming langua
   - [Macro System](#macro-system)
 
 ## Guiding Principles
-Ark is a systems programming language, intended as an alternative to C. It's main purpose is to modernize C, without deviating from C's original goal of simplicity. Ark's frontend is written in C, with LLVM being used for the backend. For users who have followed the project for a while now, it may seem very abrupt, the fact that we've decided to use LLVM as the backend. After rigorous discussions, we were of the idea that generating C had some serious limitations as far as feature implementations were concerned, ergo we decided to use LLVM. Apart from giving us ground to expand Ark's features, it also gave us comparable performance, both of which we aimed for initially.
+Ark is a systems programming language, intended as an alternative to C. It's main purpose is to modernize C, without deviating from C's original goal of simplicity. The official Ark compiler is written in Go, with the main code backend being LLVM.
 
 The design is motivated by the following:
 
@@ -66,12 +66,7 @@ Multi-line comments are denoted with a forward slash followed by an asterisks. T
 		vident pls give me some bread
 	 \*/
 
-Documenting comments are written with a pound symbol '#', these should be used for documenting functions, structures, enumerations, etc.
-
-	# Does some stuff then it exits the program
-	func main(): int {
-
-	}
+Both comment types have special variations for [documentation comments](#documentation-comments).
 
 Comments cannot be nested.
 
