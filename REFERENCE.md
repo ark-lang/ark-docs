@@ -105,7 +105,7 @@ Note: the C `char` type corresponds to the `i8` type.
 Warning: the `i128`, `u128` and `f128` types are only supported on the LLVM backend. On the C backend, they are simple aliases for their 64-bit equivelants.
 
 ### `usize`
-The `usize` or unsigned size, it can not represent any negative values. It is used when you are counting something that cannot be negative, typically it is used formemory.
+The `usize` or unsigned size, it can not represent any negative values. It is used when you are counting something that cannot be negative, typically it is used for memory.
 
 	usize		// unsigned at least 16 bits
 
