@@ -385,12 +385,17 @@ A function prototype is similar to the syntax for a function declaration, howeve
 The function can then be implemented elsewhere in the program. While (in most cases) a trivial move, sometimes adding the function prototype at the start of the program before implementing it elsewhere is considered good practice.
 
 ### Calling C Functions
-You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function.
+You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function. 
+
+We've also introduced a feature called "attributes", in order to call a c
+function, you would mark its prototype as a c binding using the attribute
+system.
 
 Here's an example of printf in Ark:
 
 	// main.aly
-	func printf(format: str, ...): int;
+	[c] // this specifies the function is a c binding
+    func printf(format: str, ...): int;
 
 	// usage
 	func main(): int {
@@ -631,7 +636,18 @@ used, it will also warn the programmer if they are using a deprecated function/v
         // something here
     }
 
-If this function is called, the user will be warned that it is deprecated.
+If this function is called, the user will be warned that it is deprecated. You can also have a block of attributes, for instance you have 5 functions that all have the same attribute, instead of specifying the attribute for each function, we create an "attribute block" like so:
+
+[attribute] {
+    func name(): int;
+    func name(): int;
+    func name(): int;
+    func name(): int;
+    func name(): int;
+}
+
+### Attributes
+TODO list of attributes supported
 
 ## Traits
 Traits are a set of functions that can be inherited by a structure. Traits must be explicitly
