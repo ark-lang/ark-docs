@@ -385,12 +385,12 @@ A function prototype is similar to the syntax for a function declaration, howeve
 The function can then be implemented elsewhere in the program. While (in most cases) a trivial move, sometimes adding the function prototype at the start of the program before implementing it elsewhere is considered good practice.
 
 ### Calling C Functions
-You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in C, and in Ark, an underscore. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function.
+You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function.
 
 Here's an example of printf in Ark:
 
 	// main.aly
-	func printf(format: str, \_): int;
+	func printf(format: str, ...): int;
 
 	// usage
 	func main(): int {
