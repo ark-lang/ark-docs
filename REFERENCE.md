@@ -507,10 +507,24 @@ that points to it. This is again done with the caret (`^`), for example:
 We've introduced a new variable `z`, that stored the value at the address `y`, in other words, the value of `x`.
 
 ## Managing Memory
-Ark is not a garbage collected language, therefore when you allocate memory, you must free it after you are
-no longer using it. We felt that, as unsafe as it is to rely on the user to manage the memory being allocated, performance takes a higher precedence. Although garbage collection makes things fool-proof and removes a significant amount of workload from the user, it inhibits the performance we were going for. 
+Ark is not a garbage collected language, therefore when you allocate memory, you must free it after you are no longer using it. We felt that, as unsafe as it is to rely on the user to manage the memory being allocated, performance takes a higher precedence. Although garbage collection makes things fool-proof and removes a significant amount of workload from the user, it inhibits the performance we were going for. 
 
-Memory is allocated using the `alloc` keyword and freed using the `free` keyword. The size of a particular type can be found using the `sizeof` operator, much like C. The `realloc` keyword can be used to reallocate a chunk of memory, in case it needs to be of a larger/smaller size.
+Memory is allocated, freed, and re-allocated using the standard library, specifically `mem`. You would import this into your code, and use the respective methods to manage your memory. The `mem` library contains three methods, namely "free", "alloc", "realloc", and "size_of".
+
+    // use the mem library!
+    !use "mem"
+
+    func main() {
+        // allocate a block of memory that can store
+        // 32 integers.
+        x: ^int = Block::alloc(Block::size_of(int) * 32);
+
+        // realloc
+        x = Block::realloc(x, Block::size_of(int) * 64);
+
+        // free the memory we allocated
+        Block::free(x);
+    }
 
 ## Flow Control
 ### If Statements
