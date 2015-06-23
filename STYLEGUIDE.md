@@ -91,7 +91,7 @@ Braces should be on the same line:
 
 ## Naming
 
-###### Function/Method Names: CamelCase
+###### Function/Method Names: camelCase
 
 	func fooBar(): void {
 		...
