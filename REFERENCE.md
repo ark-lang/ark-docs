@@ -137,7 +137,7 @@ Type-inference is still an early implementation, decimal values will be stored a
 
 We can also infer types in the following manners:
 
-    fn add(a: int, b: int): int -> a + b;
+    func add(a: int, b: int): int -> a + b;
     x := add(5, 5); // x is int
 
     struct Cat {
@@ -632,7 +632,7 @@ For instance, I could tell the compiler that the given function is deprecated an
 used, it will also warn the programmer if they are using a deprecated function/variable/etc:
 
     [deprecated]
-    fn something(): bool {
+    func something(): bool {
         // something here
     }
 
