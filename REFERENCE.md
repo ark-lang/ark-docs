@@ -5,6 +5,7 @@ This document is an informal specification for Ark, a systems programming langua
 
 - [Guiding Principles](#guiding-principles)
 - [Comments](#comments)
+- [Modules](#modules)
 - [Primitive Types](#primitive-types)
 - [Precision Types](#precision-types)
     - [`usize`](#usize)
@@ -69,6 +70,35 @@ Multi-line comments are denoted with a forward slash followed by an asterisks. T
 Both comment types have special variations for [documentation comments](#documentation-comments).
 
 Comments cannot be nested.
+
+## Modules
+Ark treats every file as a module, where the name of the module is the name of the file. This means
+that there are a few guidelines that should be followed to make programming Ark easier for you.
+
+### Module Naming
+Modules should be in lower case, and preferably a single word. However, if you must have a module that
+is two words -- or more -- they should be separated with underscores. For instance, `module_name`.
+
+### Using Modules
+Say you have a module A and B, you want to use module B's children, you would `use` a module, which then
+means you can explicitly use a function from the B module. To access the children of the module, you would
+use the scope operator `::`. First you specify the module, so in our case `B`, followed by the scope operator `::`,
+and the member to access from that module, so in the example below we access `foo()`.
+
+For instance:
+
+    // A
+    use B;
+
+    func main() {
+        B::foo();
+    }
+
+    // B
+
+    func foo() {
+        // do stuff here
+    }
 
 ## Primitive Types
 Ark provides various primitive types:
