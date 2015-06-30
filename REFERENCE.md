@@ -135,7 +135,7 @@ Note: the C `char` type corresponds to the `i8` type.
 Warning: the `i128`, `u128` and `f128` types are only supported on the LLVM backend. On the C backend, they are simple aliases for their 64-bit equivelants.
 
 ### `usize`
-The `usize` or unsigned size, it can not represent any negative values. It is used when you are counting something that cannot be negative, typically it is used formemory.
+The `usize` or unsigned size, it can not represent any negative values. It is used when you are counting something that cannot be negative, typically it is used for memory.
 
 	usize		// unsigned at least 16 bits
 
@@ -167,7 +167,7 @@ Type-inference is still an early implementation, decimal values will be stored a
 
 We can also infer types in the following manners:
 
-    fn add(a: int, b: int): int -> a + b;
+    func add(a: int, b: int): int -> a + b;
     x := add(5, 5); // x is int
 
     struct Cat {
@@ -662,7 +662,7 @@ For instance, I could tell the compiler that the given function is deprecated an
 used, it will also warn the programmer if they are using a deprecated function/variable/etc:
 
     [deprecated]
-    fn something(): bool {
+    func something(): bool {
         // something here
     }
 
