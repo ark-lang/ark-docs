@@ -80,7 +80,8 @@ Ark treats every file as a module, where the name of the module is the name of t
 
 ### <a id="module-naming"></a> Module Naming
 Modules should be in lower case, and preferably a single word. However, if you must have a module that
-is two words -- or more -- they should be separated with underscores. For instance, `module_name`.
+is two words (or more) they should be separated with underscores. For instance, `module_name` is preffered
+over `modulename` or `module name`.
 
 ### <a id="using-modules"></a> Using Modules
 Say you have a module A and B, you want to use module B's children, you would `use` a module, which then
@@ -415,32 +416,6 @@ To access the structure that the we're implementing, you use the `self` keyword.
 		p.say();
 	}
 
-## Function Prototypes
-**Why is this not under function?**
-A function prototype is similar to the syntax for a function declaration, however instead of using curly braces to start a new block, you end the statement with a semi-colon. A function prototype is a good way of defining all the functions you will be using in your program before actually implementing them. For example, a function prototype for a function `add` that takes two parameters (both integers), and returns an integer would be as follows:
-
-	func add(a: int, b: int): int;
-The function can then be implemented elsewhere in the program. While (in most cases) a trivial move, sometimes adding the function prototype at the start of the program before implementing it elsewhere is considered good practice.
-
-### Calling C Functions
-You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function.
-
-We've also introduced a feature called "attributes", in order to call a c
-function, you would mark its prototype as a c binding using the attribute
-system.
-
-Here's an example of printf in Ark:
-
-	// main.aly
-	[c] // this specifies the function is a c binding
-    func printf(format: str, ...): int;
-
-	// usage
-	func main(): int {
-		printf("this is a test\n");
-		return 0;
-	}
-
 ## <a id="pointers"></a> Pointers
 The caret (`^`) is what we use to denote a pointer, i.e something that points to an address in memory. The ampersand (`&`) symbol is the **address of** operator. For instance:
 
@@ -634,15 +609,16 @@ used, it will also warn the programmer if they are using a deprecated function/v
         // something here
     }
 
-If this function is called, the user will be warned that it is deprecated. You can also have a block of attributes, for instance you have 5 functions that all have the same attribute, instead of specifying the attribute for each function, we create an "attribute block" like so:
+If this function is called, the user will be warned that it is deprecated.
 
-[attribute] {
-    func name(): int;
-    func name(): int;
-    func name(): int;
-    func name(): int;
-    func name(): int;
-}
+Below is a list of current attributes and their actions:
+
+| unused | the compiler will not complain if the following declaration is unused. |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `deprecated` | if the following declaration is used in any of  your code, then the compiler will complain that it is deprecated and should not be used. |
+| `c` | the following declaration is a c-binding, this will also store the declaration in the modules private C module. |
+| `call_conv="value"` | this will set the calling convention for the following function. Legal values include: `"fastcc"`, `"ccc"`, `"coldcc"`, `"cc 10"`, `"cc 11"`, `"webkit_jscc"`, `"anyregcc"`, `"preserve_mostcc"`, `"preserve_allcc"`, `"cc <number>"`. |
+| `packed` | the following structure will not be aligned by the compiler. |
 
 ## <a id="traits"></a> Traits
 Traits are a set of functions that can be inherited by a structure. Traits must be explicitly
