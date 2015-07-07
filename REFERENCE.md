@@ -303,8 +303,8 @@ For instance:
 	mut another_type: (int, double) = (3.4, 10);
 
 ## <a id="functions"></a> Functions
-A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type. **Note
-that the default calling convention for function in Ark is fastcc!**
+A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type. Note
+that the default calling convention for functions in Ark is fastcc!
 
 An example of a function:
 
