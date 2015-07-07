@@ -399,7 +399,6 @@ Note how the structure declared is mutable. This is because we aren't declaring 
 
 The struct initializer is a statement, therefore it must be terminated with a semi-colon. Note that the values in the struct initializer do not have to be in order, but we suggest you do to keep things consistent.
 
-<<<<<<< HEAD
 A structure declaration can also be preceeded by the `packed` keyword. The `packed` keyword prevents aligning of structure members according to the platform the user is on, i.e. 32-bit or 64-bit. A good article going over padding and data structure alignment can be found on [this Wikipedia page and can be a good resource for the curious.](http://en.wikipedia.org/wiki/Data_structure_alignment). A packed structure can be declared like so:
 
     [packed] struct Cat {
@@ -408,10 +407,7 @@ A structure declaration can also be preceeded by the `packed` keyword. The `pack
 		weight: float
 	}
 
-### Default structure values
-=======
 ### <a id="default-structure-values"></a> Default structure values
->>>>>>> a621c83fec3339e2bab07c7505576509c9b06900
 A structure's members can also be assigned default values:
 
 	struct Cat {
