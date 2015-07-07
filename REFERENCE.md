@@ -1,4 +1,4 @@
-# Ark Reference
+## Ark Reference
 This document is an informal specification for Ark, a systems programming language.
 
 ## Table of Contents
@@ -6,9 +6,10 @@ This document is an informal specification for Ark, a systems programming langua
 - [Guiding Principles](#guiding-principles)
 - [Comments](#comments)
 - [Modules](#modules)
+  - [Module Naming](#module-naming)
+  - [Using Modules](#using-modules)
 - [Primitive Types](#primitive-types)
 - [Precision Types](#precision-types)
-    - [`usize`](#usize)
 - [Variables](#variables)
 - [Type Inference](#type-inference)
 - [Type Casting](#type-casting)
@@ -20,9 +21,11 @@ This document is an informal specification for Ark, a systems programming langua
 - [Functions](#functions)
   - [Function Return Types](#function-return-types)
   - [Single-line Functions](#single-line-functions)
+  - [Exporting Functions](#exporting-functions)
+  - [Specifying Calling Conventions](#calling-conventions)
 - [Structures](#structures)
   - [Default structure values](#default-structure-values)
-- [Implementations & Methods](#implementations-&-methods)
+- [Implementations & Methods](#implementations-and-methods)
 - [Function Prototypes](#function-prototypes)
   - [Calling C Functions](#calling-c-functions)
 - [File Inclusion](#file-inclusion)
@@ -38,8 +41,9 @@ This document is an informal specification for Ark, a systems programming langua
 - [Option Types](#option-types)
 - [Enums](#enums)
 - [Arrays](#arrays)
-  - [Statically Initializing an array](#statically-initializing-an-array)
 - [Documentation comments](#documentation-comments)
+- [Attributes](#attributes)
+- [Traits](#traits)
 - [Generics](#generics)
 - [Macro System](#macro-system)
 
@@ -56,7 +60,7 @@ The design is motivated by the following:
 
 The language should be strong enough that it can be self-hosted.
 
-## Comments
+## <a id="comments"></a> Comments
 Single-line comments are denoted with two forward slashes:
 
 	// vident pls give me some bread
@@ -71,14 +75,14 @@ Both comment types have special variations for [documentation comments](#documen
 
 Comments cannot be nested.
 
-## Modules
+## <a id="modules"></a> Modules
 Ark treats every file as a module, where the name of the module is the name of the file. This means that there are a few guidelines that should be followed to make programming Ark easier for you. **Note that it is likely we will be changing to directory-based modules soon**, where all the .ark files in a directory make up a module.
 
-### Module Naming
+### <a id="module-naming"></a> Module Naming
 Modules should be in lower case, and preferably a single word. However, if you must have a module that
 is two words -- or more -- they should be separated with underscores. For instance, `module_name`.
 
-### Using Modules
+### <a id="using-modules"></a> Using Modules
 Say you have a module A and B, you want to use module B's children, you would `use` a module, which then
 means you can explicitly use a function from the B module. To access the children of the module, you would
 use the scope operator `::`. First you specify the module, so in our case `B`, followed by the scope operator `::`,
@@ -99,7 +103,7 @@ For instance:
         // do stuff here
     }
 
-## Primitive Types
+## <a id="primitive-types"></a> Primitive Types
 Ark provides various primitive types:
 
 |Type|Description|
@@ -111,7 +115,7 @@ Ark provides various primitive types:
 
 The `C` pseudo-module contains the additional types `int` and `uint` which correspond to the C `int` and `unsigned int` types.
 
-## Precision Types
+## <a id="precision-types"></a> Precision Types
 The precision types are there for when you want a data type to be a specific size. If you're writing portable code, we suggest that you use the primitive types, however the precision types are available for when you need them.
 Note: the C `char` type corresponds to the `i8` type.
 
@@ -131,7 +135,7 @@ Note: the C `char` type corresponds to the `i8` type.
 |u64|unsigned 64 bits|
 |u128|unsigned 128 bits|
 
-## Variables
+## <a id="variables"></a> Variables
 Unlike languages like C or C++, variables are immutable unless otherwise preceeded by the `mut` keyword. A variable can be defined like so:
 
 	name: type;
@@ -145,7 +149,7 @@ Variables whose type is to be inferred can be declared as follows:
     name := some_val;
 More about type inference is discussed below.
 
-## Type Inference
+## <a id="type-inference"></a> Type Inference
 The syntax for type inference is nearly identical to a typical variable declaration, all you have to do is omit the type, for instance:
 
 	my_type := 5;
@@ -181,7 +185,7 @@ We can also infer types in the following manners:
     b := ar[2]; // b is of type int
 
 
-## Type Casting
+## <a id="type-casting"></a> Type Casting
 In Ark, type casting can be done as follows:
 
     mut my_val: float = 1.3;
@@ -191,9 +195,9 @@ To do type casting, the type its being casted to must be added, followed by the 
 
     val: int = int(4.5); // val is now 4
 
-## Literals
+## <a id="literals"></a> Literals
 
-### Numeric Literals
+### <a id="numeric-literals"></a> Numeric Literals
 Integer literal:
 
 	1234
@@ -218,7 +222,7 @@ Floating-point literals contain a period. If a literal lacks a period, or you wa
 
 	12.34
 
-### Text Literals
+### <a id="text-literals"></a> Text Literals
 A string literal is enclosed with double-quotes:
 
     "Hello!"
@@ -245,7 +249,7 @@ The following escape sequences are available:
 |`\oNNN`|octal number|
 |`\xNN`|hex number|
 
-### Mutability
+### <a id="mutability"></a> Mutability
 When a variable is mutable, it can be mutated or changed. When a variable is immutable, it cannot be changed. By default, Ark assumes that a variable you've defined is immutable. You can however, specify the `mut` keyword before the declaration. This will inform the compiler that you intend to modify the variable later in the program.
 For instance:
 
@@ -258,7 +262,7 @@ We can also error it like so:
 
 Why? Because variables are treated as constants unless otherwise specified; therefore they must have a value assigned on definition.
 
-## Tuples
+## <a id="tuples"></a> Tuples
 A tuple is defined in a manner similar to a variable. However you specify the type and the values it contains within the pipe symbol (`|`). For instance:
 
 	mut my_tuple: |int, int|;
@@ -273,8 +277,9 @@ For instance:
 	// the int must come before the double in the values
 	mut another_type: |int, double| = |3.4, 10|;
 
-## Functions
-A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type.
+## <a id="functions"></a> Functions
+A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type. **Note
+that the default calling convention for function in Ark is fastcc!**
 
 An example of a function:
 
@@ -288,14 +293,14 @@ An example of a function:
 		result = x + y;
 	}
 
-### Function Return Types
+### <a id="function-return-types"></a> Function Return Types
 We can simplify this using a return type of `int`, for instance:
 
 	func add(x: int, y: int): mut int {
 		return x + y;
 	}
 
-### Single-line Functions
+### <a id="single-line-functions"></a> Single-line Functions
 If you have a function that consists of a single statement, it's suggested that you use the `->` operator instead of an entire block. Single line functions also take the last expression and return it, so you do not have to specify a return statement.
 
 	func add(a: int, b: int): int -> a + b;
@@ -304,14 +309,24 @@ You can still write normal functions that have no return type like so:
 
     func sayHello(name: str): void -> printf("Hello %s\n", name);
 
-### External Functions
-To allow external linkage to a function, you define the function as you would typically, however after the `func` keyword, you specify the function is external by writing the `ext` keyword:
+### <a id="exporting-functions"></a> Exporting Functions
+To allow external linkage to a function, you define the function as you would typically, however before the `func` keyword, you specify the function is external by writing the `export` modifier:
 
-    func ext do_stuff() {
+    export func do_stuff() {
         // do stuff here
     }
 
-## Structures
+### <a id="calling-conventions"></a> Specifying Calling Conventions
+You may also specify a calling convention **if you are exporting a function**. To do so you would use
+an attribute, specifically the "call_conv" attribute. In the attribute value, you would specify the calling
+convention:
+
+    [call_conv="fastccc"]
+    export func do_stuff() {
+
+    }
+
+## <a id="structures"></a> Structures
 A structure is a complex data type that defines a list of variables all grouped under one name in memory:
 
 	struct Cat {
@@ -348,7 +363,7 @@ A structure declaration can also be preceeded by the `packed` keyword. The `pack
 		weight: float
 	}
 
-### Default structure values
+### <a id="default-structure-values"></a> Default structure values
 A structure's members can also be assigned default values:
 
 	struct Cat {
@@ -370,7 +385,7 @@ will give us:
 
 	Terry is 12 years old
 
-## Implementations & Methods
+## <a id="implementations-and-methods"></a> Implementations & Methods
 An `impl` is an implementation of the given `struct`, or structure. An implementation contains methods zthat 'belong' to the structure, i.e you can call these methods through the given structure and the methods can manipulate their owners data. First we must have a struct that will be the owner of these methods:
 
 	struct Person {
@@ -401,6 +416,7 @@ To access the structure that the we're implementing, you use the `self` keyword.
 	}
 
 ## Function Prototypes
+**Why is this not under function?**
 A function prototype is similar to the syntax for a function declaration, however instead of using curly braces to start a new block, you end the statement with a semi-colon. A function prototype is a good way of defining all the functions you will be using in your program before actually implementing them. For example, a function prototype for a function `add` that takes two parameters (both integers), and returns an integer would be as follows:
 
 	func add(a: int, b: int): int;
@@ -425,49 +441,7 @@ Here's an example of printf in Ark:
 		return 0;
 	}
 
-## File Inclusion
-File inclusion is very simple in Ark. One of the problems with C is the tedious header files. To include a file, you must use the `use` macro<sup>disclaimer: not an actual macro yet, but it still works</sup>, which is the `use` keyword followed by the filename to include (minus the `aly` extension) in quotes. For example:
-
-	!use "myfile"
-
-We could write a really simple "math" library with some bindings to C's `<math.h>`:
-
-	// math.aly
-	func acos(mut x: double): mut double;
-	func asin(mut x: double): mut double;
-	func atan(mut x: double): mut double;
-	func atan2(mut y: double, mut x: double): mut double;
-	func cos(mut x: double): mut double;
-	func cosh(mut x: double): mut double;
-	func sin(mut x: double): mut double;
-	func sinh(mut x: double): mut double;
-	func tanh(mut x: double): mut double;
-	func exp(mut x: double): mut double;
-	func log(mut x: double): mut double;
-	func log10(mut x: double): mut double;
-	func pow(mut x: double, mut y: double): mut double;
-	func sqrt(mut x: double): mut double;
-	func ceil(mut x: double): mut double;
-	func floor(mut x: double): mut double;
-
-And we can use this library in a file:
-
-	// main.aly
-	!use "math" // note we don't use "math.aly", just "math"; makes it cleaner
-
-	func main(): int {
-		mut x: double = pow(5, 2);
-		printf("%f\n", x);
-		return 0;
-	}
-
-Note that you need to compile any files that you use, so the code sample above would be compiled as:
-
-	arkc math.aly main.aly
-
-The files must also be compiled in order. We plan to fix this soon.
-
-## Pointers
+## <a id="pointers"></a> Pointers
 The caret (`^`) is what we use to denote a pointer, i.e something that points to an address in memory. The ampersand (`&`) symbol is the **address of** operator. For instance:
 
 	x: int = 5;
@@ -481,7 +455,7 @@ In the above example, we create an integer `x` that stores the value `5` somewhe
 
 We've introduced a new variable `z`, that stored the value at the address `y`, in other words, the value of `x`.
 
-## Managing Memory
+## <a id="managing-memory"></a> Managing Memory
 Ark is not a garbage collected language, therefore when you allocate memory, you must free it after you are no longer using it. We felt that, as unsafe as it is to rely on the user to manage the memory being allocated, performance takes a higher precedence. Although garbage collection makes things fool-proof and removes a significant amount of workload from the user, it inhibits the performance we were going for.
 
 Memory is allocated, freed, and re-allocated using the standard library, specifically `mem`. You would import this into your code, and use the respective methods to manage your memory. The `mem` library contains three methods, namely "free", "alloc", "realloc", and "size_of".
@@ -501,15 +475,15 @@ Memory is allocated, freed, and re-allocated using the standard library, specifi
         Block::free(x);
     }
 
-## Flow Control
-### If Statements
+## <a id="flow-control"></a> Flow Control
+### <a id="if-statements"></a> If Statements
 If statements are denoted with the `if` keyword followed by a condition. Parenthesis around the expression/condition are optional:
 
 	if x == 1 {
 		....
 	}
 
-### Match Statements
+### <a id="match-statements"></a> Match Statements
 Match statements are very similar to C's `switch` statement. Note that by default, a match clause will break instead of continuing to other clauses. A match is denoted with the `match` keyword, followed by something to match and then a block:
 
 	match some_var {
@@ -527,24 +501,24 @@ Within the match statement are match clauses. Match clauses consist of an expres
 
 Each clause must end with a semi-colon, including blocks.
 
-### For Loops
+### <a id="for-loops"></a> For Loops
 For loops are a little more different in Ark. There are no while loops, or do-while loops.
 
-#### Infinite Loop
+#### <a id="infinite-loop"></a> Infinite Loop
 If you want to just loop till you break, you write a for loop with no condition, for instance:
 
 	for {
 		printf("loop....\n");
 	}
 
-#### Conditional Loop
+#### <a id="while-loop"></a> Conditional Loop
 If you want to loop while a condition is true, you do the same for loop, but with a condition after the `for` keyword:
 
 	for x {
 		printf("loop while x is true\n");
 	}
 
-#### Indexed For Loop
+#### <a id="indexed-for-loop"></a> Indexed For Loop
 Finally, if you want to iterate from A to B or vice versa, you write a for loop with two conditions - the first being the range and the second being the step. For instance:
 
 	for x < 10, x++ {
@@ -558,7 +532,7 @@ Also note that `x` is not defined in the for loop; it must be defined outside of
 		...
 	}
 
-## Option Types
+## <a id="option-types"></a> Option Types
 Option types represent an optional value- they can either be `Some` or `None`, i.e. they can either have a value, or not have a value -- they are often paired with a `match` statement. An option type is denoted with an open angular bracket, the type that is optional, and a closing angle bracket.
 
 	func example(a: ?int) {
@@ -588,7 +562,8 @@ Here's an example with an `Option` type as a function return type. These are esp
 		return 0;
 	}
 
-## Enums
+## <a id="enums"></a> Enums
+**TODO UPDATE FOR TAGGED UNIONS**
 An enumeration is denoted with the `enum` keyword, followed by a name and a block. The block contains the enum items, which are identifiers (typically uppercase) with an optional default value. Enum items must be terminated with a comma (excluding the final item in the enumerion). For example:
 
 	enum DogBreed {
@@ -605,7 +580,8 @@ To refer to the enum item, you need to specify the name of the enumeration, foll
 		}
 	}
 
-## Arrays
+## <a id="arrays"></a> Arrays
+**TODO DYNAMIC ARRAYS**
 An array is a collection of data that is the same type. They are defined as follows:
 
 	mut name_of_array: [size]type;
@@ -632,7 +608,7 @@ If you already know what data needs to be stored in the array, you can simply in
 
 Note that I did not specify a size in the block this time, and that there is also a semi-colon `;` at the end of the initializing block, this is because it's still a statement.
 
-## Documentation Comments
+## <a id="documentation-comments"></a> Documentation Comments
 Block comments and single-line comments both special syntax for documentation comments. They are `/** */` and `///` respectively.
 
 The following can be documented by having doc comments placed above them (*with no empty lines*):
@@ -644,7 +620,7 @@ The following can be documented by having doc comments placed above them (*with 
 
 Markdown is supported.
 
-## Attributes
+## <a id="attributes"></a> Attributes
 Attributes describe a unique quality that belongs to something, be it a function, structure,
 variable, trait, etc. Attributes are a guide to the compiler, they clarify something, or they
 tell the compiler what to do. Currently, there are only a few simple attributes. An attribute
@@ -668,10 +644,7 @@ If this function is called, the user will be warned that it is deprecated. You c
     func name(): int;
 }
 
-### Attributes
-TODO list of attributes supported
-
-## Traits
+## <a id="traits"></a> Traits
 Traits are a set of functions that can be inherited by a structure. Traits must be explicitly
 implemented for a given structure using the `impl` (implementation) we discussed earlier in this
 document.
@@ -743,11 +716,12 @@ use `T` in the next declaration:
         // yay it works!
     }
 
-## Generics [work in progress]
+## <a id="generics"></a> Generics
+**TODO**
 Generics is the idea of generalizing types to be more diverse, as opposed
 to constraining yourself to a specific type. Generics are great for making
 code concise and avoiding code duplication.
 
-## Macro System
+## <a id="macro-system"></a> Macro System
 We're still thinking about this, want to suggest an idea/have your say? Post an issue, or comment
 on an existing one (relevant to the topic) [here](https://github.com/ark-lang/ark/issues).
