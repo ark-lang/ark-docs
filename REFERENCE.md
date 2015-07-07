@@ -32,6 +32,8 @@ This document is an informal specification for Ark, a systems programming langua
 - [Pointers](#pointers)
 - [Managing Memory](#managing-memory)
 - [Flow Control](#flow-control)
+  - [Blocks](#blocks)
+  - [Deferred Statements](#deferred-statements)
   - [If Statements](#if-statements)
   - [Match Statements](#match-statements)
   - [For Loops](#for-loops)
@@ -73,7 +75,7 @@ Multi-line comments are denoted with a forward slash followed by an asterisks. T
 
 Both comment types have special variations for [documentation comments](#documentation-comments).
 
-Comments cannot be nested.
+Comments **cannot** be nested.
 
 ## <a id="modules"></a> Modules
 Ark treats every file as a module, where the name of the module is the name of the file. This means that there are a few guidelines that should be followed to make programming Ark easier for you. **Note that it is likely we will be changing to directory-based modules soon**, where all the .ark files in a directory make up a module.
@@ -103,6 +105,28 @@ For instance:
     func foo() {
         // do stuff here
     }
+
+##### IMPORT CYCLES!
+Note that when you `use` (import) a module, if you have modules that import each-other,
+you will end up in an import cycle. The compiler will detect these and throw an error,
+you will have to re-structure your code if this were to occur.
+
+    // Module A
+    use B;
+
+    code {}
+
+    // Module B
+    use C;
+
+    code {}
+
+    // Module C
+    use A;
+
+    code {}
+
+Note how each module `use`s each-other, so A uses B, which uses C, which uses A, etc...
 
 ## <a id="primitive-types"></a> Primitive Types
 Ark provides various primitive types:
