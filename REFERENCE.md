@@ -71,7 +71,7 @@ Multi-line comments are denoted with a forward slash followed by an asterisks. T
 
 	/*
 		vident pls give me some bread
-	 \*/
+	 */
 
 Both comment types have special variations for [documentation comments](#documentation-comments).
 
@@ -300,7 +300,7 @@ For instance:
 
 	// the following errors, note the order of the types/values.
 	// the int must come before the double in the values
-	mut another_type: (int, double() = (3.4, 10);
+	mut another_type: (int, double) = (3.4, 10);
 
 ## <a id="functions"></a> Functions
 A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type. **Note
@@ -526,10 +526,7 @@ Note that you need to compile any files that you use, so the code sample above w
 
 The files must also be compiled in order. We plan to fix this soon.
 
-## Pointers
-=======
 ## <a id="pointers"></a> Pointers
->>>>>>> a621c83fec3339e2bab07c7505576509c9b06900
 The caret (`^`) is what we use to denote a pointer, i.e something that points to an address in memory. The ampersand (`&`) symbol is the **address of** operator. For instance:
 
 	x: int = 5;
