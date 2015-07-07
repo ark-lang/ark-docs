@@ -214,7 +214,7 @@ Octal literal:
 
 	0o2322
 
-Floating-point literals contain a period. If a literal lacks a period, or you want to specify the precision, use the `f` suffix for 32 bits (`f32`) or the `d` suffix for 64 bits (`f64`):
+Floating-point literals contain a period. If a literal lacks a period, or you want to specify the precision, use the `f` suffix for 32 bits (`f32`), the `d` suffix for 64 bits (`f64`), or the `q` suffix for 128 bits (`f128`):
 
 	12.34
 
