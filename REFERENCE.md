@@ -72,8 +72,7 @@ Both comment types have special variations for [documentation comments](#documen
 Comments cannot be nested.
 
 ## Modules
-Ark treats every file as a module, where the name of the module is the name of the file. This means
-that there are a few guidelines that should be followed to make programming Ark easier for you.
+Ark treats every file as a module, where the name of the module is the name of the file. This means that there are a few guidelines that should be followed to make programming Ark easier for you. **Note that it is likely we will be changing to directory-based modules soon**, where all the .ark files in a directory make up a module.
 
 ### Module Naming
 Modules should be in lower case, and preferably a single word. However, if you must have a module that
@@ -105,12 +104,12 @@ Ark provides various primitive types:
 
 |Type|Description|
 |----|-----------|
-|int|at least 16 bits in size|
-|float|IEEE 754 single-precision binary floating-point|
-|double|IEEE 754 double-precision binary floating-point|
+|int|register-sized signed integer|
+|uint|register-sized unsigned integer|
 |bool|unsigned 8 bits|
-|uint|an unsigned integer at least 16 bits in size|
-|rune|signed 32 bits, used for holding a UTF-8 character (TODO)|
+|rune|signed 32 bits, used for holding a Unicode codepoint|
+
+The `C` pseudo-module contains the additional types `int` and `uint` which correspond to the C `int` and `unsigned int` types.
 
 ## Precision Types
 The precision types are there for when you want a data type to be a specific size. If you're writing portable code, we suggest that you use the primitive types, however the precision types are available for when you need them.
@@ -121,23 +120,16 @@ Note: the C `char` type corresponds to the `i8` type.
 |f32|IEEE 754 single-precision binary floating-point|
 |f64|IEEE 754 double-precision binary floating-point|
 |f128|IEEE 754 quadruple-precision binary floating-point|
-|i8|signed 8 bits|
-|i16|signed 16 bits|
-|i32|signed 32 bits|
-|i64|signed 64 bits|
-|i128|signed 128 bits|
+|s8|signed 8 bits|
+|s16|signed 16 bits|
+|s32|signed 32 bits|
+|s64|signed 64 bits|
+|s128|signed 128 bits|
 |u8|unsigned 8 bits|
 |u16|unsigned 16 bits|
 |u32|unsigned 32 bits|
 |u64|unsigned 64 bits|
 |u128|unsigned 128 bits|
-
-Warning: the `i128`, `u128` and `f128` types are only supported on the LLVM backend. On the C backend, they are simple aliases for their 64-bit equivelants.
-
-### `usize`
-The `usize` or unsigned size, it can not represent any negative values. It is used when you are counting something that cannot be negative, typically it is used for memory.
-
-	usize		// unsigned at least 16 bits
 
 ## Variables
 Unlike languages like C or C++, variables are immutable unless otherwise preceeded by the `mut` keyword. A variable can be defined like so:
@@ -415,7 +407,7 @@ A function prototype is similar to the syntax for a function declaration, howeve
 The function can then be implemented elsewhere in the program. While (in most cases) a trivial move, sometimes adding the function prototype at the start of the program before implementing it elsewhere is considered good practice.
 
 ### Calling C Functions
-You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function. 
+You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is called like any other function.
 
 We've also introduced a feature called "attributes", in order to call a c
 function, you would mark its prototype as a c binding using the attribute
@@ -490,7 +482,7 @@ In the above example, we create an integer `x` that stores the value `5` somewhe
 We've introduced a new variable `z`, that stored the value at the address `y`, in other words, the value of `x`.
 
 ## Managing Memory
-Ark is not a garbage collected language, therefore when you allocate memory, you must free it after you are no longer using it. We felt that, as unsafe as it is to rely on the user to manage the memory being allocated, performance takes a higher precedence. Although garbage collection makes things fool-proof and removes a significant amount of workload from the user, it inhibits the performance we were going for. 
+Ark is not a garbage collected language, therefore when you allocate memory, you must free it after you are no longer using it. We felt that, as unsafe as it is to rely on the user to manage the memory being allocated, performance takes a higher precedence. Although garbage collection makes things fool-proof and removes a significant amount of workload from the user, it inhibits the performance we were going for.
 
 Memory is allocated, freed, and re-allocated using the standard library, specifically `mem`. You would import this into your code, and use the respective methods to manage your memory. The `mem` library contains three methods, namely "free", "alloc", "realloc", and "size_of".
 
