@@ -459,7 +459,6 @@ To access the structure that the we're implementing, you use the `self` keyword.
 		p.say();
 	}
 
-<<<<<<< HEAD
 ## Function Prototypes
 A function prototype is similar to the syntax for a function declaration, however instead of using curly braces to start a new block, you end the statement with a semi-colon. A function prototype is a good way of defining all the functions you will be using in your program before actually implementing them. For example, a function prototype for a function `add` that takes two parameters (both integers), and returns an integer would be as follows:
 
