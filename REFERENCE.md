@@ -336,13 +336,8 @@ You can still write normal functions that have no return type like so:
     // same as
     func sayHello(name: str) -> C::printf("Hello %s\n", name);
 
-<<<<<<< HEAD
-### External Functions
-To allow external linkage to a function, you define the function as you would typically, however before the `func` keyword, you specify the function is exported by writing the `export` keyword:
-=======
 ### <a id="exporting-functions"></a> Exporting Functions
 To allow external linkage to a function, you define the function as you would typically, however before the `func` keyword, you specify the function is external by writing the `export` modifier:
->>>>>>> a621c83fec3339e2bab07c7505576509c9b06900
 
     export func do_stuff() {
         // do stuff here
