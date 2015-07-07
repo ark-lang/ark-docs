@@ -308,7 +308,9 @@ If you have a function that consists of a single statement, it's suggested that 
 
 You can still write normal functions that have no return type like so:
 
-    func sayHello(name: str): void -> printf("Hello %s\n", name);
+    func sayHello(name: str): void -> C::printf("Hello %s\n", name);
+    // same as
+    func sayHello(name: str) -> C::printf("Hello %s\n", name);
 
 ### <a id="exporting-functions"></a> Exporting Functions
 To allow external linkage to a function, you define the function as you would typically, however before the `func` keyword, you specify the function is external by writing the `export` modifier:
@@ -325,6 +327,23 @@ convention:
     [call_conv="fastccc"]
     export func do_stuff() {
 
+    }
+
+### <a id="calling-c-functions"></a> Calling C Functions
+You can bind a C function by simple declaring a function prototype, i.e. a function without a body and tag
+the function with the `c` attribute. This will tell the compiler that the function you have defined is a C
+function. When you specify this attribute, the compiler will store the function inside of a C module. This
+means that when you call a c-binded function, you must prefix the call with `C::` as you are accessing the
+function from the C module. Note that every module has its own private C module, in which all of the bindings
+specified are stored.
+
+    [c] func printf(fmt: str, ...): int;
+
+The above snippet will create a binding for the `printf` function, which can be called as follows:
+
+    func main(): int {
+        C::printf("hello world %d!\n", 5);
+        return 0;
     }
 
 ## <a id="structures"></a> Structures
@@ -356,14 +375,6 @@ Note how the structure declared is mutable. This is because we aren't declaring 
 
 The struct initializer is a statement, therefore it must be terminated with a semi-colon. Note that the values in the struct initializer do not have to be in order, but we suggest you do to keep things consistent.
 
-A structure declaration can also be preceeded by the `packed` keyword. The `packed` keyword prevents aligning of structure members according to the platform the user is on, i.e. 32-bit or 64-bit. A good article going over padding and data structure alignment can be found on [this Wikipedia page and can be a good resource for the curious.](http://en.wikipedia.org/wiki/Data_structure_alignment). A packed structure can be declared like so:
-
-    packed struct Cat {
-	    name: str,
-		age: int,
-		weight: float
-	}
-
 ### <a id="default-structure-values"></a> Default structure values
 A structure's members can also be assigned default values:
 
@@ -380,7 +391,7 @@ In this example, upon creation of an instance of the `Cat` structure, the value 
 
 Therefore running
 
-	printf("%s is %d years old\n", cat.name, cat.age);
+	C::printf("%s is %d years old\n", cat.name, cat.age);
 
 will give us:
 
@@ -451,6 +462,29 @@ Memory is allocated, freed, and re-allocated using the standard library, specifi
     }
 
 ## <a id="flow-control"></a> Flow Control
+### <a id="deferred-statements"></a> Deferred Statements
+Deferred statements occurr in lexical scoping, in other words, a deferred statement is
+"set back" till the scope in which the deferred statement was declared is popped. They are
+executed in first in last out order, and arguments are evaluated _at_ the defer statement.
+
+    [c] func printf(fmt: str, ...): int;
+
+    func println(mess: str) {
+        C::printf("%s\n", mess);
+    }
+
+    func main(): int {
+        defer println("printed last");
+        defer println("printed second-to-last");
+
+        if true {
+            defer println("printed second");
+            defer println("printed first");
+        }
+
+        return 0;
+    }
+
 ### <a id="if-statements"></a> If Statements
 If statements are denoted with the `if` keyword followed by a condition. Parenthesis around the expression/condition are optional:
 
@@ -465,11 +499,12 @@ Match statements are very similar to C's `switch` statement. Note that by defaul
 		...
 	}
 
-Within the match statement are match clauses. Match clauses consist of an expression, followed by a single statement operator `->`, or a block if you want to do multiple statements:
+Within the match statement are match clauses. Match clauses consist of an expression, followed by a single statement operator `->`, 
+or an arrow **and** a block if you want to do multiple statements:
 
 	match x {
 		0 -> ...;
-		1 {
+		1 -> {
 			...
 		};
 	}
@@ -483,14 +518,14 @@ For loops are a little more different in Ark. There are no while loops, or do-wh
 If you want to just loop till you break, you write a for loop with no condition, for instance:
 
 	for {
-		printf("loop....\n");
+		C::printf("loop....\n");
 	}
 
 #### <a id="while-loop"></a> Conditional Loop
 If you want to loop while a condition is true, you do the same for loop, but with a condition after the `for` keyword:
 
 	for x {
-		printf("loop while x is true\n");
+		C::printf("loop while x is true\n");
 	}
 
 #### <a id="indexed-for-loop"></a> Indexed For Loop
@@ -512,8 +547,8 @@ Option types represent an optional value- they can either be `Some` or `None`, i
 
 	func example(a: ?int) {
 		match a {
-			Some -> printf("wow!\n");
-			None -> printf("Damn\n");
+			Some -> C::printf("wow!\n");
+			None -> C::printf("Damn\n");
 		}
 	}
 
@@ -531,8 +566,8 @@ Here's an example with an `Option` type as a function return type. These are esp
 		file_contents: str = read_file(file_name, ...);
 
 		match file_contents {
-			Some -> printf("file %s contains:\n %s", file_name, file_contents),
-			None -> printf("failed to read file!"),
+			Some -> C::printf("file %s contains:\n %s", file_name, file_contents),
+			None -> C::printf("failed to read file!"),
 		}
 		return 0;
 	}
