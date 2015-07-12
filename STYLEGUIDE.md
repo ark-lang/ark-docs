@@ -1,4 +1,4 @@
-## Style Guide
+# Style Guide
 This is the official documentation for the Style Guide we recommend when writing
 Ark code. Note that this is a guide, and not a set of rules; you can write 
 your code however you want, but this is what we suggest for keeping it easy to

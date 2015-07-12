@@ -1,4 +1,4 @@
-## Ark Reference
+# Ark Reference
 This document is an informal specification for Ark, a systems programming language.
 
 ## Table of Contents
