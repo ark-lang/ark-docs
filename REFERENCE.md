@@ -71,7 +71,7 @@ Multi-line comments are denoted with a forward slash followed by an asterisks. T
 
 	/*
 		vident pls give me some bread
-	 \*/
+	 */
 
 Both comment types have special variations for [documentation comments](#documentation-comments).
 
@@ -288,23 +288,23 @@ We can also error it like so:
 Why? Because variables are treated as constants unless otherwise specified; therefore they must have a value assigned on definition.
 
 ## <a id="tuples"></a> Tuples
-A tuple is defined in a manner similar to a variable. However you specify the type and the values it contains within the pipe symbol (`|`). For instance:
+A tuple is defined in a manner similar to a variable. However you specify the type and the values it contains within parentheses. For instance:
 
-	mut my_tuple: |int, int|;
+	mut my_tuple: (int, int);
 
-To initialize the tuple with values, we use a similar notation to the tuples signature, and we wrap the values in pipes. The order should be the same as the order used in signifying the types in the signature.
+To initialize the tuple with values, we use a similar notation to the tuples signature, and we wrap the values in parentheses. The order should be the same as the order used in signifying the types in the signature.
 For instance:
 
 	// this is valid
-	mut my_type: |int, double| = |10, 3.4|;
+	mut my_type: (int, double) = (10, 3.4);
 
 	// the following errors, note the order of the types/values.
 	// the int must come before the double in the values
-	mut another_type: |int, double| = |3.4, 10|;
+	mut another_type: (int, double) = (3.4, 10);
 
 ## <a id="functions"></a> Functions
-A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type. **Note
-that the default calling convention for function in Ark is fastcc!**
+A function defines a sequence of statements and an optional return value, along with a name, and a set of parameters. Functions are declared with the keyword `func`, followed by a name to identify the function, and then a list of parameters. Finally, an optional colon `:` followed by a return type, e.g. a struct, data type or `void` can be added. Note that if you do not specify a colon and a return type, it is assumed that the function returns the `void` type. Note
+that the default calling convention for functions in Ark is fastcc!
 
 An example of a function:
 
@@ -321,7 +321,7 @@ An example of a function:
 ### <a id="function-return-types"></a> Function Return Types
 We can simplify this using a return type of `int`, for instance:
 
-	func add(x: int, y: int): mut int {
+	func add(x: int, y: int): int {
 		return x + y;
 	}
 
@@ -399,6 +399,14 @@ Note how the structure declared is mutable. This is because we aren't declaring 
 
 The struct initializer is a statement, therefore it must be terminated with a semi-colon. Note that the values in the struct initializer do not have to be in order, but we suggest you do to keep things consistent.
 
+A structure declaration can also be preceeded by the `packed` keyword. The `packed` keyword prevents aligning of structure members according to the platform the user is on, i.e. 32-bit or 64-bit. A good article going over padding and data structure alignment can be found on [this Wikipedia page and can be a good resource for the curious.](http://en.wikipedia.org/wiki/Data_structure_alignment). A packed structure can be declared like so:
+
+    [packed] struct Cat {
+	    name: str,
+		age: int,
+		weight: float
+	}
+
 ### <a id="default-structure-values"></a> Default structure values
 A structure's members can also be assigned default values:
 
@@ -451,16 +459,83 @@ To access the structure that the we're implementing, you use the `self` keyword.
 		p.say();
 	}
 
+## Function Prototypes
+A function prototype is similar to the syntax for a function declaration, however instead of using curly braces to start a new block, you end the statement with a semi-colon. A function prototype is a good way of defining all the functions you will be using in your program before actually implementing them. For example, a function prototype for a function `add` that takes two parameters (both integers), and returns an integer would be as follows:
+
+	func add(a: int, b: int): int;
+The function can then be implemented elsewhere in the program. While (in most cases) a trivial move, sometimes adding the function prototype at the start of the program before implementing it elsewhere is considered good practice.
+
+### Calling C Functions
+You can use the function prototypes showcased above to call c functions. Say we wanted to use the `printf` function in `stdio`, we create a prototype for it. Note that the printf is a variadic function, i.e. it can take an unspecified amount of arguments. This is denoted with an ellipses in Ark. Note that this is mostly for backwards compatibility with C code, and we don't suggest you use it in your code generally. Once you've created the prototype, it is accessible from the pseudo-module `C`.
+
+We've also introduced a feature called "attributes", in order to call a c
+function, you would mark its prototype as a c binding using the attribute
+system.
+
+Here's an example of printf in Ark:
+
+	// main.aly
+	[c] // this specifies the function is a c binding
+    func printf(format: str, ...): int;
+
+	// usage
+	func main(): int {
+		C::printf("this is a test\n");
+		return 0;
+	}
+
+## File Inclusion
+File inclusion is very simple in Ark. One of the problems with C is the tedious header files. To include a file, you must use the `use` macro<sup>disclaimer: not an actual macro yet, but it still works</sup>, which is the `use` keyword followed by the filename to include (minus the `aly` extension) in quotes. For example:
+
+	!use "myfile"
+
+We could write a really simple "math" library with some bindings to C's `<math.h>`:
+
+	// math.aly
+	func acos(mut x: double): mut double;
+	func asin(mut x: double): mut double;
+	func atan(mut x: double): mut double;
+	func atan2(mut y: double, mut x: double): mut double;
+	func cos(mut x: double): mut double;
+	func cosh(mut x: double): mut double;
+	func sin(mut x: double): mut double;
+	func sinh(mut x: double): mut double;
+	func tanh(mut x: double): mut double;
+	func exp(mut x: double): mut double;
+	func log(mut x: double): mut double;
+	func log10(mut x: double): mut double;
+	func pow(mut x: double, mut y: double): mut double;
+	func sqrt(mut x: double): mut double;
+	func ceil(mut x: double): mut double;
+	func floor(mut x: double): mut double;
+
+And we can use this library in a file:
+
+	// main.aly
+	!use "math" // note we don't use "math.aly", just "math"; makes it cleaner
+
+	func main(): int {
+		mut x: double = pow(5, 2);
+		printf("%f\n", x);
+		return 0;
+	}
+
+Note that you need to compile any files that you use, so the code sample above would be compiled as:
+
+	arkc math.aly main.aly
+
+The files must also be compiled in order. We plan to fix this soon.
+
 ## <a id="pointers"></a> Pointers
 The caret (`^`) is what we use to denote a pointer, i.e something that points to an address in memory. The ampersand (`&`) symbol is the **address of** operator. For instance:
 
 	x: int = 5;
-	y: ^int = &x;
+	y: ^int = \&x;
 
 In the above example, we create an integer `x` that stores the value `5` somewhere in memory. The variable `y` is pointing to the address of `x`. Printing out the value of `y` will give you random gibberish denoting the memory chunk in which `x` is located. This is because it just stores the address to `x`. Now if we want to access the value at the address of x, we must *dereference* the pointer that points to it. This is again done with the caret (`^`), for example:
 
 	x: int = 5;     // 5
-	y: ^int = &x;   // 0xDEADBEEF       (somewhat arbitrary address)
+	y: ^int = \&x;   // 0xDEADBEEF       (somewhat arbitrary address)
 	z: int = ^y;    // 5                (get the value at our address 0xDEADBEEF)
 
 We've introduced a new variable `z`, that stored the value at the address `y`, in other words, the value of `x`.
@@ -476,13 +551,13 @@ Memory is allocated, freed, and re-allocated using the standard library, specifi
     func main() {
         // allocate a block of memory that can store
         // 32 integers.
-        x: ^int = Block::alloc(Block::size_of(int) * 32);
+        x: ^int = mem::alloc(sizeof(int) * 32);
 
         // realloc
-        x = Block::realloc(x, Block::size_of(int) * 64);
+        x = mem::realloc(x, sizeof(int) * 64);
 
         // free the memory we allocated
-        Block::free(x);
+        mem::free(x);
     }
 
 ## <a id="flow-control"></a> Flow Control
@@ -537,7 +612,7 @@ Match statements are very similar to C's `switch` statement. Note that by defaul
 		...
 	}
 
-Within the match statement are match clauses. Match clauses consist of an expression, followed by a single statement operator `->`, 
+Within the match statement are match clauses. Match clauses consist of an expression, followed by a single statement operator `->`,
 or an arrow **and** a block if you want to do multiple statements:
 
 	match x {
@@ -654,12 +729,12 @@ If you already know what data needs to be stored in the array, you can simply in
 		0, 1, 2, 3, 4
 	];
 
-Note that I did not specify a size in the block this time, and that there is also a semi-colon `;` at the end of the initializing block, this is because it's still a statement.
+Note that I did not specify a size in the block this time.
 
 ## <a id="documentation-comments"></a> Documentation Comments
 Block comments and single-line comments both special syntax for documentation comments. They are `/** */` and `///` respectively.
 
-The following can be documented by having doc comments placed above them (*with no empty lines*):
+The following can be documented by having doc comments placed above them (*with no empty lines between the doc comment and declaration*):
 
 * public function/method declarations
 * public variable/constant declarations
