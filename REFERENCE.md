@@ -562,18 +562,13 @@ Memory is allocated, freed, and re-allocated using the standard library, specifi
 
 ## <a id="flow-control"></a> Flow Control
 ### <a id="blocks"></a> Blocks
-There are two kinds of blocks, `do` blocks, and a typical block. The difference between
-the two is scope. The first kind of block, a `do` block introduces no scope, whereas
-a normal block **does** introduce scope. They are almost syntactically identical, however
-a `do` block has the keyword `do` before the curly braces:
+You can use a `do` statement to introduce a nested block.
 
-    do {
-        // no scope!
-    }
-
-    {
-        // scope!
-    }
+```
+do {
+    println("This is always run.").
+}
+```
 
 ### <a id="deferred-statements"></a> Deferred Statements
 Deferred statements occurr in lexical scoping, in other words, a deferred statement is
