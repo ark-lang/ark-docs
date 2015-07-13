@@ -566,7 +566,7 @@ You can use a `do` statement to introduce a nested block.
 
 ```
 do {
-    println("This is always run.").
+    println("This is always run.");
 }
 ```
 
