@@ -50,7 +50,7 @@ This document is an informal specification for Ark, a systems programming langua
 - [Macro System](#macro-system)
 
 ## <a id="guiding-principles"></a> Guiding Principles
-Ark is a systems programming language, intended as an alternative to C. It's main purpose is to modernize C, without deviating from C's original goal of simplicity. The official Ark compiler is written in Go, with the main code backend being LLVM.
+Ark is a systems programming language, intended as an alternative to C. Its main purpose is to modernize C, without deviating from C's original goal of simplicity. The official Ark compiler is written in Go, with the main code backend being LLVM.
 
 The design is motivated by the following:
 
