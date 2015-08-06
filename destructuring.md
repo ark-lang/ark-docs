@@ -14,7 +14,6 @@ match pair {
 ```
 
 ## De-structuring Tagged Unions
-
 Given the following enum:
 
 ```
