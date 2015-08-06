@@ -1,2 +1,16 @@
-This is the reference for the Ark programming language. Note that a lot of the
-content in this book may not entirely reflect the repositories current state.
+This is the official reference for the Ark programing language. Note that this
+document is not final and could change at any point, as could the compiler
+itself, which means that the reference could become out-dated. We usually try
+to avoid changes that break a lot of compatibility, or involve a lot of
+refactoring in the code, or updates to the reference. However, considering the
+stage of the compiler, it's inevitable that things will break.
+
+This file serves as a reference to the language, and not as an introduction. If
+you are familiar with other languages like C, Rust, C++, Go, ... then most of
+this document should be relatively easy to use as a cheat sheet. 
+
+However, if you are a new programmer, this will probably be quite tricky to 
+use as an introduction to the language (and programming in general). This is
+because it is a reference for the language, and is more of an aid to the
+developers working on it, and as a birdseye view for people interested
+in Ark.
