@@ -6,12 +6,14 @@ When allocating memory, the variable that is associated with it has ownership
 of it. When this variable goes out of scope, the aforementioned memory that it 
 points to is de-allocated. Take the following example:
 
-    {
-        x: ^int = mem::malloc(mem::size_of(^x));
-        // x now holds a pointer to the allocated memory
+```
+{
+    x: ^int = mem::malloc(mem::size_of(^x));
+    // x now holds a pointer to the allocated memory
 
-        // the memory that x points to is de-alloacted here
-    }
+    // the memory that x points to is de-alloacted here
+}
+```
 
 In the example above, when `x` comes into scope, memory is allocated on the 
 heap and the address is stored in `x`. When this variable goes out of scope,
