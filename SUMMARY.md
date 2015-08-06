@@ -51,5 +51,6 @@
            * [Underscore](underscore.md)
            * Destructuring
                * [Destructuring Tuples](destructuring_tuples.md)
-               * [Destructuring Tagged Unions](/destructuring_tagged_unions.md)
+               * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
+           * Binding Values
 
