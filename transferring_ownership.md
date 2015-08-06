@@ -36,12 +36,14 @@ is restored.
 To restore ownership from `y` to `x`, we just do the reverse, that is, we
 move `y` to `x` like so:
 
-    {
-        mut x: ^int = mem::malloc(mem::size_of(^x));
-        y: ^int = x;
-        x = y; // give back the ownership
-        C::printf("the value at at x is %d\n", ^x); // This works fine! :)
-    }
+```
+{
+    mut x: ^int = mem::malloc(mem::size_of(^x));
+    y: ^int = x;
+    x = y; // give back the ownership
+    C::printf("the value at at x is %d\n", ^x); // This works fine! :)
+}
+```
 
 However, note the one slight change: I made `x` a mutable variable. This is to
 avoid an error when we re-assign `x` later on to be `y`, as otherwise it wouldn't
