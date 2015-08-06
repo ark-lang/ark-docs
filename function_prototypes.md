@@ -1,6 +1,6 @@
 Function prototypes are similar to a function, however they don't specify what
 instructions the function will perform. These are most commonly used to bind
-C functions. The syntax is very similar, however, instead of specifying a block
+C functions. The syntax is similar, however, instead of specifying a block
 with curly braces, you terminate the function signature with a semi-colon `;`.
 
 ```
