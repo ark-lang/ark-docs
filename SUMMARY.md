@@ -1,5 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Variables](/variables.md)
+* [Variables](variables.md)
+* /Types
 
