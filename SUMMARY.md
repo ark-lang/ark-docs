@@ -38,5 +38,5 @@
    * [If Statements](if_statements.md)
        * [Else If](else_if.md)
        * [Else](else.md)
-   * For Loops
+   * [For Loops](/for_loops.md)
 
