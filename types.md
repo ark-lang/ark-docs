@@ -17,7 +17,7 @@ portability.
 
 The `C` pseudo-module contains the additional types `int` and `uint` which
 correspond to the C `int` and `unsigned int` types. These are accessed as
-`C::int` and `C::uint` respectively. More on modules later.
+`C::int` and `C::uint` respectively.
 
 ## Precision Types
 
