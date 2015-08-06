@@ -54,5 +54,6 @@
                * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
            * [Binding Values](binding_values.md)
 * Attributes
-* [Generics](/generics.md)
+* [Generics](generics.md)
+   * Multiple Type Parameters
 
