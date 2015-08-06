@@ -1,3 +1,5 @@
+# Variable Declarations
+
 A variable is a binding of an expression to a pattern, a variable can either be
 _mutable_ or _immutable_. Ark treats mutability differently than other
 languages, variables are immutable by default, i.e. they are constant and
