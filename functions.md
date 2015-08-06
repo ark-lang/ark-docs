@@ -50,6 +50,9 @@ func add(a, b) { // ERROR!
 ```
 
 ## Function Return Types
+
+
+## Function Prototypes
 Function prototypes are similar to a function, however they don't specify what
 instructions the function will perform. These are most commonly used to bind
 C functions. The syntax is similar, yet, instead of specifying a block
@@ -60,8 +63,7 @@ with curly braces, you terminate the function signature with a semi-colon `;`.
 func function_prototype() -> int;
 func function_prototype_returns_nothing();
 ```
-
-## Function Prototypes
+## Anonymous Functions
 
 Functions do not have to specify a name; these are anonymous functions, i.e.
 they are not bound to a name:
