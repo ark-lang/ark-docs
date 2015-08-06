@@ -11,5 +11,5 @@
    * [Option Types](option_types.md)
    * [Named Types](named_types.md)
        * Defining Custom Types
-           * Custom Structures
+           * [Custom Structures](/custom_structures.md)
 
