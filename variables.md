@@ -15,7 +15,7 @@ they **must** have an assignment.
 
 Mutability can be toggled with the `mut` keyword, this must be before the
 variable declaration. If a variable is mutable, it does **not** need an initial
-expression to be assigned to it.
+expression to be assigned to it:
 
     // constant variable, must have an initial value
     x: int = 5; // [ "mut" ] Iden ":" Type [ "=" Expr ];
