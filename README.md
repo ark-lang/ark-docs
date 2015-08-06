@@ -9,7 +9,7 @@ This file serves as a reference to the language, and not as an introduction. If
 you are familiar with other languages like C, Rust, C++, Go, ... then most of
 this document should be easy to use as a cheat sheet. 
 
-However, if you are a new programmer, this will probably be tricky to 
+If you are a new programmer, this will probably be tricky to 
 use as an introduction to the language (and programming in general). This is
 because it is a reference for the language, and is more of an aid to the
 developers working on it, and as a birds-eye view for people interested
