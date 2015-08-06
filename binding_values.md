@@ -6,7 +6,7 @@ beforehand:
 func age() -> s32 => return 17;
 
 match age() {
-    age @ 17 -> println("felix's age is %d", age);
-    age -> println("vedant's age is ", age);
+    age @ 17 => println("felix's age is %d", age);
+    age => println("vedant's age is ", age);
 }
 ```
