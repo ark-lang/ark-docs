@@ -1,6 +1,6 @@
 An enum in Ark is what some may refer to as a tagged union, this allows for
 multiple variants: with no data, with named (tagged) data,
-and variants with un-named data (anonymous data).
+and variants with unnamed data (anonymous data).
 
 An enum is denoted with the `enum` keyword, followed by a brace, which contains
 the variants that define the enum.
