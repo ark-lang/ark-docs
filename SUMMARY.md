@@ -16,5 +16,6 @@
            * [Binding Types](binding_types.md)
 * [Functions](functions.md)
    * [Function Signatures](function_signatures.md)
-   * [Function Return Types](/function_return_types.md)
+   * [Function Return Types](function_return_types.md)
+   * Function Prototypes
 
