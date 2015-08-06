@@ -23,7 +23,7 @@
 * Control Flow
    * [If Statements](if_statements.md)
    * [For Loops](for_loops.md)
-   * Destructuring
+   * [Destructuring](/destructuring.md)
        * [Destructuring Tuples](destructuring_tuples.md)
        * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
    * Pattern Matching
