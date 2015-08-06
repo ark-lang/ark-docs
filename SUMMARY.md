@@ -23,7 +23,6 @@
 * Control Flow
    * [If Statements](if_statements.md)
    * [For Loops](for_loops.md)
-       * [Indexed For Loop](indexed_for_loop.md)
        * Ranges
    * Pattern Matching
        * [Match](match.md)
