@@ -1,5 +1,5 @@
 An else if is denoted with an `else` keyword, followed by another if block,
-these can be daisychained.
+these can be daisy chained.
 
 ```
 if x == 5 {
