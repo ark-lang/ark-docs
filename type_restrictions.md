@@ -24,5 +24,5 @@ type HashMapWithIteratorKeysForSomeReason<Key: Hash & Iterator, Value> struct {
 ```
 
 This means that `Key` has to both interfaces, `Hash` **and** `Iterator`. 
-Again, the only limit to how many restrictions you can use is your 
+Again, the limit to the amount of restrictions you can use is your 
 imagination. And common sense.
