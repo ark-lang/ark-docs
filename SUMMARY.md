@@ -43,5 +43,6 @@
        * [Conditional For Loop](conditional_for_loop.md)
        * [Indexed For Loop](indexed_for_loop.md)
    * Pattern Matching
-       * [Match](/match.md)
+       * [Match](match.md)
+       * Patterns
 
