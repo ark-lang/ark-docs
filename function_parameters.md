@@ -1,11 +1,13 @@
 Parameters can be passed to function, they must be specified in the functions
 signature. 
 
-    // Parameter = Iden ":" Type
-    // ParameterList = { Parameter "," }
-    func print_value(a: int) {
-        // do stuff with a
-    }
+```
+// Parameter = Iden ":" Type
+// ParameterList = { Parameter "," }
+func print_value(a: int) {
+    // do stuff with a
+}
+```
 
 As you can see, the syntax is very similar to a variable. A parameter has a
 name, followed by a colon `:`, and a type. However, there are a few key
