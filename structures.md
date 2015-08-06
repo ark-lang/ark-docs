@@ -47,7 +47,7 @@ v.y = 32;
 
 Since a `type` is a statement, it must be terminated with a semi-colon.
 
-## Default Structure Values
+## Using Default Structure Values
 In order to use any default values specified in a structure, you must initialize
 a structure using the default statement:
 
