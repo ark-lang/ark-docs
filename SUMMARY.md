@@ -9,5 +9,6 @@
    * [Tuples](tuples.md)
    * [Enums](enums.md)
    * [Option Types](option_types.md)
-   * [Named Types](/named_types.md)
+   * [Named Types](named_types.md)
+       * Defining Custom Types
 
