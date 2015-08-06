@@ -6,10 +6,6 @@ contains the types that the structure made up of. Note that an anonymous
 semi-colon. In the example below, we end it the statement with a
 semi-colon, not the type (even though it may look like we do). 
 
-You can specify default values for structure values, these are used as a
-fall-back in case the initial value is not specified when an instance of the 
-structure is created.
-
 ```
 // anonymous structure
 struct {
