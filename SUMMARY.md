@@ -26,7 +26,6 @@
    * Pattern Matching
        * [Match](match.md)
        * [Patterns](patterns.md)
-           * [Underscore](underscore.md)
            * Destructuring
                * [Destructuring Tuples](destructuring_tuples.md)
                * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
