@@ -31,11 +31,13 @@ mut x := 5;
 Remember that because something is mutable, it can later be re-assigned to
 another value:
 
-    mut x: int = 5;
-    x = 10;
+```
+mut x: int = 5;
+x = 10;
 
-    y: int = 10;
-    y = 20; // ERROR!
+y: int = 10;
+y = 20; // ERROR!
+```
 
 In the second example above, it causes a compile-time error because we are
 trying to re-assign an immutable variable.
