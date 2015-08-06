@@ -3,7 +3,7 @@ can bind it in the arm instead of re-evaluating the expression or binding it
 beforehand:
 
 ```
-func age() -> s32 => 17;
+func age() -> s32 => return 17;
 
 match age() {
     age @ 17 -> println("felix's age is %d", age);
