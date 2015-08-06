@@ -8,20 +8,24 @@ You can specify default values for structure values, these are used as a
 fall-back in case the initial value is not specified when an instance of the 
 structure is created.
 
-    // anonymous structure
-    struct {
-        d: int,
-        g: int,
-    }
+```
+// anonymous structure
+struct {
+    d: int,
+    g: int,
+}
 
-    // bind structure to variable
-    mut x: struct {
-        a: int = 2,
-        b: int,
-    };
+// bind structure to variable
+mut x: struct {
+    a: int = 2,
+    b: int,
+};
+```
 
 To access values in a structure, simply write the structures name, followed by
 the dot operator, and the members name to acces.
 
-    x.a = 100;
-    x.b = 100;
+```
+x.a = 100;
+x.b = 100;
+```
