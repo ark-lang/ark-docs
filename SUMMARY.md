@@ -29,5 +29,5 @@
 * [Slices](slices.md)
 * [Modules](modules.md)
 * [Ownership](ownership.md)
-   * Transferring Ownership
+   * [Transferring Ownership](/transferring_ownership.md)
 
