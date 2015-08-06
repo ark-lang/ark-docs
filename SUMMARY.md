@@ -6,5 +6,6 @@
    * [General Purpose Types](general_purpose_types.md)
    * [Precision Types](precision_types.md)
    * [Structures](structures.md)
-   * [Tuples](/tuples.md)
+   * [Tuples](tuples.md)
+   * Enums
 
