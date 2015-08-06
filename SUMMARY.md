@@ -24,5 +24,6 @@
 * [Pointers](pointers.md)
    * [Pointing to Raw Memory](pointing_to_raw_memory.md)
    * [Referencing Memory](referencing_memory.md)
-   * [Dereferencing Pointers](/dereferencing_pointers.md)
+   * [Dereferencing Pointers](dereferencing_pointers.md)
+* Arrays
 
