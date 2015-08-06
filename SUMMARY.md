@@ -14,7 +14,7 @@
            * [Custom Structures](custom_structures.md)
            * [Tagged Unions](tagged_unions.md)
            * [Binding Types](binding_types.md)
-   * Type Casting
+   * [Type Casting](/type_casting.md)
 * [Functions](functions.md)
    * [Function Signatures](function_signatures.md)
    * [Function Return Types](function_return_types.md)
