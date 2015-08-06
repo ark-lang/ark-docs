@@ -23,5 +23,6 @@
    * [Function Parameters](function_parameters.md)
 * [Pointers](pointers.md)
    * [Pointing to Raw Memory](pointing_to_raw_memory.md)
-   * [Referencing Memory](\referencing_memory.md)
+   * [Referencing Memory](referencing_memory.md)
+   * Dereferencing Pointers
 
