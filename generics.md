@@ -1,3 +1,5 @@
+# Generics
+
 Generics provide a method for creating functions and composite types that work 
 across a wide range (read: all other) of types.
 
