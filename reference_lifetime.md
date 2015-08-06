@@ -1,3 +1,5 @@
+# Reference Lifetime
+
 In the examples shown above, where references were used, they were
 typically introduced in their own scope. So if we didn't introduce
 a scope, we would have a collision:
