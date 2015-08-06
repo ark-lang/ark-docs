@@ -3,7 +3,7 @@
 Match is a control structure that takes an expression and will branch based
 on its value. A match is denoted with the `match` keyword, followed by the
 expression, and a block of conditions to check, or "arms". An arm is of the
-form `val -> expr`, and must be terminated with a semi-colon. 
+form `val => expr`, and must be terminated with a semi-colon. 
 When the value matches the given expression, that arms expression will be 
 evaluated. Note that you can either have a single expression, or you can 
 insert a block and have a group of them:
