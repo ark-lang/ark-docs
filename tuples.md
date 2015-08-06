@@ -8,6 +8,8 @@ similar, however it contains a list of expressions instead of types. Note that
 the expression should correspond with the type, i.e. they should be ordered
 correctly:
 
-    a: (int, f64) = (1, 2.3);
-    b: (int, f64) = (2.3, 1); // ERROR!
-    c: (int, f64, f64, f64, int) = (1, 2.3, 3.2, 4.1, 6);
+```
+a: (int, f64) = (1, 2.3);
+b: (int, f64) = (2.3, 1); // ERROR!
+c: (int, f64, f64, f64, int) = (1, 2.3, 3.2, 4.1, 6);
+```
