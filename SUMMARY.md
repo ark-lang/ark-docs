@@ -10,10 +10,6 @@
    * [Enums](enums.md)
    * [Option Types](option_types.md)
    * [Named Types](named_types.md)
-       * Defining Custom Types
-           * [Custom Structures](custom_structures.md)
-           * [Tagged Unions](tagged_unions.md)
-           * [Binding Types](binding_types.md)
    * [Type Casting](type_casting.md)
 * [Functions](functions.md)
    * [Function Signatures](function_signatures.md)
@@ -57,5 +53,5 @@
 * [Generics](generics.md)
    * [Multiple Type Parameters](multiple_type_parameters.md)
    * [Methods on Generic Types](methods_on_generic_types.md)
-   * [Type Restrictions](/type_restrictions.md)
+   * [Type Restrictions](type_restrictions.md)
 
