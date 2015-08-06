@@ -25,8 +25,8 @@
    * [For Loops](for_loops.md)
    * [Destructuring](destructuring.md)
    * Pattern Matching
-       * [Patterns](patterns.md)
        * [Match](match.md)
+       * [Patterns](patterns.md)
 * Attributes
 * [Generics](generics.md)
    * [Multiple Type Parameters](multiple_type_parameters.md)
