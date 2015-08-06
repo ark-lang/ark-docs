@@ -12,5 +12,6 @@
    * [Named Types](named_types.md)
        * Defining Custom Types
            * [Custom Structures](custom_structures.md)
-           * [Tagged Unions](/tagged_unions.md)
+           * [Tagged Unions](tagged_unions.md)
+           * Binding Types
 
