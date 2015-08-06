@@ -23,7 +23,7 @@ mut x: struct {
 ```
 
 To access values in a structure, simply write the structures name, followed by
-the dot operator, and the members name to acces.
+the dot operator, and the members name to access.
 
 ```
 x.a = 100;
