@@ -8,17 +8,19 @@ A reference has a few extra properties:
 A reference is denoted with an ampersand (`&`), followed by the resource it
 is referring to. This means that the above example becomes the following:
 
-    func do_stuff(a: ^int) {
-        // do stuff with a (kind of...)
-        // remember it's not freed here because
-        // it's a reference!
-    }
+```
+func do_stuff(a: ^int) {
+    // do stuff with a (kind of...)
+    // remember it's not freed here because
+    // it's a reference!
+}
 
-    func main() {
-        mut a: ^int = mem::malloc(mem::size_of(^a)); // alloc
-        do_stuff(&a); // no re-assignments necessary
-        ^a = 21; // yay, it works!
-    }
+func main() {
+    mut a: ^int = mem::malloc(mem::size_of(^a)); // alloc
+    do_stuff(&a); // no re-assignments necessary
+    ^a = 21; // yay, it works!
+}
+```
 
 And all should work well! However, note my little comment "do stuff with a (kind of...)". I say "kind of" because we are passing a reference, and if you
 remember one of the properties of a reference is that you cannot mutate the
