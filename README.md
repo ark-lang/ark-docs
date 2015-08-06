@@ -12,5 +12,5 @@ this document should be easy to use as a cheat sheet.
 However, if you are a new programmer, this will probably be tricky to 
 use as an introduction to the language (and programming in general). This is
 because it is a reference for the language, and is more of an aid to the
-developers working on it, and as a birdseye view for people interested
+developers working on it, and as a birds-eye view for people interested
 in Ark.
