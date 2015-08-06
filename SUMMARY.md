@@ -28,5 +28,5 @@
 * [Arrays](arrays.md)
 * [Slices](slices.md)
 * [Modules](modules.md)
-* Ownership
+* [Ownership](/ownership.md)
 
