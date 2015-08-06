@@ -14,5 +14,5 @@
            * [Custom Structures](custom_structures.md)
            * [Tagged Unions](tagged_unions.md)
            * [Binding Types](binding_types.md)
-* Functions
+* [Functions](/functions.md)
 
