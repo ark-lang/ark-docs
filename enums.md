@@ -15,7 +15,7 @@ enum {
 }
 ```
 
-We can define powerful types using tagged unions. Below is an example that
+We can define powerful structures using tagged unions. Below is an example that
 represents a small extract for an abstract syntax tree.
 
 ```
