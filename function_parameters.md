@@ -12,12 +12,14 @@ name, followed by a colon `:`, and a type. However, there are a few key
 differences. You must specify the parameters type, and the parameter **cannot**
 have a default value:
 
-    // note, these are examples that will ERROR!
+```
+// note, these are examples that will ERROR!
 
-    func add(a: int = 5, b: int = 5) { // ERROR!
-        ...
-    }
+func add(a: int = 5, b: int = 5) { // ERROR!
+    ...
+}
 
-    func add(a, b) { // ERROR!
-        ...
-    }
+func add(a, b) { // ERROR!
+    ...
+}
+```
