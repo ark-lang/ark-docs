@@ -24,7 +24,6 @@
    * [If Statements](if_statements.md)
    * [For Loops](for_loops.md)
    * [Destructuring](destructuring.md)
-       * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
    * Pattern Matching
        * [Match](match.md)
        * [Patterns](patterns.md)
