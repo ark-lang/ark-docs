@@ -1,4 +1,4 @@
-# Methods on Generic Types
+# Methods on Generic Types [in progress]
 
 Continuing from the previous example you might notice something missing. How 
 are you supposed to actually use the structure without copy-pasting code everywhere? Usually you would implement a method on the structure, but would 

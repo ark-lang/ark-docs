@@ -1,4 +1,4 @@
-# Functions
+# Functions [implemented]
 
 Ark programs will have, at the bare minimum, one function; the main function.
 This is the entry point of the program, i.e. where the execution of the program
@@ -9,7 +9,6 @@ will begin.
     }
 
 ## Function Signatures
-    
 A function is denoted with the `func` keyword, followed by the name of the
 function, a list of parameters, an optional return value, and block or semi-colon. 
 
@@ -59,6 +58,12 @@ func add(a: int): int {
     return a + 1;
 }
 ```
+
+## Single Line Functions
+We've introduced some syntactic sugar for single line functions, instead of
+using two curly braces to denote a block, you can use this operator `=>` instead:
+
+    func add(a: int, b: int) -> int => return a + b;
 
 ## Function Prototypes
 Function prototypes are similar to a function, however they don't specify what

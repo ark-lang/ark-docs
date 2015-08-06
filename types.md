@@ -1,4 +1,4 @@
-# Types
+# Types [implemented]
 There are many primitive types in Ark, as well as structures that allow you to
 define custom types in the language, and binding a type to a name.
 
@@ -39,3 +39,16 @@ a little bit more control, or you need to worry about how much memory you use.
 |u32|unsigned 32 bits|
 |u64|unsigned 64 bits|
 |u128|unsigned 128 bits|
+
+## Type Casting
+
+A type cast is denoted with the name of the type, followed by parenthesis, 
+which contain the value to cast: `T(E)`, where T is the Type, and E is the
+expression to cast.
+
+    x: int = int(4.5); // becomes 4
+    
+Variables can also be casted:
+
+    y: f64 = 4.5;
+    x: int = int(y);

@@ -1,4 +1,4 @@
-# Slices
+# Slices [planned]
 
 Slices are (as the name suggests) a "slice" borrowed from an array, this is a
 great way for safely, and efficiently accessing a portion of an array without

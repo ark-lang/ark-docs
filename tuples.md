@@ -1,4 +1,4 @@
-# Tuple
+# Tuple [implemented]
 
 A tuple is similar to an array, however it is a collection of values that can
 have irregular types, whereas an array is a collection of values in which their
