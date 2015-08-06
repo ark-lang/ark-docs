@@ -50,5 +50,5 @@
            * [Multiple Values](multiple_values.md)
            * [Underscore](underscore.md)
            * Destructuring
-               * Destructuring Tuples
+               * [Destructuring Tuples](/destructuring_tuples.md)
 
