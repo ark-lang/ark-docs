@@ -11,7 +11,7 @@ portability.
 |----|-----------|
 |int|register-sized signed integer|
 |uint|register-sized unsigned integer|
-|bool|unsigned 8 bits|
+|bool|1 bit (though it will expand to 8 bit on x64, and 4 bit on x32)|
 |rune|signed 32 bits, used for holding a Unicode codepoint|
 |string|a pascal-style string, contains the string and length of the string|
 
