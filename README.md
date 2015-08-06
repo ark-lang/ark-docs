@@ -1,3 +1,5 @@
+# Introduction
+
 This is the official reference for the Ark programming language. Note that this
 document is not final and could change at any point, as could the compiler
 itself, which means that the reference could become out-dated. We try
