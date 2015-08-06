@@ -7,5 +7,5 @@
    * [Precision Types](precision_types.md)
    * [Structures](structures.md)
    * [Tuples](tuples.md)
-   * Enums
+   * [Enums](/enums.md)
 
