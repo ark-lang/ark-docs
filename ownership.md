@@ -1,3 +1,5 @@
+# Ownership
+
 Ownership is a set of rules that Ark will enforce to ensure
 memory safety. This will allow for zero-cost abstractions and help make 
 features such as dynamic arrays, operator overloading etc. potentially safer.
