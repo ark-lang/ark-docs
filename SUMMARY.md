@@ -29,5 +29,6 @@
 * [Slices](slices.md)
 * [Modules](modules.md)
 * [Ownership](ownership.md)
-   * [Transferring Ownership](/transferring_ownership.md)
+   * [Transferring Ownership](transferring_ownership.md)
+   * Borrowing
 
