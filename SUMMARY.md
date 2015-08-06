@@ -26,5 +26,6 @@
    * [Referencing Memory](referencing_memory.md)
    * [Dereferencing Pointers](dereferencing_pointers.md)
 * [Arrays](arrays.md)
-* [Slices](/slices.md)
+* [Slices](slices.md)
+* Modules
 
