@@ -46,4 +46,5 @@
    * Pattern Matching
        * [Match](match.md)
        * Patterns
+           * Ranges
 
