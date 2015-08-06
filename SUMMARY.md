@@ -25,8 +25,7 @@
    * [For Loops](for_loops.md)
    * Pattern Matching
        * [Match](match.md)
-       * [Patterns](/patterns.md)
-           * [Ranges](ranges.md)
+       * [Patterns](patterns.md)
            * [Multiple Values](multiple_values.md)
            * [Underscore](underscore.md)
            * Destructuring
