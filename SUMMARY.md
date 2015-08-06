@@ -10,7 +10,6 @@
    * [Option Types](option_types.md)
    * [Type Casting](type_casting.md)
 * [Functions](functions.md)
-   * [Function Return Types](function_return_types.md)
    * [Function Prototypes](function_prototypes.md)
    * [Anonymous Functions](anonymous_functions.md)
    * [Function Parameters](function_parameters.md)
