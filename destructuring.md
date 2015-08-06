@@ -12,3 +12,5 @@ match pair {
     pair(a, b) => /* do stuff with a and b */;
 }
 ```
+
+## De-structuring Tagged Unions
