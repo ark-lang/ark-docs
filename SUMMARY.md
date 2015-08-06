@@ -11,7 +11,6 @@
    * [Type Casting](type_casting.md)
 * [Functions](functions.md)
 * [Pointers](pointers.md)
-   * [Referencing Memory](referencing_memory.md)
    * [Dereferencing Pointers](dereferencing_pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
