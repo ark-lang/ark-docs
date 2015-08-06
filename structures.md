@@ -1,7 +1,7 @@
 We can define a structure with the `struct` keyword, followed by a block that
 contains the types that the structure made up of. Note that an anonymous
 `struct` is not a statement, thus it is not typically terminated with a
-semi-colon. In the example below, we terminate it the statement with a
+semi-colon. In the example below, we end it the statement with a
 semi-colon, not the type (even though it may look like we do). 
 
 You can specify default values for structure values, these are used as a
