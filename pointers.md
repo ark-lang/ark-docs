@@ -10,3 +10,13 @@ This is allowed, and you probably won't have to do this unless you know what
 you're doing:
 
     vga_start: ^u16 = ^u16(0xB8000);
+    
+## Referencing Memory
+To get the value at the given memory address, you simply dereference using
+the caret:
+
+```
+x: int = 5;
+y: ^int = ^int(&x);
+z: int = ^y; // get the value at y, store in x
+```
