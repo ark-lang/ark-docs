@@ -10,8 +10,7 @@ func print_value(a: int) {
 ```
 
 As you can see, the syntax is very similar to a variable. A parameter has a
-name, followed by a colon `:`, and a type. However, there are a few key
-differences. You must specify the parameters type, and the parameter **cannot**
+name, followed by a colon `:`, and a type. However, there are differences. You must specify the parameters type, and the parameter **cannot**
 have a default value:
 
 ```
