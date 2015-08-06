@@ -41,5 +41,6 @@
    * [For Loops](for_loops.md)
        * [Infinite For Loop](infinite_for_loop.md)
        * [Conditional For Loop](conditional_for_loop.md)
-       * [Indexed For Loop](/indexed_for_loop.md)
+       * [Indexed For Loop](indexed_for_loop.md)
+   * Pattern Matching
 
