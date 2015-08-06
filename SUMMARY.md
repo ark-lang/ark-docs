@@ -48,5 +48,6 @@
        * Patterns
            * [Ranges](ranges.md)
            * [Multiple Values](multiple_values.md)
-           * [Underscore](/underscore.md)
+           * [Underscore](underscore.md)
+           * Destructuring
 
