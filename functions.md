@@ -33,6 +33,7 @@ func function_prototype_returns_nothing();
 ```
 
 ## Function Prototypes
+
 Functions do not have to specify a name; these are anonymous functions, i.e.
 they are not bound to a name:
 
