@@ -47,5 +47,6 @@
        * [Match](match.md)
        * Patterns
            * [Ranges](ranges.md)
-           * [Multiple Values](/multiple_values.md)
+           * [Multiple Values](multiple_values.md)
+           * Underscore
 
