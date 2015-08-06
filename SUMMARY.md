@@ -28,5 +28,6 @@
 * [Arrays](arrays.md)
 * [Slices](slices.md)
 * [Modules](modules.md)
-* [Ownership](/ownership.md)
+* [Ownership](ownership.md)
+   * Transferring Ownership
 
