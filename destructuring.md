@@ -1,6 +1,6 @@
 # De-structuring
 
-## De-structuring tuples
+## De-structuring Tuples
 
 Tuples can be de-structured by binding values to an identifier:
 
