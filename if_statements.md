@@ -11,6 +11,7 @@ if x == 5 && y == 10 && z == 21 {
 }
 ```
 
+## Else If
 An else if is denoted with an `else` keyword, followed by another if block,
 these can be daisy chained.
 
