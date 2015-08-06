@@ -1,3 +1,5 @@
+# Multiple Type Parameters
+
 When using generics you are not limited to one type parameter. This allows for 
 even more complicated, but often even more useful, constructs. An example of 
 using more than one type parameter could be a map:
