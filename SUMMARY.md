@@ -22,5 +22,6 @@
    * [Anonymous Functions](anonymous_functions.md)
    * [Function Parameters](function_parameters.md)
 * [Pointers](pointers.md)
-   * [Pointing to Raw Memory](/pointing_to_raw_memory.md)
+   * [Pointing to Raw Memory](pointing_to_raw_memory.md)
+   * Referencing Memory
 
