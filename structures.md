@@ -48,3 +48,15 @@ v.y = 32;
 Since a `type` is a statement, it must be terminated with a semi-colon.
 
 ## Default Structure Values
+In order to use any default values specified in a structure, you must initialize
+a structure using the default operator:
+
+    type Person struct {
+        a: int = 0,
+        b: int = 0,
+    };
+    person: Person;
+    default(^person);
+    
+The above will set the person variable to use the Person types default values, if
+you do not set a default to structure, it will be initialized with garbage values.
