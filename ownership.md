@@ -15,5 +15,5 @@ points to is de-allocated. Take the following example:
 
 In the example above, when `x` comes into scope, memory is allocated on the 
 heap and the address is stored in `x`. When this variable goes out of scope,
-Ark will de-allocate the memory associated with said variable as it is no longer
-needed.
+Ark will de-allocate the memory associated with said variable as it is no 
+longer needed.
