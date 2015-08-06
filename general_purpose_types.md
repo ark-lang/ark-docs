@@ -1,3 +1,5 @@
+# General Purpose Types
+
 These are the more general purpose types that we suggest you use for maximum
 portability.
 
