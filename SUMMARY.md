@@ -18,5 +18,6 @@
    * [Function Signatures](function_signatures.md)
    * [Function Return Types](function_return_types.md)
    * [Function Prototypes](function_prototypes.md)
-   * [Anonymous Functions](/anonymous_functions.md)
+   * [Anonymous Functions](anonymous_functions.md)
+   * Function Parameters
 
