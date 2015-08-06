@@ -10,3 +10,17 @@ to 4. An inclusive range is denoted with two dots and an equals symbol, e.g.
 ## Underscore
 The underscore `_` is a "default" match, in other words, it matches anything
 that isn't covered in the other arms.
+
+## Binding Values
+If we directly match something, like the return value from a function, we
+can bind it in the arm instead of re-evaluating the expression or binding it
+beforehand:
+
+```
+func age() -> s32 => return 17;
+
+match age() {
+    age @ 17 => println("felix's age is %d", age);
+    age => println("vedant's age is ", age);
+}
+```
