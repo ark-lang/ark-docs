@@ -1,4 +1,8 @@
-# General Purpose Types
+# Types
+There are many primitive types in Ark, as well as structures that allow you to
+define custom types in the language, and binding a type to a name.
+
+## General Purpose Types
 
 These are the more general purpose types that we suggest you use for maximum
 portability.
@@ -14,3 +18,24 @@ portability.
 The `C` pseudo-module contains the additional types `int` and `uint` which
 correspond to the C `int` and `unsigned int` types. These are accessed as
 `C::int` and `C::uint` respectively. More on modules later.
+
+## Precision Types
+
+Precision types are usually used in embedded systems, or when you need just
+a little bit more control, or you need to worry about how much memory you use.
+
+|Type|Description|
+|----|-----------|
+|f32|IEEE 754 single-precision binary floating-point|
+|f64|IEEE 754 double-precision binary floating-point|
+|f128|IEEE 754 quadruple-precision binary floating-point|
+|s8|signed 8 bits|
+|s16|signed 16 bits|
+|s32|signed 32 bits|
+|s64|signed 64 bits|
+|s128|signed 128 bits|
+|u8|unsigned 8 bits|
+|u16|unsigned 16 bits|
+|u32|unsigned 32 bits|
+|u64|unsigned 64 bits|
+|u128|unsigned 128 bits|
