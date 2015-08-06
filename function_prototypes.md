@@ -5,6 +5,6 @@ with curly braces, you terminate the function signature with a semi-colon `;`.
 
 ```
 // these are function prototypes
-func function_prototype(): int;
+func function_prototype() -> int;
 func function_prototype_returns_nothing();
 ```
