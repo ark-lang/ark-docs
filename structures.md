@@ -46,3 +46,5 @@ v.y = 32;
 ```
 
 Since a `type` is a statement, it must be terminated with a semi-colon.
+
+## Default Structure Values
