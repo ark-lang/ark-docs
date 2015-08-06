@@ -15,5 +15,5 @@
            * [Tagged Unions](tagged_unions.md)
            * [Binding Types](binding_types.md)
 * [Functions](functions.md)
-   * Function Signatures
+   * [Function Signatures](/function_signatures.md)
 
