@@ -1,4 +1,4 @@
-## Transferring Ownership
+# Transferring Ownership
 
 Consider the following example:
 
