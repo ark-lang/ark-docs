@@ -56,7 +56,7 @@ a structure using the default operator:
         b: int = 0,
     };
     person: Person;
-    default(^person);
+    default(person);
     
 The above will set the person variable to use the Person types default values, if
 you do not set a default to structure, it will be initialized with garbage values.
