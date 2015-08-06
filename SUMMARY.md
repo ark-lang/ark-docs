@@ -35,5 +35,5 @@
        * [Reference Lifetime](reference_lifetime.md)
        * [Explicit Lifetimes](explicit_lifetimes.md)
 * Control Flow
-   * If Statements
+   * [If Statements](/if_statements.md)
 
