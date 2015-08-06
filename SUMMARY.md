@@ -27,5 +27,5 @@
    * [Dereferencing Pointers](dereferencing_pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
-* Modules
+* [Modules](/modules.md)
 
