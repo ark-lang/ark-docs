@@ -11,7 +11,7 @@ type Whatever enum {
 };
 ```
 
-We can destructure it by binding the values to given identifiers, for instance:
+We can de-structure it by binding the values to given identifiers, for instance:
 
 ```
 something := Whatever::Colour(255, 0, 255);
