@@ -50,7 +50,11 @@ Since a `type` is a statement, it must be terminated with a semi-colon.
 ## Using Default Structure Values
 ### Default Expression
 Note that default can also be an expression, this will set the default for a
-given type, 
+given type:
+
+```
+x: int = default(int);
+```
 
 ### Default Statement
 In order to use any default values specified in a structure, you must initialize
