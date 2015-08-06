@@ -8,7 +8,7 @@ type Whatever enum {
         x: s32,
         y: s32,
     },
-}
+};
 ```
 
 We can destructure it by binding the values to given identifiers, for instance:
