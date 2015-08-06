@@ -9,5 +9,5 @@
    * [Tuples](tuples.md)
    * [Enums](enums.md)
    * [Option Types](option_types.md)
-   * Named Types
+   * [Named Types](/named_types.md)
 
