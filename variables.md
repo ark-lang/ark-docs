@@ -13,7 +13,7 @@ The syntax for a variable is the name of the variable, followed by a colon (`:`
 to the variable. Note that because variables are __immutable__ by default, 
 they **must** have an assignment.
 
-Mutability can be applied with the `mut` keyword, this must be before the
+Mutability can be toggled with the `mut` keyword, this must be before the
 variable declaration. If a variable is mutable, it does **not** need an initial
 expression to be assigned to it.
 
