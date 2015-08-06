@@ -29,7 +29,6 @@
            * Destructuring
                * [Destructuring Tuples](destructuring_tuples.md)
                * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
-           * [Binding Values](binding_values.md)
 * Attributes
 * [Generics](generics.md)
    * [Multiple Type Parameters](multiple_type_parameters.md)
