@@ -3,7 +3,7 @@ multiple variants: with no data, with named (tagged) data,
 and variants with unnamed data (anonymous data).
 
 An enum, denoted with the `enum` keyword, followed by a brace, contains
-the variants that define the enum.
+the variants that define the enum:
 
 ```
 enum {
