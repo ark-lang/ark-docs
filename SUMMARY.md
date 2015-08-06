@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Variables](variables.md)
-* Types
+* [Types](/types.md)
 
