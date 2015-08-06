@@ -1,3 +1,5 @@
+# Structures
+
 We can define a structure with the `struct` keyword, followed by a block that
 contains the types that the structure made up of. Note that an anonymous
 `struct` is not a statement, thus it is not typically terminated with a
