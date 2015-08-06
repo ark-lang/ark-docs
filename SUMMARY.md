@@ -25,6 +25,9 @@
    * [For Loops](for_loops.md)
    * Pattern Matching
        * [Match](match.md)
+       * Destructuring
+           * [Destructuring Tuples](destructuring_tuples.md)
+           * [Destructuring Tagged Unions](destructuring_tagged_unions.md)
        * [Patterns](patterns.md)
            * Destructuring
                * [Destructuring Tuples](destructuring_tuples.md)
