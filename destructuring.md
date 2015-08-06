@@ -1,3 +1,7 @@
+# De-structuring
+
+## De-structuring tuples
+
 Tuples can be de-structured by binding values to an identifier:
 
 ```
