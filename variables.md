@@ -15,16 +15,18 @@ they **must** have an assignment.
 
 Mutability can be toggled with the `mut` keyword, this must be before the
 variable declaration. If a variable is mutable, it does **not** need an initial
-expression to be assigned to it:
+expression to be assigned to it.
 
-    // constant variable, must have an initial value
-    x: int = 5; // [ "mut" ] Iden ":" Type [ "=" Expr ];
-    // mutable variable, initial value is optional
-    mut x: int;
-    // constant inferred variable, the type is inferred from the expression
-    x := 5;
-    // mutable inferred variable, the type is inferred from the expression
-    mut x := 5;
+```
+// constant variable, must have an initial value
+x: int = 5; // [ "mut" ] Iden ":" Type [ "=" Expr ];
+// mutable variable, initial value is optional
+mut x: int;
+// constant inferred variable, the type is inferred from the expression
+x := 5;
+// mutable inferred variable, the type is inferred from the expression
+mut x := 5;
+```
 
 Remember that because something is mutable, it can later be re-assigned to
 another value:
