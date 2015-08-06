@@ -8,3 +8,4 @@ to, and the type it aliases.
     type PersonAge int;
     type PersonWeight f32;
     
+A type is a declaration, so it must be terminated with a semi-colon.
