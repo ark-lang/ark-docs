@@ -56,5 +56,5 @@
 * Attributes
 * [Generics](generics.md)
    * [Multiple Type Parameters](multiple_type_parameters.md)
-   * Methods on Generic Types
+   * [Methods on Generic Types](/methods_on_generic_types.md)
 
