@@ -1,7 +1,7 @@
 # Structures [implemented]
 
 We can define a structure with the `struct` keyword, followed by a block that
-contains the types that the structure made up of. Note that an anonymous
+contains the types that the structure is made up of. Note that an anonymous
 `struct` is not a statement, thus it is not typically terminated with a
 semi-colon. In the example below, we end it the statement with a
 semi-colon, not the type (even though it may look like we do). 
@@ -66,5 +66,5 @@ a structure using the default statement:
     person: Person;
     default(person);
     
-The above will set the person variable to use the Person types default values, if
+The above will set the person variable to use the Person type's default values, if
 you do not set a default to structure, it will be initialized with garbage values.
