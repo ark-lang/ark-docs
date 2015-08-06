@@ -6,6 +6,12 @@ to 4. An inclusive range is denoted with two dots and an equals symbol, e.g.
 `0 ..= 5`, this will match 0 to 5.
 
 ## Multiple Values
+Multiple values can be matched using commas:
+
+    match x {
+        1, 2 => ...; // both 1 and 2
+        _ => ...; // everything else
+    }
 
 ## Underscore
 The underscore `_` is a "default" match, in other words, it matches anything
