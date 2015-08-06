@@ -5,6 +5,7 @@ addresses in memory. In Ark, we denote pointers with the caret, `^`.
 
 > Note that a raw pointer is not memory safe in Ark.
 
+## Pointing to Raw Memory
 This is allowed, and you probably won't have to do this unless you know what
 you're doing:
 
