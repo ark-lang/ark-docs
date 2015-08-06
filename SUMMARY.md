@@ -55,5 +55,6 @@
            * [Binding Values](binding_values.md)
 * Attributes
 * [Generics](generics.md)
-   * [Multiple Type Parameters](/multiple_type_parameters.md)
+   * [Multiple Type Parameters](multiple_type_parameters.md)
+   * Methods on Generic Types
 
