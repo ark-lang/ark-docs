@@ -22,7 +22,6 @@
        * [Explicit Lifetimes](explicit_lifetimes.md)
 * Control Flow
    * [If Statements](if_statements.md)
-       * [Else](else.md)
    * [For Loops](for_loops.md)
        * [Infinite For Loop](infinite_for_loop.md)
        * [Conditional For Loop](conditional_for_loop.md)
