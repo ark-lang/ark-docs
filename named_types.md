@@ -8,4 +8,10 @@ to, and the type it aliases.
     type PersonAge int;
     type PersonWeight f32;
     
-A type is a declaration, so it must be terminated with a semi-colon.
+A type is a declaration, so it must be terminated with a semi-colon. You can have
+unnamed types, i.e. you do not have to bind a type to a name:
+
+    something: struct {
+        a: int,
+        b: int
+    };
