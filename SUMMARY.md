@@ -11,5 +11,6 @@
    * [Option Types](option_types.md)
    * [Named Types](named_types.md)
        * Defining Custom Types
-           * [Custom Structures](/custom_structures.md)
+           * [Custom Structures](custom_structures.md)
+           * Tagged Unions
 
