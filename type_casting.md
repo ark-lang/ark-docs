@@ -5,3 +5,6 @@ expression to cast.
     x: int = int(4.5); // becomes 4
     
 Variables can also be casted:
+
+    y: f64 = 4.5;
+    x: int = int(y);
