@@ -7,5 +7,6 @@
    * [Precision Types](precision_types.md)
    * [Structures](structures.md)
    * [Tuples](tuples.md)
-   * [Enums](/enums.md)
+   * [Enums](enums.md)
+   * Option Types
 
