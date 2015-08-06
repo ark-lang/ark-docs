@@ -7,7 +7,7 @@ stage of the compiler, it's inevitable that things will break.
 
 This file serves as a reference to the language, and not as an introduction. If
 you are familiar with other languages like C, Rust, C++, Go, ... then most of
-this document should be relatively easy to use as a cheat sheet. 
+this document should be easy to use as a cheat sheet. 
 
 However, if you are a new programmer, this will probably be quite tricky to 
 use as an introduction to the language (and programming in general). This is
