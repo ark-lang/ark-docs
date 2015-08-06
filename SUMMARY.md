@@ -8,5 +8,5 @@
    * [Structures](structures.md)
    * [Tuples](tuples.md)
    * [Enums](enums.md)
-   * Option Types
+   * [Option Types](/option_types.md)
 
