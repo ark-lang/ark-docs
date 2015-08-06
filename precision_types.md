@@ -1,3 +1,5 @@
+# Precision Types
+
 Precision types are usually used in embedded systems, or when you need just
 a little bit more control, or you need to worry about how much memory you use.
 
