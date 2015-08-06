@@ -8,11 +8,3 @@ to, and the type it aliases.
     type PersonAge int;
     type PersonWeight f32;
     
-Types do not have to be bound to a name, they can be used like so:
-
-```
-z: Vector = Vector {
-    x: 23,
-    y: 32,
-};
-```
