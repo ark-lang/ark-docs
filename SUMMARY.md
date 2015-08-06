@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [Variables](variables.md)
 * [Types](types.md)
-   * [Precision Types](precision_types.md)
    * [Named Types](named_types.md)
    * [Structures](structures.md)
    * [Tuples](tuples.md)
