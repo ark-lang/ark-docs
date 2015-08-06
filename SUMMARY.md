@@ -38,5 +38,6 @@
    * [If Statements](if_statements.md)
        * [Else If](else_if.md)
        * [Else](else.md)
-   * [For Loops](/for_loops.md)
+   * [For Loops](for_loops.md)
+       * Infinite For Loop
 
