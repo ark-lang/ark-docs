@@ -6,6 +6,9 @@ contains the types that the structure made up of. Note that an anonymous
 semi-colon. In the example below, we end it the statement with a
 semi-colon, not the type (even though it may look like we do). 
 
+Note that the second structure contains default values for some of the structure
+members. More on this later.
+
 ```
 // anonymous structure
 struct {
