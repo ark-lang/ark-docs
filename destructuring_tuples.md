@@ -1,4 +1,4 @@
-Tuples can be destructured by binding values to an identifier:
+Tuples can be de-structured by binding values to an identifier:
 
     pair := (0, -5);
     match pair {
