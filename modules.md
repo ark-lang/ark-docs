@@ -81,7 +81,9 @@ func main() -> int {
 ```
 
 And again, we can use the as keyword. Since we are using the brace syntactic
-sugar, we must also specify each "alias":
+sugar, we must also specify each "alias". Order is important in this case,
+otherwise your player will have a "slime" alias, and a slime has a "player"
+alias.
 
 ```
 use entities::{player, mob::slime} as {player, slime};
