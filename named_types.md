@@ -7,13 +7,24 @@ cast to their core type.
 A named type is denoted with the `type` keyword, followed by a name to bind it
 to, and the type it aliases.
 
-    type PersonAge int;
-    type PersonWeight f32;
+```
+type PersonAge int;
+type PersonWeight f32;
+```
     
 A type is a declaration, so it must be terminated with a semi-colon. You can have
 unnamed types, i.e. you do not have to bind a type to a name:
 
-    something: struct {
-        a: int,
-        b: int
-    };
+```
+something: struct {
+    a: int,
+    b: int
+};
+```
+
+It's important to know that this isn't a true alias, it's a new type, which means
+that it must be cast. For example:
+
+```
+
+```
