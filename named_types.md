@@ -29,4 +29,6 @@ type Foo int;
 
 a: int = 10;
 b: Foo = Foo(a); // we have to cast a to Foo.
+
+b: Foo = a; // this is not allowed.
 ```
