@@ -14,7 +14,7 @@ know what you're doing:
     
 ## Referencing Memory
 To get the value at the given memory address, you dereference using
-the caret:
+the caret symbol:
 
 ```
 x: int = 5;
