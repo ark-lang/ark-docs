@@ -7,7 +7,7 @@ In Ark, we denote pointers with the caret symbol, `^`.
 > Note that a raw pointer is not memory safe in Ark.
 
 ## Pointing to Raw Memory
-You may point to raw memory, and you probably won't have to do this unless you 
+You may point to raw memory, however you probably won't have to do this unless you 
 know what you're doing:
 
     vga_start: ^u16 = ^u16(0xB8000);
