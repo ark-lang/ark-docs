@@ -6,6 +6,9 @@ identifier where the identifier is the attribute to enforce.
 ## Allowed Attributes
 Here's a table of allowed attributes and *where* they're allowed:
 
+_declarations are function declarations, variable declarations, type declarations,
+operator overload declarations, _
+
 Attribute Name | Restricted To | Options | What it does |
 ---------------|---------------|------------------------|
 deprecated | declarations | n/a | warns the developer if they use the deprecated declaration in their code
