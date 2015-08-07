@@ -51,7 +51,7 @@ We can make a generic function that takes any type that implements our Geometry 
 
 ```
 func calculate(g: Geometry) {
-    C::printf("area %, perim % \n", g.area(), g.perimeter());
+    C::printf("area %f, perim %f \n", g.area(), g.perimeter());
 }
 
 func main() -> int {
