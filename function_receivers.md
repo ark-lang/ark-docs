@@ -55,3 +55,11 @@ func main() -> int {
 ```
 
 ### Static Methods
+Static methods can be defined by omitting the name of the receiver, which means `bar`
+would become the following:
+
+```
+func (Foo) bar() {
+    // do stuff here
+}
+```
