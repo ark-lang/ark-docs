@@ -26,4 +26,12 @@ operator *(a: Vector2, b: f32) -> Vector2 {
 }
 ```
 
-This will allow both `Vector2 * f32` and `f32 * Vector2`. 
+This will allow both `Vector2 * f32` and `f32 * Vector2`. You can force an operator
+overload to be ordered using the `ordered` attribute:
+
+```
+[ordered]
+operator *(a: Vector2, b: f32) -> Vector2 {
+    ...
+}
+```
