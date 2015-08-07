@@ -22,7 +22,8 @@ are being stored in.
 A reference to something is denoted with the address-of operator `&`. This is
 expected to be stored in a reference type `&T = &xyz;`. However, this reference
 will follow the rules of ownership, i.e. in this case a constant reference that
-cannot be mutated, and must also not outlive the referrers lifetime.
+cannot be mutated, and must also not outlive the referrers lifetime. To avoid this
+we can cast the reference to a pointer, 
 
 ```
 x: int = 5;
