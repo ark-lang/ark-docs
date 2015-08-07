@@ -10,7 +10,7 @@ will begin.
 
 ## Function Signatures
 The `func` keyword, followed by the name of the function, a list of parameters, 
-an optional return value, and block or semi-colon denotes a function signature.
+an optional return value denotes a function signature.
 
 ```
 // "func" Iden "(" ParameterList ")" [ "->" Type ] Block;
