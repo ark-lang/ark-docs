@@ -16,7 +16,7 @@ type Foo struct {
 };
 
 func (a: Foo) bar() {
-    
+    // do stuff here
 }
 ```
 
