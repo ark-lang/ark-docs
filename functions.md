@@ -49,6 +49,7 @@ default value:
 ```
 // note, these are examples that will ERROR!
 
+// default values!
 func add(a: int = 5, b: int = 5) { // ERROR!
     ...
 }
