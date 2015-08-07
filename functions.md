@@ -81,7 +81,7 @@ operator  `=>`:
     func add(a: int, b: int) -> int => return a + b;
 
 ## Function Prototypes
-Function prototypes are similar to a function, however they don't specify what
+Function prototypes are a function forward-declaration, however they don't specify what
 instructions the function will perform. These are most commonly used to bind
 C functions. The syntax is similar, yet, instead of specifying a block
 with curly braces, you terminate the function signature with a semi-colon `;`.
