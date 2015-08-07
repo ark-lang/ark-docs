@@ -14,6 +14,12 @@ A single line comment is denoted with two forward slashes `//`.
 // woah, here's another one!
 ```
 
+Documentation comments are specified with _three_ forward slashes:
+
+```
+/// this does a thing
+```
+
 ## Multiple Line Comments
 Comments that span over multiple lines are denoted with a forward slash,
 followed by an asterisks, and they must be closed with an asterisks and
@@ -24,3 +30,5 @@ a backwards slash.
     this is my comment!
 */
 ```
+
+Documentation comments 
