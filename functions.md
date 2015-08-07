@@ -93,7 +93,7 @@ func main(): int {
 ```
 
 As you can see, the first function took a function as a parameter. Functions
-can be passed as first-class function pointers. This is mostly useful when
+can be passed as first-class function pointers. This is useful when
 sorting lists, making callbacks, etc.
 
 ## Variadic Functions
