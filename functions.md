@@ -10,7 +10,7 @@ will begin.
 
 ## Declaring Functions
 The `func` keyword, followed by the name of the function, a list of parameters, 
-an optional return value denotes a function signature. A function itself is
+an _optional_ return value denotes a function signature. A function itself is
 a function signature, followed by a block. A pair of curly braces `{}` denote
 a block.
 
