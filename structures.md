@@ -52,7 +52,9 @@ v.y = 32;
 
 ## Using Default Structure Values
 There are two ways of using `default`. As an expression, or as a statement. The
-`default` expression takes a Type `T`. The `default` statement takes a structure.
+`default` expression takes a Type `T`. The `default` statement takes an `access`, e.g.
+a variable pointer, dereferenced pointer, structure member, array index, tuple index,
+etc.
 
 ### Default Expression
 In this case, we use the `default` expression, which takes the Type `int`. This will
