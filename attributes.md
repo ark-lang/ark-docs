@@ -7,7 +7,7 @@ identifier where the identifier is the attribute to enforce.
 Here's a table of allowed attributes and *where* they're allowed:
 
 _declarations are function declarations, variable declarations, type declarations,
-operator overload declarations_
+operator overload declarations, function prototypes_
 
 Attribute Name | Restricted To | Options | What it does |
 ---------------|---------------|------------------------|
