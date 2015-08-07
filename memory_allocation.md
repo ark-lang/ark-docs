@@ -34,4 +34,11 @@ foo: ^u8 = std::mem::alloc(std::mem::sizeof(int) + std::mem::sizeof(f64));
 `dealloc` will de-allocate the memory that is given to it, this must be called after
 allocating any memory, otherwise you will get a memory leak. Note that you should
 *not* use this on memory that isn't stored on the heap. The `dealloc` function takes
-a pointer to the memory that it should deallocate. 
+a pointer to the memory that it should deallocate.
+
+```
+x: ^int = std::mem::alloc<int>();
+defer std::mem::dealloc(x);
+```
+
+In the example above we defer, which means that at the end of scope, call dealloc on `x`.
