@@ -45,7 +45,7 @@ Of course, that gets a bit tedious. So we can use just the `player` module:
 mod entities::player;
 
 func main() -> int {
-    player: ^Player = Player::new();
+    player: ^player::Player = player::Player::new();
     return 0;
 }
 ```
