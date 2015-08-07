@@ -29,7 +29,7 @@ func foobar() -> int {
 ```
 
 ## Function Parameters
-Parameters can be passed to function, they must be specified in the functions
+Parameters are passed to function, they must be specified in the functions
 signature. 
 
 ```
