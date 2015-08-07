@@ -6,3 +6,12 @@ other words:
 
 > If it looks like a duck, and quacks like a duck, it's a duck"
 
+The `interface` keyword, followed by a block that consists of method signatures
+will denote an interface. Method signatures defined in an interface do not 
+need to specify the `func` keyword.
+
+```
+interface {
+    
+}
+```
