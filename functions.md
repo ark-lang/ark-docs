@@ -29,8 +29,8 @@ func foobar() -> int {
 ```
 
 ## Function Parameters
-Parameters are passed to function, they must be specified in the functions
-signature. 
+An identifier, followed by a colon and a Type denote a function parameter. Function
+parameters must go in the function signature.
 
 ```
 // Parameter = Iden ":" Type
