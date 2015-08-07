@@ -62,7 +62,7 @@ func add(a, b) { // ERROR!
 
 ## Function Return Types
 A function that has no return type specified will return nothing. The function in the
-exmaple above returns an integer. A function return type is denoted with an arrow "->", followed by the type that the function returns.
+example above returns an integer. A function return type is denoted with an arrow "->", followed by the type that the function returns.
 
 ```
 // returns an integer
