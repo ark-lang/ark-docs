@@ -15,3 +15,10 @@ This file serves as a reference to the language, however it can be used as
 an introduction to the language, though it is not written to be read as one. If
 you are familiar with other languages like C, Rust, C++, Go, ... then most of
 this document should be easy to use as a cheat sheet. 
+
+## Resources
+* [Website](https://ark-lang.org)
+* [GitHub](https://github.com/ark-lang)
+* [Reddit](http://reddit.com/r/ark_lang)
+* [Gitter]()
+* [IRC]()
