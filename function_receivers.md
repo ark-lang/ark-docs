@@ -31,4 +31,4 @@ foo.bar();
 
 The `bar` function takes an instance of `Foo`, however it takes a copy of `Foo`,
 and not a pointer to it. This is an important detail, because `Foo` will be copied
-into the function, instead of a pointer to it.
+into the function, instead of a pointer to it the structure.
