@@ -16,7 +16,7 @@ mut x: Option<int> = None;
 x = Some(23);
 ```
 
-We can then destructure options like so:
+We can then de-structure options like so:
 
 ```
 match x {
