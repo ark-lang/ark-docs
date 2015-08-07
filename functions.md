@@ -76,6 +76,7 @@ with curly braces, you terminate the function signature with a semi-colon `;`.
 func function_prototype() -> int;
 func function_prototype_returns_nothing();
 ```
+
 ## Anonymous Functions
 
 Functions do not have to specify a name; these are anonymous functions, i.e.
