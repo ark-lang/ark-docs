@@ -53,8 +53,8 @@ sugar:
 use entities::{player, mob::slime};
 
 func main() -> int {
-    player: ^player::Player = player::Player::new();
-    slime: ^slime::Slime = slime::Slime::new();
+    player: ^Player = Player::new();
+    slime: ^Slime = Slime::new();
     return 0;
 }
 
