@@ -58,6 +58,7 @@ the module that is being accessed:
 
 ```
 mod entities::mob::*; // injects all children of the mob module
+// don't use both obviously...
 // mod entities::mob::{slime, cat}; // injects selected children of mob module
 
 func main() -> int {
