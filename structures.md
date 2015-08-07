@@ -1,13 +1,8 @@
 # Structures [implemented]
 
 We can define a structure with the `struct` keyword, followed by a block that
-contains the structures members. Note that an anonymous
-`struct` is not a declaration, thus it is not terminated with a
-semi-colon. In the example below, we end it the statement with a
-semi-colon, not the type (even though it may look like we do). 
-
-Note that the second structure contains default values for some of the structure
-members. More on this later.
+contains the structures members. Note that an anonymous `struct` is not a 
+declaration, thus it is not terminated with a semi-colon.
 
 ```
 // anonymous structure
@@ -15,6 +10,11 @@ struct {
     d: int,
     g: int,
 }
+```
+
+We can bind a structure to a variable like so. Note that the structure itself
+is not terminated with a semi-colon, but the variable declaration that is binding
+this type does.
 
 // bind structure to variable
 mut x: struct {
