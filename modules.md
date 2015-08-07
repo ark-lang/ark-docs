@@ -16,4 +16,8 @@ is inside of a directory, we refer to it as a sub-directory, however this is mor
 for the sake of simplicity.
 
 Ark will determine the name of the module based on the files name and the directory
-it is a child of. 
+it is a child of.
+
+## Module Access
+
+## Dependencies
