@@ -12,7 +12,7 @@ initializer syntax:
 ```
 a: []int = [0, 1, 2, 3, 4]; // size deduced, size in type is superfluous
 b: []int; // ERROR! no initial value, no size!
-mut c: [5]int; // compiler will zero out 5 contigiuos slots of memory
+mut c: [5]int; // compiler will zero out 5 contiguous slots of memory
 
 d: int = a[2]; // subscript notation for access
 c[1] = a[2]; // and setting array values too
