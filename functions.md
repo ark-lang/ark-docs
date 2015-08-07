@@ -115,6 +115,19 @@ functions as first-class function pointers.This is useful when
 sorting lists, making callbacks, etc.
 
 ## Program Arguments
+If you need the arguments passed to your program, you can modify the main
+functions arguments to take the amount of arguments passed, and a pointer
+to the argument list:
+
+```
+[c] func printf(fmt: str, ...);
+
+func main(argc: int, argv: ^str) -> int {
+    C::printf("%d %s\n", argc, ^argv);
+
+    return 0;
+}
+```
 
 ## Variadic Functions
 A variadic function is a function that can take a variable amount of arguments.
