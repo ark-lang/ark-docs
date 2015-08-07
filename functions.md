@@ -53,6 +53,7 @@ func add(a: int = 5, b: int = 5) { // ERROR!
     ...
 }
 
+// no types!
 func add(a, b) { // ERROR!
     ...
 }
