@@ -18,7 +18,7 @@ func do_stuff(a: ^int) {
 }
 
 func main() {
-    mut a: ^int = std::mem::alloc(mem::size_of(^a)); // alloc
+    mut a: ^int = std::mem::alloc(std::mem::sizeof(^a)); // alloc
     do_stuff(&a); // no re-assignments necessary
     ^a = 21; // yay, it works!
 }
