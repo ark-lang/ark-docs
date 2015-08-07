@@ -41,3 +41,14 @@ close with two to make it look pretty.
     nice!
 **/
 ```
+
+### Nested Comments
+Comments _can_ be nested:
+
+```
+/*
+    /* hi there */
+    
+    /* this is my nested comment */
+*/
+```
