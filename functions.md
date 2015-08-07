@@ -114,6 +114,8 @@ As you can see, the first function took a function as a parameter. You can pass
 functions as first-class function pointers.This is useful when
 sorting lists, making callbacks, etc.
 
+## Program Arguments
+
 ## Variadic Functions
 A variadic function is a function that can take a variable amount of arguments.
 An ellipses at the end of parameter list denotes a variadic function.
