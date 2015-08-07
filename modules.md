@@ -46,6 +46,8 @@ func main() -> int {
 }
 ```
 
+### Module Aliasing
+
 Notice how we don't specify the module we access from on function calls? This
 is because using a sub-module (or file module) will allow us to implicitly
 call the children of said module. However, we can specify the `as` keyword
