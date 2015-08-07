@@ -31,7 +31,7 @@ Functions and other members of the module being used are accessed with the
 double colon operator `::`.
 
 ```
-use entities;
+mod entities;
 
 func main() -> int {
     player: ^entities::player::Player = entities::player::new();
@@ -42,7 +42,7 @@ func main() -> int {
 Of course, that gets a bit tedious. So we can use just the `player` module:
 
 ```
-use entities::player;
+mod entities::player;
 
 func main() -> int {
     player: ^Player = Player::new();
@@ -58,7 +58,7 @@ call the children of said module. However, we can specify the `as` keyword
 to be more explicit.
 
 ```
-use entities::player as entity; // as player is fine too!
+mod entities::player as entity; // as player is fine too!
 
 func main() -> int {
     player: ^entity::Player = entity::Player::new();
@@ -86,7 +86,7 @@ otherwise your player will have a "slime" alias, and a slime has a "player"
 alias.
 
 ```
-use entities::{player, mob::slime} as {player, slime};
+mod entities::{player, mob::slime} as {player, slime};
 
 func main() -> int {
     player: ^player::Player = player::Player::new();
@@ -97,4 +97,7 @@ func main() -> int {
 
 ## Dependencies
 Dependencies will be located in a `_deps` directory. This will be in the root
-of your project.
+of your project. The compiler will search for the `_deps` directory in the
+current directory, and keep going up a directory till it finds a `_deps` folder.
+
+Dependencies are used almost identically to modules, however you use the 
