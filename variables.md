@@ -42,4 +42,5 @@ y = 20; // ERROR!
 ```
 
 In the second example above, it causes a compile-time error because we are
-trying to re-assign an immutable variable.
+trying to re-assign an immutable variable. We can solve this by putting the `mut`
+keyword before the variable declaration.
