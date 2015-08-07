@@ -52,7 +52,7 @@ func main() -> int {
 
 ### Implicit Modules
 
-When you have a lot of nested modules, things can get a bit messy.
+When you have a lot of nested modules, things can get a bit messy. 
 
 
 ## Dependencies
