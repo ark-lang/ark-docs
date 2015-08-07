@@ -87,7 +87,7 @@ as a "dummy" function so that the compiler knows that you aren't calling a
 non-existent function.
 
 A function signature, followed by a semi-colon instead of a block will denote
-a function prototype.
+a function prototype:
 
 ```
 // these are function prototypes
