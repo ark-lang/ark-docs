@@ -38,6 +38,10 @@ func (r: rect) perimeter() -> f64 {
     return (r.width * 2) * (r.height * 2);
 }
 
+// NOTE std::math::PI as of writing this doesn't exist
+// in this context it's more for an example sake
+// but I'm sure you know what PI means in this context
+
 func (c: circle) area() -> f64 {
     return std::math::PI * c.radius * c.radius;
 }
