@@ -36,7 +36,7 @@ operator *(a: Vector2, b: f32) -> Vector2 {
 }
 
 [ordered]
-operator *(a: f32, b: Vector2): Vector2 { 
+operator *(a: f32, b: Vector2) -> Vector2 { 
     ... 
 }
 ```
