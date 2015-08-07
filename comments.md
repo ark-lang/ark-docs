@@ -32,4 +32,11 @@ a backwards slash.
 */
 ```
 
-Documentation comments 
+Documentation comments are specified with two opening asterisks, and you can 
+close with two to make it look pretty.
+
+```
+/**
+ 
+**/
+```
