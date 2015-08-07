@@ -10,6 +10,7 @@
    * [Enums](enums.md)
    * [Option Types](option_types.md)
 * [Functions](functions.md)
+* Defer
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
@@ -33,5 +34,4 @@
    * [Multiple Type Parameters](multiple_type_parameters.md)
    * [Methods on Generic Types](methods_on_generic_types.md)
    * [Type Restrictions](type_restrictions.md)
-* Defer
 
