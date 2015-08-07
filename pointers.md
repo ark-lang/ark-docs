@@ -27,6 +27,8 @@ we can cast the reference to a pointer:
 
 ```
 x: int = 5;
+
+// avoid the ownership rules...
 y: ^int = ^int(&x);
 
 z: int = ^y; // get the value at y, store in x
