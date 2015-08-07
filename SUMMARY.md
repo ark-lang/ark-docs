@@ -11,7 +11,7 @@
    * [Option Types](option_types.md)
    * [Interfaces](interfaces.md)
 * [Functions](functions.md)
-   * Function Receivers
+   * [Function Receivers](function_receivers.md)
 * [Defer](defer.md)
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
