@@ -22,5 +22,6 @@ We can then de-structure options like so:
 match x {
     Some(x) -> println("hey our integer is %d", x);
     None -> println("Nothing there! :(");
+    _ -> println("...?");
 }
 ```
