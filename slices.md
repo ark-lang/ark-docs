@@ -9,5 +9,7 @@ the slice.
 A slice is denoted with an ampersand, followed by the array to access, and
 subscript notation specifying what segment of the array you wish to borrow.
 
-    a: [int] = [2, 4, 6, 8, 10, 12, 16, 18];
-    b: &[int] = &a[1..5]; // refers the slice [4, 6, 8, 10]
+```
+a: [int] = [2, 4, 6, 8, 10, 12, 16, 18];
+b: &[int] = &a[1..5]; // refers the slice [4, 6, 8, 10]
+```
