@@ -25,7 +25,7 @@ This means that the following example would **not** work:
 
 ```
 {
-    x: ^int = mem::malloc(mem::size_of(^x));
+    x: ^int = std::mem::alloc(std::mem::sizeof(^x));
     y: ^int = x;
     C::printf("the value at at x is %d\n", ^x); // ERROR!
 }
