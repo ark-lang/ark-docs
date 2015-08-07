@@ -13,7 +13,7 @@ now has "ownership" of the memory that `x` previously pointed to.
 
 If this is tricky to wrap your head around, consider this real-life analogy. 
 Say I had a loaf of bread. If I were to give to my friend Vedant this loaf of 
-bread, I don't own it anymore, which means I cannot eat the bread, and I 
+bread, I don't own it any more, which means I cannot eat the bread, and I 
 can't give it to someone else as I am no longer in possession of said loaf of bread. 
 
 Note that you cannot mutate or use something that no longer has ownership of 
