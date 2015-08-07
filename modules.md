@@ -52,7 +52,7 @@ call the children of said module. However, we can specify the `as` keyword
 to be more explicit.
 
 ```
-use entities::player as entity;
+use entities::player as entity; // as player is fine too!
 
 func main() -> int {
     player: ^entity::Player = entity::Player::new();
