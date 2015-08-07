@@ -3,7 +3,7 @@
 Consider the following example:
 
     {
-        x: ^int = mem::malloc(mem::size_of(^x));
+        x: ^int = std::mem::malloc(std::mem::size_of(^x));
         y: ^int = x;
     }
 
