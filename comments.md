@@ -14,7 +14,8 @@ A single line comment is denoted with two forward slashes `//`.
 // woah, here's another one!
 ```
 
-Documentation comments are specified with _three_ forward slashes:
+Documentation comments are specified with _three_ forward slashes, this is
+for the documentation generator.
 
 ```
 /// this does a thing
