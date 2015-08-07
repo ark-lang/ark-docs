@@ -90,7 +90,6 @@ A function signature, followed by a semi-colon instead of a block will denote
 a function prototype:
 
 ```
-// these are function prototypes
 func function_prototype() -> int;
 func function_prototype_returns_nothing();
 ```
