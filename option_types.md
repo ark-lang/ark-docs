@@ -12,7 +12,7 @@ is a tagged union that allows for a generic type `T`.
 // set it to none for now...
 mut x: Option<int> = None;
 
-// re-initialize later with a value.
+// re-initialize later with a value
 x = Some(23);
 ```
 
