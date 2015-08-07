@@ -15,6 +15,15 @@ b: []int; // ERROR! no initial value, no size!
 mut c: [5]int; // compiler will zero out 5 contiguous slots of memory
 ```
 
+## Accessing Array Values
+Ark uses subscript notation for array access:
+
+```
+d: int = a[2]; // subscript notation for access
+c[1] = a[2]; // and setting array values too
+```
+
+
 ## Bounds Checking
 Ark does some simple bounds checking for arrays, a segmentation fault will be
 generated if you go out of the bounds of an array.
