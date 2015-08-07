@@ -26,4 +26,5 @@ called with the dot operator like so:
 
 ```
 foo: ^Foo;
+foo.bar();
 ```
