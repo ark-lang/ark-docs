@@ -23,7 +23,7 @@ Ark will determine the name of the module based on the files name and the direct
 it is a child of.
 
 ## Module Access
-A module is accessed using the `use` statement. If the module is a directory,
+A module is accessed using the `mod` statement. If the module is a directory,
 all of the children will be used. If the module is a file, all of the modules
 contents will be used.
 
