@@ -16,7 +16,7 @@ func main() -> int {
 ## `alloc_raw`
 The `alloc_raw` function will allocate raw memory, it takes the amount of memory to
 allocate as an unsigned integer. Like the `alloc` function, the `alloc_raw` function
-will also return a pointer to the memory block that it allocated.
+will also return a pointer to the memory block that it allocates.
 
 ## `sizeof`
 
