@@ -124,6 +124,6 @@ func do_stuff(a: int, ...) {
 }
 ```
 
-Will take a variable amount of arguments. Note that this is for compatibility
-with C, for instance the `printf` function. This means that there is no way that
-you can get the arguments in Ark.
+The above example shows a function that takes a variable amount of arguments. Note 
+that this is for compatibility with C, for instance the `printf` function. 
+This means that there is no way that you can get the arguments in Ark.
