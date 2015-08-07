@@ -4,7 +4,7 @@ Names can be bound to a type, you can declare custom types, or you can alias
 existing types. 
 
 The `type` keyword, followed by a name to bind it to, and the type it aliases, denotes
-a Named Type.
+a Named Type. Here are some examples:
 
 ```
 type PersonAge int;
