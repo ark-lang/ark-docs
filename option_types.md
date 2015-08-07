@@ -1,7 +1,6 @@
 # Option Types [in progress]
 
-An option type allows for either
-`Some(x)` or `None`. Option types are in the standard library, they are
+An option type allows for either `Some(x)` or `None`. Option types are in the standard library, they are
 represented with a tagged union, and can take any type `T`.
 
 ```
