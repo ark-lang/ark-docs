@@ -10,7 +10,7 @@ points to is de-allocated. Take the following example:
 
 ```
 {
-    x: ^int = std::mem::malloc(std::mem::size_of(^x));
+    x: ^int = std::mem::alloc(std::mem::sizeof(^x));
     // x now holds a pointer to the allocated memory
 
     // the memory that x points to is de-allocated here
