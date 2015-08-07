@@ -8,6 +8,8 @@ function receiver is an "extra parameter", however the compiler will pass it to
 the function implicitly in code gen. This means that functions can be called with the
 dot operator.
 
+A function that has a receiver is a method, since it "belongs" to a type.
+
 ```
 type Foo struct {
     a: int,
