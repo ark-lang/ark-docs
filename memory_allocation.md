@@ -21,6 +21,9 @@ foo: ^u8 = std::mem::alloc_raw(256);
 ```
 
 ## `sizeof`
-`sizeof` is an expression that will get the size of the given type `T` or expression `E`.
+`sizeof` is an expression that will get the size of the given type `T` or expression
+`E`. Since `alloc` handles memory allocation for types for you, we suggest not using
+this in pair with `alloc_raw`. However, it is available for when you need the size
+of something for 
 
 ## `dealloc`
