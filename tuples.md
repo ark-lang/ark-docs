@@ -11,6 +11,10 @@ the values specified in the same order that the type expects:
 
 ```
 a: (int, f64) = (1, 2.3);
+
+// here we expect an int and a float, but we get
+// a float and an int
 b: (int, f64) = (2.3, 1); // ERROR!
+
 c: (int, f64, f64, f64, int) = (1, 2.3, 3.2, 4.1, 6);
 ```
