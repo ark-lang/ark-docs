@@ -41,7 +41,7 @@ y: ^int = ^int(&x);
 
 ## Dereferencing Pointers
 To get the value at the given memory address, you simply dereference using
-the caret:
+the caret symbol `^`:
 
 ```
 x: int = 5;
