@@ -1,3 +1,19 @@
 # Operator Overloading
 Ark allows operator overloading, however there are a few restrictions enforced 
-for safety.
+for safety. You can overload the following operators:
+
+* `+`
+* `-`
+* `/`
+* `*`
+
+The `operator` keyword, followed by the operator to overload, a set of parameters
+and a return type denote an operator overload. This syntax is very similar to a
+function, however the operator keyword is used in replace of `func`, and the symbol
+to overload in replace of a function name.
+
+By default operator implementations are unordered, for example:
+
+```
+
+```
