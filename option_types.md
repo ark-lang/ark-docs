@@ -4,7 +4,8 @@ An option type represents the encapsulation of an optional value. An option type
 can either contain `Some(x)`, where `x` is the value it contains, or `None`, i.e.
 no value.
 
-Option types are -- soon to be -- defined in the standard library.
+Option types are -- soon to be -- defined in the standard library. Option types
+make use of Ark features for their implementation.
 
 ```
 mut x: Option<int> = None;
