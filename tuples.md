@@ -22,3 +22,11 @@ c: (int, f64, f64, f64, int) = (1, 2.3, 3.2, 4.1, 6);
 ## Accessing Tuple Values
 Pipe operators denote tuple access. For instance, to access the values in a tuple
 `x`, we write `x|n|` where `n` is the index of the item to access in the tuple.
+
+> this syntax is under review...
+
+```
+a: (int, f64) = (1, 2.3);
+y := a|0|;
+z := a|1|;
+```
