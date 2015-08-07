@@ -53,3 +53,5 @@ func main() -> int {
     foo.bar();
 }
 ```
+
+### Static Methods
