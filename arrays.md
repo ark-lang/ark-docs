@@ -17,3 +17,4 @@ mut c: [5]int; // compiler will zero out 5 contigiuos slots of memory
 d: int = a[2]; // subscript notation for access
 c[1] = a[2]; // and setting array values too
 ```
+
