@@ -41,7 +41,7 @@ func print_value(a: int) {
 }
 ```
 
-As you can see, the syntax is similar to a variable. A parameter has a
+As you can see, the syntax is almost like a variable. A parameter has a
 name, followed by a colon `:`, and a type. However, there are differences. You 
 must specify the parameters type, and the parameter **cannot** have a 
 default value:
@@ -76,7 +76,7 @@ func add(a: int) -> int {
 ## Single Line Functions
 We've introduced some syntactic sugar for single line functions, instead of
 using two curly braces to denote a block, you can use the association 
-operator `=>`:
+operator  `=>`:
 
     func add(a: int, b: int) -> int => return a + b;
 
