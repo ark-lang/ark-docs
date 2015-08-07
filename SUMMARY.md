@@ -9,6 +9,7 @@
    * [Tuples](tuples.md)
    * [Enums](enums.md)
    * [Option Types](option_types.md)
+   * Interfaces
 * [Functions](functions.md)
 * [Defer](defer.md)
 * [Pointers](pointers.md)
