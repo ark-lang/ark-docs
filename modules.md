@@ -20,6 +20,6 @@ it is a child of.
 
 ## Module Access
 A module is accessed using the `use` statement. If the module is a directory,
-all of the children will be used. If the module is a file, 
+all of the children will be used. If the module is a file, all of 
 
 ## Dependencies
