@@ -86,10 +86,8 @@ know what types a function should take that you are calling to. It also acts
 as a "dummy" function so that the compiler knows that you aren't calling a 
 non-existent function.
 
-, however they don't specify what
-instructions the function will perform. These are most commonly used to bind
-C functions. The syntax is similar, yet, instead of specifying a block
-with curly braces, you terminate the function signature with a semi-colon `;`.
+A function signature, followed by a semi-colon instead of a block will denote
+a function prototype.
 
 ```
 // these are function prototypes
