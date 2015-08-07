@@ -29,7 +29,7 @@ c[1] = a[2]; // and setting array values too
 ## Array Length
 To get the length of an array, use the hash symbol `#` followed by an array literal
 or an array binding. The array length operator will be an unsigned integer, so
-it should be stored as such,
+it should be stored as such.
 
 ```
 some_array := [0, 1, 2, 3];
