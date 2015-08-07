@@ -27,7 +27,8 @@ c[1] = a[2]; // and setting array values too
 ```
 
 ## Array Length
-To get the length of an array, 
+To get the length of an array, use the hash symbol `#` followed by an array literal
+or an array binding:
 
 ## Bounds Checking
 Ark does some simple bounds checking for arrays, a segmentation fault will be
