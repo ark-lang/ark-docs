@@ -29,4 +29,12 @@ type Rectangle struct {
 type Circle struct {
     radius: f64,
 };
+
+func (r ^rect) area() -> f64 {
+    return r.width * r.height;
+}
+
+func (r ^rect) perimeter() -> f64 {
+    return (r.width * 2) * (r.height * 2);
+}
 ```
