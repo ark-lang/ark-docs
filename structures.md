@@ -14,8 +14,13 @@ struct {
 
 We can bind a structure to a variable like so. Note that the structure itself
 is not terminated with a semi-colon, but the variable declaration that is binding
-this type does.
+this type does. 
 
+We can also have default values for a structure. Default values are set in a 
+similar fashion to variable declarations (name, colon, Type, assignment operator,
+expression).
+
+```
 // bind structure to variable
 mut x: struct {
     a: int = 2,
