@@ -19,6 +19,8 @@ the caret symbol:
 ```
 x: int = 5;
 y: ^int = ^int(&x);
+
+// dereference
 z: int = ^y; // get the value at y, store in x
 ```
 
