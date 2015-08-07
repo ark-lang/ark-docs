@@ -19,3 +19,10 @@ type Geometry interface {
 
 Now if we introduce some structures that implement the same methods in the interface
 we defined, they will implement `Geometry` implicitly.
+
+```
+type Rectangle struct {
+    width: f64,
+    height: f64,
+};
+```
