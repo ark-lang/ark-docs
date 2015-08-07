@@ -31,3 +31,5 @@ foo: ^u8 = std::mem::alloc(std::mem::sizeof(int) + std::mem::sizeof(f64));
 ```
 
 ## `dealloc`
+`dealloc` will de-allocated the memory that you allocate, this must be called after
+allocating any memory, otherwise you will get a memory leak.
