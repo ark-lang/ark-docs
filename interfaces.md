@@ -37,4 +37,12 @@ func (r ^rect) area() -> f64 {
 func (r ^rect) perimeter() -> f64 {
     return (r.width * 2) * (r.height * 2);
 }
+
+func (c ^circle) area() -> f64 {
+    return std::math::PI * c.radius * c.radius;
+}
+
+func (c ^circle) perimeter() -> f64 {
+    return 2 * std::math::PI * c.radius;
+}
 ```
