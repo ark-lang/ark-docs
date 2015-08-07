@@ -17,7 +17,7 @@ are being stored in.
 
     
 ## Referencing Memory
-To reference some memory,
+To reference some memory, you use the address-of operator `&`.
 
 ```
 x: int = 5;
