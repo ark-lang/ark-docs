@@ -20,7 +20,7 @@
        * [References](references.md)
        * [Reference Lifetime](reference_lifetime.md)
        * [Explicit Lifetimes](explicit_lifetimes.md)
-* Memory Allocation
+* [Memory Allocation](memory_allocation.md)
 * Control Flow
    * [If Statements](if_statements.md)
    * [For Loops](for_loops.md)
