@@ -9,8 +9,8 @@ will begin.
     }
 
 ## Function Signatures
-A function is denoted with the `func` keyword, followed by the name of the
-function, a list of parameters, an optional return value, and block or semi-colon. 
+The `func` keyword, followed by the name of the function, a list of parameters, 
+an optional return value, and block or semi-colon denotes a function.
 
 ```
 // "func" Iden "(" ParameterList ")" [ "->" Type ] Block;
