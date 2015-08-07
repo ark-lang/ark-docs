@@ -63,3 +63,13 @@ func (Foo) bar() {
     // do stuff here
 }
 ```
+
+However, static methods are called slightly differently. Instead of a dot operator,
+you use the double colon operator `::`. Also, you do not need an instance of the
+function.
+
+```
+func main() -> int {
+    Foo::bar();
+}
+```
