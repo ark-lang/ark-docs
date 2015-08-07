@@ -26,5 +26,8 @@ It's important to know that this isn't a true alias, it's a new type, which mean
 that it must be cast. For example:
 
 ```
+type Foo int;
 
+a: int = 10;
+b: Foo = Foo(a); // we have to cast a to Foo.
 ```
