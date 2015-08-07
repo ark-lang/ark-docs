@@ -52,7 +52,7 @@ v.y = 32;
 
 ## Using Default Structure Values
 ### Default Expression
-Note that default can also be an expression, this will set the default for a
+`default` can also be an expression, this will set the default for a
 given type:
 
 ```
