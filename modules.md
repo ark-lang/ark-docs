@@ -19,6 +19,6 @@ Ark will determine the name of the module based on the files name and the direct
 it is a child of.
 
 ## Module Access
-
+A module is accessed using the `use` statement. 
 
 ## Dependencies
