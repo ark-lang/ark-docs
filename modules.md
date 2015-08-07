@@ -51,6 +51,15 @@ is because using a sub-module (or file module) will allow us to implicitly
 call the children of said module. However, we can specify the `as` keyword
 to be more explicit.
 
+```
+use entities::player as entity;
+
+func main() -> int {
+    player: ^entity::Player = entity::Player::new();
+    return 0;
+}
+```
+
 We can also specify to use more than one child-module with some syntactic
 sugar:
 
