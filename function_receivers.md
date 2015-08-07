@@ -13,5 +13,7 @@ type Foo struct {
     a: int,
 };
 
-func (a:
+func (a: Foo) bar() {
+
+}
 ```
