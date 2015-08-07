@@ -33,6 +33,8 @@ The `bar` function takes an instance of `Foo`, however it takes a copy of `Foo`,
 and not a pointer to it. This is an important detail, because `Foo` will be copied
 into the function, instead of a pointer to the structure.
 
+### Passing by Reference
+
 We can easily pass a reference instead by changing the receiver to accept a pointer
 to Foo instead of a copy of Foo, thus making the code become:
 
@@ -41,7 +43,12 @@ type Foo struct {
     a: int,
 };
 
-func (a: Foo) bar() {
+func (a: ^Foo) bar() {
     // do stuff here
+}
+
+func main() -> int {
+    foo: ^Foo;
+    
 }
 ```
