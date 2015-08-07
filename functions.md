@@ -95,3 +95,18 @@ func main(): int {
 As you can see, the first function took a function as a parameter. Functions
 can be passed as first-class function pointers. This is mostly useful when
 sorting lists, making callbacks, etc.
+
+## Variadic Functions
+A variadic function is a function that can take a variable amount of arguments.
+To declare a variadic function, an ellipses is used as the last parameter, for
+example:
+
+```
+func do_stuff(a: int, ...) {
+
+}
+```
+
+Will take a variable amount of arguments. Note that this is for compatibility
+with C, for instance the `printf` function. This means that there is no way that
+you can get the arguments in Ark.
