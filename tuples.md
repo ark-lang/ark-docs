@@ -1,7 +1,7 @@
 # Tuple [implemented]
 
 A tuple is a collection of values that can have irregular types. Tuples are similar
-to an array, although an array is a collection of values, which all 
+to an array, though an array is a collection of values, which all 
 have a **uniform type**.
 
 Two parenthesis that contain types separated by commas will denote a tuple type. A
