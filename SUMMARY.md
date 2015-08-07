@@ -12,7 +12,7 @@
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
-* [Modules](modules.md)
+* [Modules and Dependencies](modules.md)
 * [Ownership](ownership.md)
    * [Transferring Ownership](transferring_ownership.md)
    * [Borrowing](borrowing.md)
