@@ -1,7 +1,6 @@
 # Modules [in progress]
 
-## Meta
-This is under debate, check out the [RFC #3](https://github.com/ark-lang/rfcs/issues/3)
+> This is under debate, check out the [RFC #3](https://github.com/ark-lang/rfcs/issues/3)
 for modules to help.
 
 Modules can be in two forms, a file, or a directory. Consider the
