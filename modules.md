@@ -15,5 +15,5 @@ All of the ark files are modules, all of the directories are modules. If a file
 is inside of a directory, we refer to it as a sub-directory, however this is more
 for the sake of simplicity.
 
-Ark will determine the name of the module based on the filename and the directory
+Ark will determine the name of the module based on the file name and the directory
 it is a child of.
