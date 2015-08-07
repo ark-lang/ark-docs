@@ -26,4 +26,8 @@ foo: ^u8 = std::mem::alloc_raw(256);
 this in pair with `alloc_raw`. However, it is available for when you need the size
 of an expression or type.
 
+```
+foo: ^u8 = std::mem::alloc(std::mem::sizeof(int) + std::mem::sizeof(f64));
+```
+
 ## `dealloc`
