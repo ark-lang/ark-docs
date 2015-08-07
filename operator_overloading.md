@@ -2,10 +2,11 @@
 Ark allows operator overloading, however there are a few restrictions enforced 
 for safety. You can overload the following operators:
 
-* `+`
-* `-`
-* `/`
-* `*`
+* `+` => addition
+* `-` => subtraction
+* `/` => division
+* `*` => multiplication
+* `%` => modulo
 
 The `operator` keyword, followed by the operator to overload, a set of parameters
 and a return type denote an operator overload. This syntax is very similar to a
