@@ -50,5 +50,7 @@ func (c: ^circle) perimeter() -> f64 {
 We can make a generic function that takes any type that implements our Geometry interface:
 
 ```
-func calculate(g: 
+func calculate(g: Geometry) {
+    
+}
 ```
