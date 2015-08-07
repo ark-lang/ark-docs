@@ -48,7 +48,7 @@ func (a: ^Foo) bar() {
 }
 
 func main() -> int {
-    foo: ^Foo = std::mem::alloc<Foo>;
+    foo: ^Foo = std::mem::alloc<Foo>();
     
 }
 ```
