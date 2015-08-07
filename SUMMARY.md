@@ -10,7 +10,7 @@
    * [Enums](enums.md)
    * [Option Types](option_types.md)
 * [Functions](functions.md)
-* Defer
+* [Defer](defer.md)
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
