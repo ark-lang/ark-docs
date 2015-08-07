@@ -12,6 +12,8 @@ know what you're doing:
 
     vga_start: ^u16 = ^u16(0xB8000);
     
+As shown above, memory address (hex literals) should be cast to a pointer they
+are being stored in.
 
     
 ## Referencing Memory
