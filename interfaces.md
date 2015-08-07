@@ -60,7 +60,7 @@ func main() -> int {
     };
     
     c := Circle {
-        radius: 5
+        radius: 5,
     };
 
     measure(r)
