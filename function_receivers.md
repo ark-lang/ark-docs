@@ -66,7 +66,7 @@ func (Foo) bar() {
 
 However, static methods are called slightly differently. Instead of a dot operator,
 you use the double colon operator `::`. Also, you do not need an instance of the
-function.
+function receiver.
 
 ```
 func main() -> int {
