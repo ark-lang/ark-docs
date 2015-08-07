@@ -101,4 +101,8 @@ of your project. The compiler will search for the `_deps` directory in the
 current directory, and keep going up a directory till it finds a `_deps` folder.
 
 Dependencies are used almost identically to modules, however you use the `dep`
-keyword instead of a `mod` keyword.
+keyword instead of a `mod` keyword. For instance:
+
+```
+dep mysql;
+```
