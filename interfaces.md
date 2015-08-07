@@ -16,3 +16,12 @@ interface {
     perimeter() -> f64;
 }
 ```
+
+we can bind this to a new type like so:
+
+```
+type Geometry interface {
+    area() -> f64;
+    perimeter() -> f64;
+};
+```
