@@ -52,48 +52,8 @@ func main() -> int {
 
 ### Implicit Modules
 
-Notice how we don't specify the module we access from on function calls? This
-is because using a sub-module (or file module) will allow us to implicitly
-call the children of said module. However, we can specify the `as` keyword
-to be more explicit.
+When you have a lot of nested modules, things can get a bit messy.
 
-```
-mod entities::player as entity; // as player is fine too!
-
-func main() -> int {
-    player: ^entity::Player = entity::Player::new();
-    return 0;
-}
-```
-
-We can also specify to use more than one child-module with some syntactic
-sugar:
-
-```
-use entities::{player, mob::slime};
-
-func main() -> int {
-    player: ^Player = Player::new();
-    slime: ^Slime = Slime::new();
-    return 0;
-}
-
-```
-
-And again, we can use the as keyword. Since we are using the brace syntactic
-sugar, we must also specify each "alias". Order is important in this case,
-otherwise your player will have a "slime" alias, and a slime has a "player"
-alias.
-
-```
-mod entities::{player, mob::slime} as {player, slime};
-
-func main() -> int {
-    player: ^player::Player = player::Player::new();
-    slime: ^slime::Slime = slime::Slime::new();
-    return 0;
-}
-```
 
 ## Dependencies
 Dependencies will be located in a `_deps` directory. This will be in the root
