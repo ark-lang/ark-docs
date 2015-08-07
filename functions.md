@@ -81,7 +81,7 @@ operator  `=>`:
     func add(a: int, b: int) -> int => return a + b;
 
 ## Function Prototypes
-Function prototypes are mostly for interop with C. 
+Function prototypes are mostly for interoperability with C. 
 
 , however they don't specify what
 instructions the function will perform. These are most commonly used to bind
