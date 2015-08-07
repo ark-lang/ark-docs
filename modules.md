@@ -58,6 +58,10 @@ to inject, or to inject all modules:
 ```
 mod entities::mob::*; // injects all children of the mob module
 use entities::mob::{slime, cat}; // injects selected children of mob module
+
+func main() -> int {
+
+}
 ```
 
 
