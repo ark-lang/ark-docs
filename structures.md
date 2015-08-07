@@ -75,5 +75,6 @@ a structure using the default statement:
     person: Person;
     default(person);
     
-The above will set the person variable to use the Person type's default values, if
-you do not set a default to structure, it will be initialized with garbage values.
+The above will set the person variable to use the Person type's default values. If 
+we do not use the default statement on a structure, the structures members will not
+have their memory zeroed out, thus causing them to contain random values.
