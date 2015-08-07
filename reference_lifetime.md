@@ -5,7 +5,7 @@ typically introduced in their own scope. So if we didn't introduce
 a scope, we would have a collision:
 
 ```
-x: ^int = mem::malloc(mem::size_of(^x));
+x: ^int = mem::alloc(mem::sizeof(^x));
 y: &int = &mut x; // reference to x here
 
 C::printf("bread %d\n", ^x); // try to borrow x here
