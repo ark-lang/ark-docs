@@ -11,7 +11,8 @@ to avoid changes that break a lot of compatibility, or involve a lot of
 re-factoring in the code. Yet, considering the
 stage of the compiler, it's inevitable that things will break.
 
-This file serves as a reference to the language, and not as an introduction. If
+This file serves as a reference to the language, however it can be used as
+an introduction to the language, though it is not written to be read as one. If
 you are familiar with other languages like C, Rust, C++, Go, ... then most of
 this document should be easy to use as a cheat sheet. 
 
