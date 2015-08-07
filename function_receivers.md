@@ -34,7 +34,7 @@ and not a pointer to it. This is an important detail, because `Foo` will be copi
 into the function, instead of a pointer to the structure.
 
 We can easily pass a reference instead by changing the receiver to accept a pointer
-to Foo instead of a copy of Foo.
+to Foo instead of a copy of Foo, thus making the code become:
 
 ```
 type Foo struct {
