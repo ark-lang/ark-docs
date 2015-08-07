@@ -16,7 +16,7 @@ Note that the lifetimes of `x` and `y` collide, so we cannot borrow `x`
 while `y` is in scope. To avoid this, we introduce a new scope:
 
 ```
-x: ^int = mem::malloc(mem::size_of(^x));
+x: ^int = std::mem::alloc(std::mem::sizeof(^x));
 {
     y: &int = &mut x; // reference to x here
     // y's lifetime ends here
