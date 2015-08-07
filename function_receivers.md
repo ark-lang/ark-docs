@@ -25,5 +25,5 @@ A method needs an instance of the function receiver in order to be called. It is
 called with the dot operator like so:
 
 ```
-
+foo: ^Foo;
 ```
