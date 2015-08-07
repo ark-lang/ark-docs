@@ -20,6 +20,7 @@
        * [References](references.md)
        * [Reference Lifetime](reference_lifetime.md)
        * [Explicit Lifetimes](explicit_lifetimes.md)
+* Memory Allocation
 * Control Flow
    * [If Statements](if_statements.md)
    * [For Loops](for_loops.md)
@@ -32,5 +33,4 @@
    * [Multiple Type Parameters](multiple_type_parameters.md)
    * [Methods on Generic Types](methods_on_generic_types.md)
    * [Type Restrictions](type_restrictions.md)
-* Memory Allocation
 
