@@ -18,7 +18,6 @@ know what you're doing:
 As shown above, memory address (hex literals) should be cast to a pointer they
 are being stored in.
 
-    
 ## Referencing Memory
 
 ```
