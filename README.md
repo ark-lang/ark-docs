@@ -7,7 +7,7 @@
 This is the official reference for the Ark programming language. Note that this
 document is not final and could change at any point, as could the compiler
 itself, which means that the reference could become out-dated. We try
-to avoid changes that break a lot of compatibility, or involve a lot of
+to avoid changes that break a lot of compatibility, involve a lot of
 re-factoring in the code, or updates to the reference. Yet, considering the
 stage of the compiler, it's inevitable that things will break.
 
