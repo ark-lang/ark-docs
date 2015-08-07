@@ -37,6 +37,7 @@ close with two to make it look pretty.
 
 ```
 /**
- 
+    This does a thing
+    nice!
 **/
 ```
