@@ -41,4 +41,4 @@ x: ^int = std::mem::alloc<int>();
 defer std::mem::dealloc(x);
 ```
 
-In the example above we defer, which means that at the end of scope, call dealloc on `x`.
+In the example above we defer, which means that at the end of scope, call dealloc on `x`. The defer expression is very handy with resource allocation.
