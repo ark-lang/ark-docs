@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Comments
+* [Comments](comments.md)
 * [Variables](variables.md)
 * [Types](types.md)
    * [Named Types](named_types.md)
