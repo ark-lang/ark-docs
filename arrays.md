@@ -16,7 +16,7 @@ mut c: [5]int; // compiler will zero out 5 contiguous slots of memory
 ```
 
 ## Accessing Array Values
-Ark uses subscript notation for array access:
+Ark uses subscript notation for array access.
 
 ```
 d: int = a[2]; // subscript notation for access
