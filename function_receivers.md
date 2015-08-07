@@ -35,3 +35,13 @@ into the function, instead of a pointer to the structure.
 
 We can easily pass a reference instead by changing the receiver to accept a pointer
 to Foo instead of a copy of Foo.
+
+```
+type Foo struct {
+    a: int,
+};
+
+func (a: Foo) bar() {
+    // do stuff here
+}
+```
