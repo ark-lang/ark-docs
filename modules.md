@@ -105,4 +105,9 @@ keyword instead of a `mod` keyword. For instance:
 
 ```
 dep mysql;
+
+func main() -> int {
+    connection: ^mysql::Connection = mysql::connect(...);
+    defer connection.close();
+}
 ```
