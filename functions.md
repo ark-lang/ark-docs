@@ -84,7 +84,7 @@ operator  `=>`:
 Function prototypes are for interoperability with C. They help the Ark compiler
 know what types a function should take that you are calling to. It also acts
 as a "dummy" function so that the compiler knows that you aren't calling a 
-non-existant function.
+non-existent function.
 
 , however they don't specify what
 instructions the function will perform. These are most commonly used to bind
