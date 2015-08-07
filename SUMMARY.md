@@ -16,7 +16,6 @@
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
-* [Operator Overloading](operator_overloading.md)
 * [Modules and Dependencies](modules.md)
 * [Ownership](ownership.md)
    * [Transferring Ownership](transferring_ownership.md)
@@ -32,6 +31,7 @@
    * Pattern Matching
        * [Match](match.md)
        * [Patterns](patterns.md)
+* [Operator Overloading](operator_overloading.md)
 * [Attributes](attributes.md)
 * [Generics](generics.md)
    * [Multiple Type Parameters](multiple_type_parameters.md)
