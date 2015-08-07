@@ -33,3 +33,32 @@ type VariableData struct {
     // some values here that
 };
 ```
+
+Tagged union values are set and accessed with the double colon operator `::`.
+
+```
+[c] func printf(fmt: str, ...) -> int;
+
+type Tree enum {
+    Node{left: ^Tree, right: ^Tree},
+    Leaf(int)
+};
+
+func main() -> int {
+    // make a leaf with the value 42
+	x := Tree::Leaf(42);
+	
+	// make a leaf with the value 36
+	y := Tree::Leaf(36);
+	
+	// make a node which contains two pointers to
+	// the child leaves
+	z := Tree::Node{left: &x, right: &y};
+
+    // print out the tree contents.
+    C::printf("Leaf-tag: %d\n", x);
+    C::printf("Leaf-tag: %d\n", y);
+    C::printf("Node-tag: %d\n", z);
+    return 0;
+}
+```
