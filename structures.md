@@ -51,9 +51,10 @@ v.y = 32;
 ```
 
 ## Using Default Structure Values
+There are two ways of using `default`. As an expression, or as a statement. The
+`default` expression takes a Type `T`. The `default` statement takes a structure.
+
 ### Default Expression
-`default` can also be an expression, this will set the default for a
-given type:
 
 ```
 x: int = default(int);
