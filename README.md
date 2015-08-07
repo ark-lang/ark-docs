@@ -20,5 +20,4 @@ this document should be easy to use as a cheat sheet.
 * [Website](https://ark-lang.org)
 * [GitHub](https://github.com/ark-lang)
 * [Reddit](http://reddit.com/r/ark_lang)
-* [Gitter](https://gitter.im/ark-lang/ark)
-* [IRC]()
+* [Git (#ark-lang on freenode)](https://webchat.freenode.net/?channels=%23ark-lang)
