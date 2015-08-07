@@ -5,7 +5,8 @@ can either contain `Some(x)`, where `x` is the value it contains, or `None`, i.e
 no value.
 
 Option types are -- soon to be -- defined in the standard library. Option types
-make use of Ark features for their implementation.
+make use of Ark features for their implementation. In other words, an Option Type
+is a tagged union that allows for a generic type.
 
 ```
 mut x: Option<int> = None;
