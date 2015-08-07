@@ -46,4 +46,17 @@ func main() -> int {
 }
 ```
 
+We can also specify to use more than one child-module with some syntactic
+sugar:
+
+```
+use entities::{player, mob::slime};
+
+func main() -> int {
+    player: ^player::Player = player::new();
+    return 0;
+}
+
+```
+
 ## Dependencies
