@@ -6,7 +6,7 @@ In Ark, we denote pointers with the caret symbol, `^`.
 
 ## Meta
 A raw pointer is not memory safe in Ark. Pointers
-work differently in the Ark language (see ownership),
+work differently in the Ark language for memory safety (see ownership),
 but for behaviour similar to C we have raw pointers which
 are described in this section.
 
