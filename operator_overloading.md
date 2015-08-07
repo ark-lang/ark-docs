@@ -12,6 +12,12 @@ and a return type denote an operator overload. This syntax is very similar to a
 function, however the `operator` keyword is used in replace of `func`, and the symbol
 to overload in replace of a function name.
 
+```
+operator +(a: Vector2, b: Vector2) -> Vector2 {
+    ...
+}
+```
+
 By default operator implementations are unordered, for example:
 
 ```
