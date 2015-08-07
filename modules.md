@@ -83,3 +83,6 @@ func main() -> int {
     defer connection.close();
 }
 ```
+
+You can also tell the compiler where your `_deps` directory is located explicitly
+using the `--deps` flag, e.g. `--deps=../../_deps`.
