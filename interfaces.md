@@ -25,4 +25,8 @@ type Rectangle struct {
     width: f64,
     height: f64,
 };
+
+type Circle struct {
+    radius: f64,
+};
 ```
