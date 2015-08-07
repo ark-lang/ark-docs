@@ -21,5 +21,6 @@ foo: ^u8 = std::mem::alloc_raw(256);
 ```
 
 ## `sizeof`
+`sizeof` is an 
 
 ## `dealloc`
