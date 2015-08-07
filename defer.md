@@ -17,6 +17,8 @@ func main() -> int {
     while !file.eof() {
         file_contents = std::string::append(file_contents, file.read_line());
     }
+    
+    // file.close() is done here.
 }
 ```
 
