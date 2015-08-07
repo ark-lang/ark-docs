@@ -16,6 +16,10 @@ The `alloc_raw` function will allocate raw memory, it takes the amount of memory
 allocate as an unsigned integer. Like the `alloc` function, the `alloc_raw` function
 will also return a pointer to the memory block that it allocates.
 
+```
+foo: ^u8 = std::mem::alloc_raw(256);
+```
+
 ## `sizeof`
 
 ## `dealloc`
