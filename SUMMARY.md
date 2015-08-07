@@ -16,7 +16,7 @@
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
-* Operator Overloading
+* [Operator Overloading](operator_overloading.md)
 * [Modules and Dependencies](modules.md)
 * [Ownership](ownership.md)
    * [Transferring Ownership](transferring_ownership.md)
