@@ -16,7 +16,10 @@ mut c: [5]int; // compiler will zero out 5 contiguous slots of memory
 ```
 
 ## Accessing Array Values
-Ark uses subscript notation for array access.
+Ark uses subscript notation for array access. In other words, the array to access,
+and the index of the array to access inside of square brackets. For example:
+`x[n]`, where `x` is the array to access, and `n` is the index of the array
+to retrieve.
 
 ```
 d: int = a[2]; // subscript notation for access
