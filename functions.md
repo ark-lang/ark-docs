@@ -8,7 +8,7 @@ will begin.
         ...
     }
 
-## Function Signatures
+## Declaring Functions
 The `func` keyword, followed by the name of the function, a list of parameters, 
 an optional return value denotes a function signature.
 
