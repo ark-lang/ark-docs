@@ -1,6 +1,6 @@
 # Option Types [in progress]
 
-An option type is used in replace of a null pointer, an object can either be
+An option type replaces of a null pointer, an object can either be
 `Some(x)` or `None`. Option types are in the standard library, they are
 represented with a tagged union, and can take any type `T`.
 
