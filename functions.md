@@ -75,7 +75,7 @@ func add(a: int) -> int {
 
 ## Single Line Functions
 We've introduced some syntactic sugar for single line functions, instead of
-using two curly braces to denote a block, you can use the "hash rocket" operator 
+using two curly braces to denote a block, you can use the association operator 
 `=>`:
 
     func add(a: int, b: int) -> int => return a + b;
