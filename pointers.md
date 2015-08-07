@@ -19,7 +19,10 @@ As shown above, memory address (hex literals) should be cast to a pointer they
 are being stored in.
 
 ## Referencing Memory
-
+A reference to something is denoted with the address-of operator `&`. This is
+expected to be stored in a reference type `&T = &xyz;`. However, this reference
+will follow the rules of ownership, i.e. in this case a constant reference that
+cannot be mutated, and must also not outlive the referrers lifetime.
 
 ```
 x: int = 5;
