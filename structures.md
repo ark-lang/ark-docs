@@ -55,6 +55,8 @@ There are two ways of using `default`. As an expression, or as a statement. The
 `default` expression takes a Type `T`. The `default` statement takes a structure.
 
 ### Default Expression
+In this case, we use the `default` expression, which takes the Type `int`. This will
+set `x` to the default value for an `int`, which is zero.
 
 ```
 x: int = default(int);
