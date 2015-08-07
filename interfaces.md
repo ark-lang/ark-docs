@@ -30,19 +30,19 @@ type Circle struct {
     radius: f64,
 };
 
-func (r: ^rect) area() -> f64 {
+func (r: rect) area() -> f64 {
     return r.width * r.height;
 }
 
-func (r: ^rect) perimeter() -> f64 {
+func (r: rect) perimeter() -> f64 {
     return (r.width * 2) * (r.height * 2);
 }
 
-func (c: ^circle) area() -> f64 {
+func (c: circle) area() -> f64 {
     return std::math::PI * c.radius * c.radius;
 }
 
-func (c: ^circle) perimeter() -> f64 {
+func (c: circle) perimeter() -> f64 {
     return 2 * std::math::PI * c.radius;
 }
 ```
@@ -51,6 +51,19 @@ We can make a generic function that takes any type that implements our Geometry 
 
 ```
 func calculate(g: Geometry) {
+    C::printf("area %, perim % \n", g.area(), g.perimeter());
+}
+
+func main() -> int {
+    r := Rect { 
+        width: 3, height: 4
+    };
     
+    c := Circle {
+        radius: 5
+    };
+
+    measure(r)
+    measure(c)
 }
 ```
