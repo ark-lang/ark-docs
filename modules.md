@@ -96,3 +96,5 @@ func main() -> int {
 ```
 
 ## Dependencies
+Dependencies will be located in a `_deps` directory. This will be in the root
+of your project.
