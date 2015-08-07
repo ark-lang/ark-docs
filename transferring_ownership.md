@@ -47,6 +47,6 @@ move `y` to `x` like so:
 }
 ```
 
-However, note the one slight change: I made `x` a mutable variable. This is to
+However, notice the one slight change: I made `x` a mutable variable. This is to
 avoid an error when we re-assign `x` later on to be `y`, as otherwise it wouldn't
 compile.
