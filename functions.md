@@ -30,7 +30,8 @@ func foobar() -> int {
 
 ## Function Parameters
 An identifier, followed by a colon and a Type denote a function parameter. Function
-parameters must go in the function signature.
+parameters must go in the function signature, between the parenthesis after the
+functions identifier (name).
 
 ```
 // Parameter = Iden ":" Type
