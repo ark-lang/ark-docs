@@ -16,6 +16,7 @@ a block.
 
 ```
 // "func" Iden "(" ParameterList ")" [ "->" Type ] Block;
+
 func do_stuff() {
     // this returns nothing
 }
