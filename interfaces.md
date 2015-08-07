@@ -11,15 +11,6 @@ will denote an interface. Method signatures defined in an interface do not
 need to specify the `func` keyword.
 
 ```
-interface {
-    area() -> f64;
-    perimeter() -> f64;
-}
-```
-
-we can bind this to a new type like so:
-
-```
 type Geometry interface {
     area() -> f64;
     perimeter() -> f64;
