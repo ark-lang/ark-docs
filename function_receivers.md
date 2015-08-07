@@ -17,3 +17,5 @@ func (a: Foo) bar() {
 
 }
 ```
+
+## Calling Methods
