@@ -17,8 +17,14 @@ a block.
 ```
 // "func" Iden "(" ParameterList ")" [ "->" Type ] Block;
 
+// optional return value!
 func do_stuff() {
     // this returns nothing
+}
+
+// return value!
+func foobar() -> int {
+
 }
 ```
 
