@@ -25,7 +25,7 @@ know what you're doing:
 As shown above, memory address (hex literals) should be cast to a pointer they
 are being stored in.
 
-## Referencing Memory
+## Raw References
 A reference to something is denoted with the address-of operator `&`. This is
 expected to be stored in a reference type `&T = &xyz;`. However, this reference
 will follow the rules of ownership, i.e. in this case a constant reference that
