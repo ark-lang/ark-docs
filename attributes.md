@@ -13,7 +13,7 @@ packed | structures | n/a | doesn't pad the given structure |
 unused | declarations | n/a | supresses compiler warning on unused declarations |
 c | functions | n/a | places function in C module, sets appropriate settings in the compiler for C binding |
 target_os | declarations | "linux", "windows", "mac" | the tagged declaration only gets compiled on the given platform |
-target_arch | declarations | "x86_64" | |
+target_arch | declarations | "x86_64" | the tagged declaration only gets compiled on the given arch |
 inline |
 export |
 call_conv |
