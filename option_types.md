@@ -9,6 +9,7 @@ make use of Ark features for their implementation. In other words, an Option Typ
 is a tagged union that allows for a generic type `T`.
 
 ```
+// set it to none for now...
 mut x: Option<int> = None;
 
 x = Some(23);
