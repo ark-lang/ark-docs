@@ -4,8 +4,7 @@ An option type represents the encapsulation of an optional value. An option type
 can either contain `Some(x)`, where `x` is the value it contains, or `None`, i.e.
 no value.
 
-Option types are in the standard library, they are
-represented with a tagged union, and can take any type `T`.
+Option types are -- soon to be -- defined in the standard library.
 
 ```
 mut x: Option<int> = None;
