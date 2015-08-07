@@ -31,6 +31,8 @@ mut x: struct {
 The dot operator - `.` - allows us to access the members of a structure:
 
 ```
+// x is the structure
+// a, b are the members
 x.a = 100;
 x.b = 100;
 ```
