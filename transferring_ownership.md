@@ -40,7 +40,7 @@ move `y` to `x` like so:
 
 ```
 {
-    mut x: ^int = mem::malloc(mem::size_of(^x));
+    mut x: ^int = std::mem::alloc(std::mem::sizeof(^x));
     y: ^int = x;
     x = y; // give back the ownership
     C::printf("the value at at x is %d\n", ^x); // This works fine! :)
