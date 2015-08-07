@@ -4,7 +4,7 @@
 > is open source and licensed under MIT; if you spot any errors, feel free to 
 > send a PR!
 
-This is the official reference for the Ark programming language. Note that this
+This is the official reference for the [Ark programming language](github.com/ark-lang/ark). Note that this
 document is not final and could change at any point, as could the compiler
 itself, which means that the reference could become out-dated. We try
 to avoid changes that break a lot of compatibility, or involve a lot of
