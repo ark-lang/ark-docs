@@ -21,6 +21,6 @@ foo: ^u8 = std::mem::alloc_raw(256);
 ```
 
 ## `sizeof`
-`sizeof` is an 
+`sizeof` is an expression that will get the size of the given type `T` or expression `E`.
 
 ## `dealloc`
