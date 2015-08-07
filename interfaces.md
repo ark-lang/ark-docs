@@ -12,6 +12,7 @@ need to specify the `func` keyword.
 
 ```
 interface {
-    
+    area() -> f64;
+    perimeter() -> f64;
 }
 ```
