@@ -8,9 +8,7 @@ will allocate enough memory to store the size of the generic type you pass in.
 The `alloc` function returns a pointer to the memory block that it allocates.
 
 ```
-func main() -> int {
-    foo: ^int = std::mem::alloc<int>();
-}
+foo: ^int = std::mem::alloc<int>();
 ```
 
 ## `alloc_raw`
