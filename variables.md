@@ -12,7 +12,10 @@ Variables are defined in two ways:
 
 The syntax for a variable is the name of the variable, followed by a colon (`:`
 ), an optional type, an assignment operator (`=`), and an expression to assign 
-to the variable. Note that because variables are __immutable__ by default, 
+to the variable. 
+
+## Mutability
+Note that because variables are __immutable__ by default, 
 they **must** have an assignment.
 
 Mutability can be toggled with the `mut` keyword, this must be before the
