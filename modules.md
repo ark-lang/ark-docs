@@ -74,4 +74,18 @@ func main() -> int {
 
 ```
 
+And again, we can use the as keyword. Since we are using the brace syntactic
+sugar, we must also specify each "alias":
+
+```
+use entities::{player, mob::slime} as {player, slime};
+
+func main() -> int {
+    player: ^player::Player = player::Player::new();
+    slime: ^slime::Slime = slime::Slime::new();
+    return 0;
+}
+
+```
+
 ## Dependencies
