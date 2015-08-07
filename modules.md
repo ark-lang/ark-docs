@@ -87,4 +87,6 @@ func main() -> int {
 }
 ```
 
+Or we can group them under a single module:
+
 ## Dependencies
