@@ -23,4 +23,6 @@ A module is accessed using the `use` statement. If the module is a directory,
 all of the children will be used. If the module is a file, all of the modules
 contents will be used.
 
+If you use a directory module, 
+
 ## Dependencies
