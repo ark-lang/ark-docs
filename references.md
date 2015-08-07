@@ -4,7 +4,7 @@ How do we solve this issue? We use something called "borrowing". Instead of
 moving these values to the function, we pass a reference to these values.
 A reference has a few extra properties:
 
-* it cannot mutate what resource it'refers' to
+* it cannot mutate what resource it 'refers' to
 * it is **not** de-allocated at the end of scope
 
 A reference is denoted with an ampersand (`&`), followed by the resource it
