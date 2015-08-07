@@ -3,8 +3,8 @@
 Names can be bound to a type, you can declare custom types, or you can alias
 existing types. 
 
-A named type is denoted with the `type` keyword, followed by a name to bind it
-to, and the type it aliases.
+The `type` keyword, followed by a name to bind it to, and the type it aliases, denotes
+a Named Type.
 
 ```
 type PersonAge int;
