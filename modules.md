@@ -85,7 +85,6 @@ func main() -> int {
     slime: ^slime::Slime = slime::Slime::new();
     return 0;
 }
-
 ```
 
 ## Dependencies
