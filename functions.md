@@ -87,7 +87,7 @@ func do_stuff(fn: func(): int) {
     C::printf("%d\n", fn());
 }
 
-func main(): int {
+func main() -> int {
     do_stuff(func(): int { return 123; });
     return 0;
 }
