@@ -50,8 +50,6 @@ v.x = 23;
 v.y = 32;
 ```
 
-Since a Named Type is a declaration, it must end with a semi-colon.
-
 ## Using Default Structure Values
 ### Default Expression
 Note that default can also be an expression, this will set the default for a
