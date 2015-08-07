@@ -63,7 +63,7 @@ func main() -> int {
         radius: 5,
     };
 
-    measure(r)
-    measure(c)
+    measure(r);
+    measure(c);
 }
 ```
