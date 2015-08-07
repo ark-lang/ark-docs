@@ -53,7 +53,7 @@ func main() -> int {
 ### Implicit Modules
 When you have a lot of nested modules, things can get a bit messy. To inject
 modules into scope (which is not advised), you can specify multiple modules
-to inject, or to inject all modules:
+to inject, or to inject all modules.
 
 ```
 mod entities::mob::*; // injects all children of the mob module
