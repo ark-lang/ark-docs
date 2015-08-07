@@ -54,6 +54,7 @@ use entities::{player, mob::slime};
 
 func main() -> int {
     player: ^player::Player = player::new();
+    slime: ^slime::Slime = slime::new();
     return 0;
 }
 
