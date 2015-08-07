@@ -1,2 +1,2 @@
 # Modules [in progress]
-Modules are directory based.
+Modules can be in two forms, a file, or a directory.
