@@ -25,3 +25,5 @@ operator *(a: Vector2, b: f32) -> Vector2 {
     ...
 }
 ```
+
+This will allow both `Vector2 * f32` and `f32 * Vector2`. 
