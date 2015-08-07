@@ -5,7 +5,11 @@ need to know about pointers. Pointers store (or point to) addresses in memory.
 In Ark, we denote pointers with the caret symbol, `^`.
 
 ## Warning
-
+This section of the reference is more for the developers of ark, and the low level
+hackers who want more control over what they are doing. In other words, if you
+just want to write Ark code, you do not have to read this, and 9 times out of 10
+you wont need to do anything described in this document. Though this is handy
+to know, but shouldn't be used unless you know what you're doing.
 
 ## Meta
 A raw pointer is not memory safe in Ark. Pointers work differently in the Ark 
