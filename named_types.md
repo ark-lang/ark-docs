@@ -22,7 +22,7 @@ something: struct {
 ```
 
 It's important to know that this isn't a true alias, it's a new type, which means
-that it must be cast. For example:
+that it must be cast, even if the core type is the same. For example:
 
 ```
 type Foo int;
