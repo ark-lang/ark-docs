@@ -11,6 +11,12 @@ mod std::io::file;
 func main() -> int {
     file: ^File = File::open("shoppinglist.txt");
     defer file.close();
+    
+    // do some stuff with file here
+    mut file_contents: str = "";
+    while !file.eof() {
+        file_contents = std::string::append(file_contents, file.read_line());
+    }
 }
 ```
 
