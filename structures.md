@@ -28,8 +28,7 @@ mut x: struct {
 };
 ```
 
-To access values in a structure, write the structures name, followed by
-the dot operator, and the members name to access.
+The dot operator - `.` - allows us to access the members of a structure:
 
 ```
 x.a = 100;
