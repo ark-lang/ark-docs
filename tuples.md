@@ -6,7 +6,7 @@ uniform with one and another.
 
 Two parenthesis that contain types separated by commas will denote a tuple type. A
 tuple expression is like a tuple type, but instead of specifying the type
-in the parenthesis, you specify the values.
+in the parenthesis, you specify the values instead.
 
 Tuple types are a list of types separated with commas, surrounded with parenthesis. A tuple expression is
 similar, however it contains a list of expressions instead of types. Note that
