@@ -21,5 +21,7 @@ operator +(a: Vector2, b: Vector2) -> Vector2 {
 By default operator implementations are unordered, for example:
 
 ```
-
+operator *(a: Vector2, b: f32) -> Vector2 {
+    ...
+}
 ```
