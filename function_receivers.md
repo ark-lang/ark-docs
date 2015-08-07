@@ -28,3 +28,6 @@ called with the dot operator like so:
 foo: ^Foo;
 foo.bar();
 ```
+
+The `bar` function takes an instance of `Foo`, however it takes a copy of `Foo`,
+and not a pointer to it.
