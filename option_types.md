@@ -9,7 +9,8 @@ make use of Ark features for their implementation. In other words, an Option Typ
 is a tagged union that allows for a generic type `T`.
 
 ```
-mut x: std::Option<int> = None;
+// use Option from std library
+mut x: std::opt::Option<int> = None;
 x = Some(23);
 ```
 
