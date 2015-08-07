@@ -34,4 +34,9 @@ overload to be ordered using the `ordered` attribute:
 operator *(a: Vector2, b: f32) -> Vector2 {
     ...
 }
+
+[ordered]
+operator *(a: f32, b: Vector2): Vector2 { 
+    ... 
+}
 ```
