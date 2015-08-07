@@ -1,7 +1,7 @@
 # Tuple [implemented]
 
-A tuple is a collection of values that can have irregular types, whereas an array 
-is a collection of values in which their types are consistent with each-other.
+A tuple is a collection of values that can have irregular types. Tuples are similar
+to an array, however an array is a collection of values, which have a **uniform type**.
 
 Tuples are surrounded with parenthesis. Tuple types are a list of types
 separated with commas, surrounded with parenthesis. A tuple expression is
