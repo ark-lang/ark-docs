@@ -19,7 +19,7 @@ can't give it to someone else as I am no longer in possession of said loaf of br
 Note that you cannot mutate or use something that no longer has ownership of 
 the resource that it previously pointed to. This means that if we use `x` after 
 transferring its ownership to `y`, it won't work because it is no longer in 
-posession of the resource it is bound to as it has been transferred to `y`.
+possession of the resource it is bound to as it has been transferred to `y`.
 
 This means that the following example would **not** work:
 
