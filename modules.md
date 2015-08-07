@@ -23,6 +23,16 @@ A module is accessed using the `use` statement. If the module is a directory,
 all of the children will be used. If the module is a file, all of the modules
 contents will be used.
 
-If you use a directory module, you will have to specify
+Functions and other members of the module being used are accessed with the 
+double colon operator `::`.
+
+```
+use entities;
+
+func main() -> int {
+    player: ^entities::player::Player = entities::player::new();
+    return 0;
+}
+```
 
 ## Dependencies
