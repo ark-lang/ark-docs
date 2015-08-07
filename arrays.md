@@ -30,6 +30,12 @@ c[1] = a[2]; // and setting array values too
 To get the length of an array, use the hash symbol `#` followed by an array literal
 or an array binding:
 
+```
+some_array := [0, 1, 2, 3];
+x: uint = #[0, 1, 2, 3]; // stores 4
+y: uint = #some_array;
+```
+
 ## Bounds Checking
 Ark does some simple bounds checking for arrays, a segmentation fault will be
 generated if you go out of the bounds of an array.
