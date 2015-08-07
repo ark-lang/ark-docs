@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* Comments
 * [Variables](variables.md)
 * [Types](types.md)
    * [Named Types](named_types.md)
@@ -31,5 +32,4 @@
    * [Multiple Type Parameters](multiple_type_parameters.md)
    * [Methods on Generic Types](methods_on_generic_types.md)
    * [Type Restrictions](type_restrictions.md)
-* Comments
 
