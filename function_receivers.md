@@ -49,6 +49,7 @@ func (a: ^Foo) bar() {
 
 func main() -> int {
     foo: ^Foo = std::mem::alloc<Foo>();
-    
+    defer std::mem::dealloc<Foo>(foo);
+    foo.bar();
 }
 ```
