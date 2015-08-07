@@ -12,15 +12,15 @@ know what you're doing:
 
     vga_start: ^u16 = ^u16(0xB8000);
     
+
+    
 ## Referencing Memory
-To get the value at the given memory address, you dereference using
-the caret symbol:
+To reference some memory,
 
 ```
 x: int = 5;
 y: ^int = ^int(&x);
 
-// dereference
 z: int = ^y; // get the value at y, store in x
 ```
 
