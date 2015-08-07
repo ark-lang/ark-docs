@@ -5,3 +5,4 @@ implicitly implement interface `A`. This allows for duck typing, or in
 other words: 
 
 > If it looks like a duck, and quacks like a duck, it's a duck"
+
