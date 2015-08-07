@@ -37,8 +37,6 @@ type VariableData struct {
 Tagged union values are set and accessed with the double colon operator `::`.
 
 ```
-[c] func printf(fmt: str, ...) -> int;
-
 type Tree enum {
     Node{left: ^Tree, right: ^Tree},
     Leaf(int)
