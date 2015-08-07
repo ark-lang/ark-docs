@@ -16,3 +16,6 @@ type Geometry interface {
     perimeter() -> f64;
 };
 ```
+
+Now if we introduce some structures that implement the same methods in the interface
+we defined, they will implement `Geometry` implicitly.
