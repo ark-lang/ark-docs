@@ -1,4 +1,6 @@
 # Comments
+> This feature is implemented
+
 There are two types of comments in Ark:
 
 * single line comments

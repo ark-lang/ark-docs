@@ -1,4 +1,5 @@
-# Tagged Unions [implemented]
+# Tagged Unions
+> This feature is implemented
 
 An enum in Ark is what some may refer to as a tagged union, this allows for
 multiple variants: with no data, with named (tagged) data,

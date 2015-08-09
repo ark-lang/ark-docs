@@ -1,4 +1,5 @@
-# Multiple Type Parameters [in progress]
+# Multiple Type Parameters
+> This feature is in progress
 
 When using generics you are not limited to one type parameter. This allows for 
 even more complicated, but often even more useful, constructs. An example of 

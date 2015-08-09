@@ -1,4 +1,5 @@
-# If Statements [implemented]
+# If Statements
+> This feature is implemented
 
 An if statement is denoted with the `if` keyword, followed by a condition and
 a block of statements to execute.

@@ -1,4 +1,5 @@
-# Ownership [in progress]
+# Ownership
+> This feature is in progress
 
 Ownership is a set of rules that Ark will enforce to ensure
 memory safety. This will allow for zero-cost abstractions and help make 

@@ -1,4 +1,5 @@
-# Structures [implemented]
+# Structures
+> This feature is implemented
 
 We can define a structure with the `struct` keyword, followed by a block that
 contains the structures members. Note that an anonymous `struct` is not a 

@@ -1,4 +1,6 @@
-# Types [implemented]
+# Types
+> This feature is implemented
+
 There are many primitive types in Ark, as well as structures that allow you to
 define custom types in the language, and binding a type to a name.
 

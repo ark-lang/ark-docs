@@ -1,4 +1,5 @@
-# Transferring Ownership [in progress]
+# Transferring Ownership
+> This feature is in progress
 
 Consider the following example:
 
