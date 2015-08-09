@@ -19,7 +19,7 @@ Note that because variables are __immutable__ by default,
 they **must** have an assignment.
 
 To allow the mutation of a variable, you prepend the variable declaration with the `mut` keyword. If a variable is mutable, it does **not** need an initial
-expression to be assigned to it.
+expression to be assigned to it. However, if a variable is **immutable**, this means it is constant and cannot be changed, therefore it needs an initial value.
 
 ```
 // constant variable, must have an initial value
