@@ -1,2 +1,2 @@
-# Explicit Lifetimes [planned]
-TODO
+# Explicit Lifetimes
+> This page is unfinished

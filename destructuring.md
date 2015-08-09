@@ -1,4 +1,5 @@
-# De-structuring [in progress]
+# De-structuring
+> This feature is in progress
 
 ## De-structuring Tuples
 

@@ -1,4 +1,6 @@
 # Operator Overloading
+> This feature is planned
+
 Ark allows operator overloading, however there are a few restrictions enforced 
 for safety. You can overload the following operators:
 

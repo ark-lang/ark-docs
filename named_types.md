@@ -1,4 +1,5 @@
-# Named Types [implemented]
+# Named Types
+> This feature is implemented
 
 Names can be bound to a type, you can declare custom types, or you can alias
 existing types. 

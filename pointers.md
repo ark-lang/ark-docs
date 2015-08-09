@@ -1,4 +1,6 @@
-# Pointers [in progress]
+# Pointers
+> This feature is in progress
+
 Before we proceed to one of the more advanced topics in the Ark language, we
 need to know about pointers. Pointers store (or point to) addresses in memory.
 

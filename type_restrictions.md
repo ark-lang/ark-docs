@@ -1,4 +1,5 @@
-# Type Restrictions [in progress]
+# Type Restrictions
+> This feature is in progress
 
 It is not always the case that a generic function/type wishes to work with *all* types. To allow for the creation of functions/types like this we use the 
 concept of **type restrictions**. A type restriction is, as the name suggests, 

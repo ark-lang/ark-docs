@@ -1,4 +1,6 @@
-# Arrays [implemented]
+# Arrays
+> This feature is implemented
+
 An array is a static collection of values that have a uniform type. Arrays are 
 denoted with square brackets, or "blocks". Arrays are accessed using subscript
 notation. An arrays size should be known at compile-time, you can specify this
