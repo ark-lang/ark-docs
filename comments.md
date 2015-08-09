@@ -1,5 +1,5 @@
 # Comments
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 There are two types of comments in Ark:
 

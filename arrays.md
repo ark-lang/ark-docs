@@ -1,5 +1,5 @@
 # Arrays
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 An array is a static collection of values that have a uniform type. Arrays are 
 denoted with square brackets, or "blocks". Arrays are accessed using subscript

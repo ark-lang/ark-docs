@@ -1,5 +1,5 @@
 # Tagged Unions
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 An enum in Ark is what some may refer to as a tagged union, this allows for
 multiple variants: with no data, with named (tagged) data,

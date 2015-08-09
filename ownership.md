@@ -1,5 +1,5 @@
 # Ownership
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 
 Ownership is a set of rules that Ark will enforce to ensure
 memory safety. This will allow for zero-cost abstractions and help make 

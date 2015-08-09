@@ -1,5 +1,5 @@
 # Structures
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 We can define a structure with the `struct` keyword, followed by a block that
 contains the structures members. Note that an anonymous `struct` is not a 

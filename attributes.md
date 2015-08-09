@@ -1,5 +1,5 @@
 # Attributes
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 Attributes allow the developer to modify or restrict behaviour for certain
 declarations. An attribute is specified with square brackets surrounding an

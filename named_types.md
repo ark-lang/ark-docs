@@ -1,5 +1,5 @@
 # Named Types
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 Names can be bound to a type, you can declare custom types, or you can alias
 existing types. 

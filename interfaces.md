@@ -1,5 +1,5 @@
 # Interfaces
-> This feature is planned
+![Feature Planned](Badge_Planned.svg)
 
 Interfaces are named collections of method signatures. In Ark, interfaces are implicit,
 which means that if something has the methods defined in an interface `A`, it will

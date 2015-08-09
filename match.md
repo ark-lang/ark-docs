@@ -1,5 +1,5 @@
 # Match
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 
 Match is a control structure that takes an expression and will branch based
 on its value. A match is denoted with the `match` keyword, followed by the

@@ -1,5 +1,5 @@
 # For Loops
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 A for loop is specified with the `for` keyword, there are a few types of for
 loops that you can do:

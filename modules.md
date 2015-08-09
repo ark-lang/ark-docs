@@ -1,5 +1,5 @@
 # Modules
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 > This is under debate, check out the [RFC #3](https://github.com/ark-lang/rfcs/issues/3)
 for modules to help.
 

@@ -1,5 +1,5 @@
 # Variable Declarations
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 A variable is a binding of an expression to a pattern, a variable can either be
 _mutable_ or _immutable_. Ark treats mutability differently than other

@@ -1,5 +1,5 @@
 # Tuple
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 A tuple is a collection of values that can have irregular types. Tuples are similar
 to an array, though an array is a collection of values in which their types are

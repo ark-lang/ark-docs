@@ -1,5 +1,5 @@
 # Option Types
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 
 An option type represents the encapsulation of an optional value. An option type
 can either contain `Some(x)`, where `x` is the value it contains, or `None`, i.e.
