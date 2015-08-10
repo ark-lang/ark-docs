@@ -12,7 +12,7 @@ _**declarations** are: function declarations, variable declarations, type declar
 operator overload declarations, and function prototypes_
 
 Attribute Name | Restricted To | Options | What it does |
----------------|---------------|------------------------|
+---------------|---------------|---------|--------------|
 deprecated | declarations | n/a | warns the developer if they use the deprecated declaration in their code
 packed | structures | n/a | doesn't pad the given structure
 unused | declarations | n/a | supresses compiler warning on unused declarations
