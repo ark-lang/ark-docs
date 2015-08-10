@@ -4,8 +4,6 @@
 > is open source and licensed under MIT; if you spot any errors, feel free to 
 > send a PR!
 
-This reference can be read in book form [here](http://felixangell.gitbooks.io/ark-reference/content/).
-
 This is the official reference for the [Ark programming language](github.com/ark-lang/ark). Note that this
 document is not final and could change at any point, as could the compiler
 itself, which means that the reference could become out-dated. We try
