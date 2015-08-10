@@ -1,5 +1,5 @@
 # Transferring Ownership
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 
 Consider the following example:
 

@@ -1,5 +1,5 @@
 # Slices
-> This feature is planned
+![Feature Planned](Badge_Planned.svg)
 
 > note this feature is still under review, check [RFC #8](https://github.com/ark-lang/rfcs/issues/8) if you are interested in helping
 iron out this feature.

@@ -1,5 +1,5 @@
 # Memory Allocation
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 
 Memory allocation is handled in the standard library, there are a few functions
 used for allocating memory, namely `alloc`, `alloc_raw`, `sizeof`, and `dealloc`.

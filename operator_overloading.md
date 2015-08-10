@@ -1,5 +1,5 @@
 # Operator Overloading
-> This feature is planned
+![Feature Planned](Badge_Planned.svg)
 
 Ark allows operator overloading, however there are a few restrictions enforced 
 for safety. You can overload the following operators:

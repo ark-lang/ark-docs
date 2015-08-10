@@ -1,5 +1,5 @@
 # Reference Lifetime
-> This feature is in progress
+![Feature In Progress](Badge_InProgress.svg)
 
 In the examples shown above, where references were used, they were
 typically introduced in their own scope. So if we didn't introduce

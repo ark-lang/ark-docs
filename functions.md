@@ -1,5 +1,5 @@
 # Functions
-> This feature is implemented
+![Feature Implemented](Badge_Implemented.svg)
 
 Ark programs will have, at the least, one function; the main function.
 This is the entry point of the program, i.e. where the execution of the program

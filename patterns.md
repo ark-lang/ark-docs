@@ -1,5 +1,5 @@
 # Patterns
-> This feature is planned
+![Feature Planned](Badge_Planned.svg)
 
 ## Ranges
 An exclusive range is denoted with two dots, e.g: `0 .. 5`, this will match 0
