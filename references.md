@@ -1,10 +1,11 @@
-# References [in progress]
+# References
+![Feature In Progress](Badge_InProgress.svg)
 
 How do we solve this issue? We use something called "borrowing". Instead of
 moving these values to the function, we pass a reference to these values.
 A reference has a few extra properties:
 
-* it cannot mutate what resource it'refers' to
+* it cannot mutate what resource it refers to
 * it is **not** de-allocated at the end of scope
 
 A reference is denoted with an ampersand (`&`), followed by the resource it
@@ -18,7 +19,7 @@ func do_stuff(a: ^int) {
 }
 
 func main() {
-    mut a: ^int = mem::malloc(mem::size_of(^a)); // alloc
+    mut a: ^int = std::mem::alloc(std::mem::sizeof(^a)); // alloc
     do_stuff(&a); // no re-assignments necessary
     ^a = 21; // yay, it works!
 }

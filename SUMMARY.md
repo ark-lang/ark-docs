@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Comments](comments.md)
 * [Variables](variables.md)
 * [Types](types.md)
    * [Named Types](named_types.md)
@@ -8,17 +9,21 @@
    * [Tuples](tuples.md)
    * [Enums](enums.md)
    * [Option Types](option_types.md)
+   * [Interfaces](interfaces.md)
 * [Functions](functions.md)
+   * [Function Receivers](function_receivers.md)
+* [Defer](defer.md)
 * [Pointers](pointers.md)
 * [Arrays](arrays.md)
 * [Slices](slices.md)
-* [Modules](modules.md)
+* [Modules and Dependencies](modules.md)
 * [Ownership](ownership.md)
    * [Transferring Ownership](transferring_ownership.md)
    * [Borrowing](borrowing.md)
        * [References](references.md)
        * [Reference Lifetime](reference_lifetime.md)
        * [Explicit Lifetimes](explicit_lifetimes.md)
+* [Memory Allocation](memory_allocation.md)
 * Control Flow
    * [If Statements](if_statements.md)
    * [For Loops](for_loops.md)
@@ -31,4 +36,5 @@
    * [Multiple Type Parameters](multiple_type_parameters.md)
    * [Methods on Generic Types](methods_on_generic_types.md)
    * [Type Restrictions](type_restrictions.md)
+* [Operator Overloading](operator_overloading.md)
 

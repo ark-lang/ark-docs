@@ -1,4 +1,5 @@
-# Borrowing [in progress]
+# Borrowing
+![Feature Implemented](Badge_InProgress.svg)
 
 One problem with the example above is if we keep transferring ownership
 back and forth, it can get really messy. Take the following example:

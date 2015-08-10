@@ -1,13 +1,9 @@
-# Structures [implemented]
+# Structures
+![Feature Implemented](Badge_Implemented.svg)
 
 We can define a structure with the `struct` keyword, followed by a block that
-contains the types that the structure made up of. Note that an anonymous
-`struct` is not a statement, thus it is not typically terminated with a
-semi-colon. In the example below, we end it the statement with a
-semi-colon, not the type (even though it may look like we do). 
-
-Note that the second structure contains default values for some of the structure
-members. More on this later.
+contains the structures members. Note that an anonymous `struct` is not a 
+declaration, thus it is not terminated with a semi-colon.
 
 ```
 // anonymous structure
@@ -15,7 +11,17 @@ struct {
     d: int,
     g: int,
 }
+```
 
+We can bind a structure to a variable like so. Note that the structure itself
+is not terminated with a semi-colon, but the variable declaration that is binding
+this type does. 
+
+We can also have default values for a structure. Default values are set in a 
+similar fashion to variable declarations (name, colon, Type, assignment operator,
+expression).
+
+```
 // bind structure to variable
 mut x: struct {
     a: int = 2,
@@ -23,10 +29,11 @@ mut x: struct {
 };
 ```
 
-To access values in a structure, write the structures name, followed by
-the dot operator, and the members name to access.
+The dot operator - `.` - allows us to access the members of a structure:
 
 ```
+// x is the structure
+// a, b are the members
 x.a = 100;
 x.b = 100;
 ```
@@ -44,12 +51,15 @@ v.x = 23;
 v.y = 32;
 ```
 
-Since a `type` is a statement, it must end with a semi-colon.
-
 ## Using Default Structure Values
+There are two ways of using `default`. As an expression, or as a statement. The
+`default` expression takes a Type `T`. The `default` statement takes an `access`, e.g.
+a variable pointer, dereferenced pointer, structure member, array index, tuple index,
+and so on.
+
 ### Default Expression
-Note that default can also be an expression, this will set the default for a
-given type:
+In this case, we use the `default` expression, which takes the Type `int`. This will
+set `x` to the default value for an `int`, which is zero.
 
 ```
 x: int = default(int);
@@ -66,5 +76,6 @@ a structure using the default statement:
     person: Person;
     default(person);
     
-The above will set the person variable to use the Person types default values, if
-you do not set a default to structure, it will be initialized with garbage values.
+The above will set the person variable to use the Person type's default values. If 
+we do not use the default statement on a structure, the structures members will not
+have their memory zeroed out, thus causing them to contain random values.

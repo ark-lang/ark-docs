@@ -1,4 +1,5 @@
-# Ownership [in progress]
+# Ownership
+![Feature In Progress](Badge_InProgress.svg)
 
 Ownership is a set of rules that Ark will enforce to ensure
 memory safety. This will allow for zero-cost abstractions and help make 
@@ -10,10 +11,10 @@ points to is de-allocated. Take the following example:
 
 ```
 {
-    x: ^int = mem::malloc(mem::size_of(^x));
+    x: ^int = std::mem::alloc(std::mem::sizeof(^x));
     // x now holds a pointer to the allocated memory
 
-    // the memory that x points to is de-alloacted here
+    // the memory that x points to is de-allocated here
 }
 ```
 
